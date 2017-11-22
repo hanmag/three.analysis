@@ -1,0 +1,38 @@
+{
+  "name": "three.analysis",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanmag/three.analysis.git"
+  },
+  "keywords": [
+    "three.js"
+  ],
+  "author": "Daemon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hanmag/three.analysis/issues"
+  },
+  "homepage": "https://github.com/hanmag/three.analysis#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "rollup": "^0.51.8",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-watch": "^4.3.1",
+    "uglify-js": "^3.1.10"
+  },
+  "dependencies": {
+    "accessor-fn": "^1.2.2",
+    "kapsule": "^1.7.8",
+    "ngraph.forcelayout3d": "0.0.16",
+    "ngraph.graph": "0.0.14",
+    "three": "^0.88.0",
+    "three-trackballcontrols": "0.0.6"
+  }
+}
