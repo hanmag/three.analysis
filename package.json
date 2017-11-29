@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && rollup -c"
+    "build": "npm run build-min",
+    "build-dist": "rm -rf dist && mkdir dist && rollup -c",
+    "build-min": "npm run build-dist && uglifyjs dist/three-analysis.js -o dist/three-analysis.min.js -c -m --comments '/Version/'",
+    "watch": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,9 @@
     "babel-preset-env": "^1.6.1",
     "rollup": "^0.51.8",
     "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-postcss": "^0.5.5",
     "rollup-watch": "^4.3.1",
     "uglify-js": "^3.1.10"
   },
