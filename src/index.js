@@ -2,6 +2,7 @@ import './assets/css/graph.css';
 
 import Kapsule from 'kapsule';
 import * as THREE from 'three';
+import { CSS3DRenderer } from 'three-renderer-css3d';
 import trackballControls from 'three-trackballcontrols';
 
 
@@ -19,6 +20,15 @@ export default Kapsule({
         },
         idField: {
             default: 'id'
+        },
+        linkField: {
+            default: 'link'
+        },
+        colorField: {
+            default: 'color'
+        },
+        sizeField: {
+            default: 'size'
         },
         onNodeClick: {}
     },
@@ -67,11 +77,17 @@ export default Kapsule({
             }
         }, false);
 
+        // Setup webgl renderer
+        state.webglRenderer = new THREE.WebGLRenderer({
+            antialias: true,
+            alpha: true
+        });
+        domNode.appendChild(state.webglRenderer.domElement);
         // Handle click events on nodes
-        domNode.addEventListener("click", ev => {
+        state.webglRenderer.domElement.addEventListener("click", ev => {
             if (state.onNodeClick) {
                 raycaster.setFromCamera(mousePos, state.camera);
-                const intersects = raycaster.intersectObjects(state.graphScene.children)
+                const intersects = raycaster.intersectObjects(state.webglScene.children)
                     .filter(o => o.object.__data); // Check only objects with data (nodes)
                 if (intersects.length) {
                     state.onNodeClick(intersects[0].object.__data);
@@ -79,16 +95,14 @@ export default Kapsule({
             }
         }, false);
 
-        // Setup renderer
-        state.renderer = new THREE.WebGLRenderer({
-            antialias: true,
-            alpha: true
-        });
-        domNode.appendChild(state.renderer.domElement);
+        // Setup css3 renderer
+        state.css3dRenderer = new CSS3DRenderer();
+        domNode.appendChild(state.css3dRenderer.domElement);
 
-        // Setup scene
+        // Setup scenes
         const scene = new THREE.Scene();
-        scene.add(state.graphScene = new THREE.Group());
+        scene.add(state.webglScene = new THREE.Group());
+        scene.add(state.css3Scene = new THREE.Group());
 
         // Add lights
         scene.add(new THREE.AmbientLight(0xbbbbbb));
@@ -99,67 +113,48 @@ export default Kapsule({
         state.camera.far = 20000;
 
         // Add camera interaction
-        const tbControls = new trackballControls(state.camera, state.renderer.domElement);
+        const tbControls_webgl = new trackballControls(state.camera, state.webglRenderer.domElement);
+        const tbControls_css3 = new trackballControls(state.camera, state.css3dRenderer.domElement);
 
         // Kick-off renderer
         (function animate() {
             if (state.onFrame) state.onFrame();
             // Update tooltip
             raycaster.setFromCamera(mousePos, state.camera);
-            const intersects = raycaster.intersectObjects(state.graphScene.children)
+            const intersects = raycaster.intersectObjects(state.webglScene.children)
                 .filter(o => o.object.name); // Check only objects with labels
             toolTipElem.textContent = intersects.length ? intersects[0].object.name : '';
 
             // Frame cycle
-            tbControls.update();
-            state.renderer.render(scene, state.camera);
+            tbControls_webgl.update();
+            tbControls_css3.update();
+            state.webglRenderer.render(scene, state.camera);
+            state.css3dRenderer.render(scene, state.camera);
             requestAnimationFrame(animate);
         })();
     },
     update: function (state) {
         // update layput
-        this.resizeCanvas();
+        this.resizeDom();
 
         state.onFrame = null; // Pause simulation
         state.infoElem.textContent = 'Loading...';
 
-        // preprocess data
-        preprocess();
+        if (!Array.isArray(state.graphData)) return;
+        console.info('Graph loading', state.graphData.length, 'records');
 
         state.infoElem.textContent = '';
-
-        function preprocess() {
-            if (!Array.isArray(state.graphData)) return;
-            console.info('Graph loading', state.graphData.length, 'records');
-
-            // init records' dimensions
-            state.dimensions = [];
-            state.graphData.forEach(object => {
-                for (const key in object) {
-                    if (object.hasOwnProperty(key)) {
-                        const element = object[key];
-                        if (!isNaN(element)) {
-                            // is a Number, can sizeby / rankby / ycord
-
-                        } else if (Array.isArray(element)) {
-                            // is a Array, can relationby
-
-                        } else {
-                            // is a Enum, can colorby / xcord
-                        }
-                    }
-                }
-            });
-        }
     },
     methods: {
-        resizeCanvas: function (state) {
+        resizeDom: function (state) {
             if (state.domNode.offsetWidth && state.domNode.offsetHeight) {
                 state.width = state.domNode.offsetWidth;
                 state.height = state.domNode.offsetHeight;
             }
             if (state.width && state.height) {
-                state.renderer.setSize(state.width, state.height);
+                state.webglRenderer.setSize(state.width, state.height);
+                state.css3dRenderer.setSize(state.width, state.height);
+                state.css3dRenderer.domElement.style.marginTop = -state.height + "px";
                 state.camera.aspect = state.width / state.height;
                 state.camera.updateProjectionMatrix();
             }
