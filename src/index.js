@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { CSS3DRenderer } from 'three-renderer-css3d';
 import trackballControls from 'three-trackballcontrols';
 
+import network from './network/force-graph'
 
 
 export default Kapsule({
@@ -116,6 +117,8 @@ export default Kapsule({
         const tbControls_webgl = new trackballControls(state.camera, state.webglRenderer.domElement);
         const tbControls_css3 = new trackballControls(state.camera, state.css3dRenderer.domElement);
 
+        state.visualizes = [network];
+
         // Kick-off renderer
         (function animate() {
             if (state.onFrame) state.onFrame();
@@ -137,13 +140,43 @@ export default Kapsule({
         // update layput
         this.resizeDom();
 
-        state.onFrame = null; // Pause simulation
+        // state.onFrame = null; // Pause simulation
         state.infoElem.textContent = 'Loading...';
 
         if (!Array.isArray(state.graphData)) return;
-        console.info('Graph loading', state.graphData.length, 'records');
+        validate();
+
+        state.visualizes.forEach(visualize => {
+            if (visualize.inUse && visualize.name !== state.graphType) {
+                visualize.cancel(state);
+            } else if (visualize.inUse && visualize.name === state.graphType) {
+                // reset current layout
+                visualize.reset(state);
+            }
+            if (visualize.name === state.graphType) {
+                // wait for cancel or reset
+                setTimeout(() => {
+                    visualize.apply(state);
+                }, 1500);
+            }
+        });
 
         state.infoElem.textContent = '';
+
+        function validate() {
+            console.info('Graph loading', state.graphData.length, 'records');
+            if (state.graphData.length > 1) {
+                for (let i = 0; i < state.graphData.length; i++) {
+                    const el1 = state.graphData[i];
+                    for (let j = i + 1; j < state.graphData.length; j++) {
+                        const el2 = state.graphData[j];
+                        if (el1[state.idField] === el2[state.idField]) {
+                            throw 'Error: records contains duplicated idFields \'' + el1[state.idField] + '\'';
+                        }
+                    }
+                }
+            }
+        }
     },
     methods: {
         resizeDom: function (state) {
