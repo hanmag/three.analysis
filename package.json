@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build-min",
     "build-dist": "rm -rf dist && mkdir dist && rollup -c",
-    "build-min": "npm run build-dist && uglifyjs dist/three-analysis.js -o dist/three-analysis.min.js -c -m --comments '/Version/'",
+    "build-min": "npm run build-dist && uglifyjs dist/three-analysis.js -o dist/three-analysis.min.js -c -m ",
     "watch": "rollup -c -w"
   },
   "repository": {
