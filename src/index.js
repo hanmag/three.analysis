@@ -4,6 +4,8 @@ import Kapsule from 'kapsule';
 import * as THREE from 'three';
 import { CSS3DRenderer } from 'three-renderer-css3d';
 import trackballControls from 'three-trackballcontrols';
+import { autoColorItems, colorStr2Hex } from './utils/color-utils';
+import { linearSizeItems } from './utils/math-utils';
 
 import network from './network/force-graph'
 
@@ -106,7 +108,7 @@ export default Kapsule({
         scene.add(state.css3Scene = new THREE.Group());
 
         // Add lights
-        scene.add(new THREE.AmbientLight(0xbbbbbb));
+        scene.add(new THREE.AmbientLight(0xcccccc));
         scene.add(new THREE.DirectionalLight(0xffffff, 0.6));
 
         // Setup camera
@@ -146,8 +148,14 @@ export default Kapsule({
         if (!Array.isArray(state.graphData)) return;
         validate();
 
+        // set color
+        autoColorItems(state.graphData, state.colorField);
+        // set size
+        linearSizeItems(state.graphData, state.sizeField)
+
         state.visualizes.forEach(visualize => {
             if (visualize.inUse && visualize.name !== state.graphType) {
+                // fade out aniamtion
                 visualize.cancel(state);
             } else if (visualize.inUse && visualize.name === state.graphType) {
                 // reset current layout
