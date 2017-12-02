@@ -28,6 +28,8 @@
     "rollup": "^0.51.8",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-glsl": "^1.1.0",
+    "rollup-plugin-image": "^1.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-postcss": "^0.5.5",
     "rollup-watch": "^4.3.1",
@@ -35,11 +37,13 @@
   },
   "dependencies": {
     "accessor-fn": "^1.2.2",
+    "d3-scale-chromatic": "^1.1.1",
     "kapsule": "^1.7.8",
     "ngraph.forcelayout3d": "0.0.16",
     "ngraph.graph": "0.0.14",
     "three": "^0.88.0",
     "three-renderer-css3d": "^1.0.0",
-    "three-trackballcontrols": "0.0.6"
+    "three-trackballcontrols": "0.0.6",
+    "tinycolor2": "^1.4.1"
   }
 }
