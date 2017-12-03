@@ -29,7 +29,9 @@
             if (this.readyState == 4 && this.status == 200) {
                 const Graph = ThreeAnalysis()
                     (document.getElementById('graph'))
-                    .graphData(JSON.parse(this.responseText));
+                    .graphData(JSON.parse(this.responseText))
+                    .colorField('country')
+                    .sizeField('age');
             }
         };
         xhttp.open("GET", "data/persons.json", true);

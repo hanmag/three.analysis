@@ -1,4 +1,4 @@
-const rate = 1.0, base = 0.1;
+const rate = 0.3, base = 0.7;
 
 function linearNumericItems(items, numField) {
     let min = Infinity,

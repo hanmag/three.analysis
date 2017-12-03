@@ -5,7 +5,8 @@ import * as THREE from 'three';
 import ngraph from 'ngraph.graph';
 import forcelayout3d from 'ngraph.forcelayout3d';
 
-const CAMERA_DISTANCE2NODES_FACTOR = 80;
+const CAMERA_DISTANCE2NODES_FACTOR = 100;
+const NODE_BASE_SIZE = 5;
 
 export default {
     name: 'network',
@@ -25,10 +26,14 @@ export default {
 
         // Create nodes
         state.graphData.forEach(item => {
+            let nodeRadius = NODE_BASE_SIZE * item._size;
             let material = new THREE.ShaderMaterial({
                 uniforms: {
                     uColor: {
-                        value: new THREE.Color(0xffffff)
+                        value: new THREE.Color(item._color)
+                    },
+                    uCenter: {
+                        value: new THREE.Vector3(0, 0, 0)
                     }
                 },
                 vertexShader: nodeVertexShaderSource,
@@ -37,7 +42,7 @@ export default {
                 depthTest: false,
                 transparent: true
             });
-            let sprite = new THREE.Mesh(new THREE.SphereGeometry(4, 32, 32), material);
+            let sprite = new THREE.Mesh(new THREE.SphereGeometry(nodeRadius, 16, 16), material);
             state.webglScene.add(item._sprite = sprite);
         });
 
@@ -62,8 +67,9 @@ export default {
                 if (!sprite) return;
                 const pos = layout.getNodePosition(item[state.idField]);
                 sprite.position.x = pos.x;
-                sprite.position.y = pos.y || 0;
-                sprite.position.z = pos.z || 0;
+                sprite.position.y = pos.y;
+                sprite.position.z = pos.z;
+                sprite.material.uniforms.uCenter.value = pos;
             });
             // Update links position
         }
