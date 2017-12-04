@@ -6,7 +6,8 @@ import ngraph from 'ngraph.graph';
 import forcelayout3d from 'ngraph.forcelayout3d';
 
 const CAMERA_DISTANCE2NODES_FACTOR = 100;
-const NODE_BASE_SIZE = 5;
+const NODE_BASE_SIZE = 7;
+const COOLDOWNTICKS = 70;
 
 export default {
     name: 'network',
@@ -25,28 +26,29 @@ export default {
         layout.graph = graph; // Attach graph reference to layout
 
         // Create nodes
+        let nodeMaterials = {}; // indexed by color
         state.graphData.forEach(item => {
             let nodeRadius = NODE_BASE_SIZE * item._size;
-            let material = new THREE.ShaderMaterial({
-                uniforms: {
-                    uColor: {
-                        value: new THREE.Color(item._color)
+            if (!nodeMaterials.hasOwnProperty(item._color)) {
+                nodeMaterials[item._color] = new THREE.ShaderMaterial({
+                    uniforms: {
+                        uColor: {
+                            value: new THREE.Color(item._color)
+                        }
                     },
-                    uCenter: {
-                        value: new THREE.Vector3(0, 0, 0)
-                    }
-                },
-                vertexShader: nodeVertexShaderSource,
-                fragmentShader: nodeFragmentShaderSource,
-                blending: THREE.AdditiveBlending,
-                depthTest: false,
-                transparent: true
-            });
-            let sprite = new THREE.Mesh(new THREE.SphereGeometry(nodeRadius, 16, 16), material);
+                    vertexShader: nodeVertexShaderSource,
+                    fragmentShader: nodeFragmentShaderSource,
+                    blending: THREE.AdditiveBlending,
+                    depthTest: false,
+                    transparent: true
+                });
+            }
+            let sprite = new THREE.Mesh(new THREE.SphereGeometry(nodeRadius, 32, 32), nodeMaterials[item._color]);
             state.webglScene.add(item._sprite = sprite);
         });
 
         // Create links
+        let lineMaterials = {}; // indexed by color
 
         if (state.camera.position.x === 0 && state.camera.position.y === 0) {
             // If camera still in default position (not user modified)
@@ -55,10 +57,15 @@ export default {
         }
 
         // Start rendering
+        let cntTicks = 0;
         state.onFrame = layoutTick;
         this.inUse = true;
 
         function layoutTick() {
+            if (cntTicks++ > COOLDOWNTICKS) {
+                state.onFrame = null; // Stop ticking graph
+            }
+
             layout.step();
 
             // Update nodes position
@@ -69,7 +76,6 @@ export default {
                 sprite.position.x = pos.x;
                 sprite.position.y = pos.y;
                 sprite.position.z = pos.z;
-                sprite.material.uniforms.uCenter.value = pos;
             });
             // Update links position
         }

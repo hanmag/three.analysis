@@ -1,8 +1,7 @@
 uniform vec3 uColor;
-uniform vec3 uCenter;
-varying vec3 vPosition;
+varying vec3 vNormal;
 
 void main () {
-
-  gl_FragColor = vec4(uColor, 1.0 /  pow(length(vPosition), 1.0));
+  float intensity = pow( 0.15 + dot( vNormal, vec3( 0, 0, 1.0 ) ), 12.0 );
+  gl_FragColor = vec4(uColor, 0.95 * intensity);
 }
