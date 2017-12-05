@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import ngraph from 'ngraph.graph';
 import forcelayout3d from 'ngraph.forcelayout3d';
 
-const CAMERA_DISTANCE2NODES_FACTOR = 100;
+const CAMERA_DISTANCE2NODES_FACTOR = 120;
 const NODE_BASE_SIZE = 7;
 const COOLDOWNTICKS = 70;
 
@@ -14,11 +14,18 @@ export default {
     apply: function (state) {
         // Setup graph
         const graph = ngraph();
+        state.network = { nodes : [], links : [] };
         state.graphData.forEach(item => {
             graph.addNode(item[state.idField]);
+            state.network.nodes.push({ id : item[state.idField], color : item._color, size : item._size});
             if (Array.isArray(item[state.linkField])) {
-                item[state.linkField].forEach(link => {
-                    graph.addLink(item[state.idField], link);
+                item[state.linkField].forEach(tid => {
+                    if(state.network.links.find(link => 
+                        (link.sid === item[state.idField] && link.tid === tid)
+                        || (link.tid === item[state.idField] && link.sid === tid)))
+                        return;
+                    graph.addLink(item[state.idField], tid);
+                    state.network.links.push({ sid : item[state.idField], tid : tid });
                 });
             }
         });
@@ -27,13 +34,13 @@ export default {
 
         // Create nodes
         let nodeMaterials = {}; // indexed by color
-        state.graphData.forEach(item => {
-            let nodeRadius = NODE_BASE_SIZE * item._size;
-            if (!nodeMaterials.hasOwnProperty(item._color)) {
-                nodeMaterials[item._color] = new THREE.ShaderMaterial({
+        state.network.nodes.forEach(node => {
+            let nodeRadius = NODE_BASE_SIZE * node.size;
+            if (!nodeMaterials.hasOwnProperty(node.color)) {
+                nodeMaterials[node.color] = new THREE.ShaderMaterial({
                     uniforms: {
                         uColor: {
-                            value: new THREE.Color(item._color)
+                            value: new THREE.Color(node.color)
                         }
                     },
                     vertexShader: nodeVertexShaderSource,
@@ -43,12 +50,23 @@ export default {
                     transparent: true
                 });
             }
-            let sprite = new THREE.Mesh(new THREE.SphereGeometry(nodeRadius, 32, 32), nodeMaterials[item._color]);
-            state.webglScene.add(item._sprite = sprite);
+            let sprite = new THREE.Mesh(new THREE.SphereGeometry(nodeRadius, 32, 32), nodeMaterials[node.color]);
+            state.webglScene.add(node.sprite = sprite);
         });
 
         // Create links
-        let lineMaterials = {}; // indexed by color
+        let lineMaterial = new THREE.LineBasicMaterial({
+            color: 0xbbbbbb,
+            transparent: true,
+            opacity: 0.2
+        });
+        state.network.links.forEach(link => {
+            const geometry = new THREE.BufferGeometry();
+            geometry.addAttribute('position', new THREE.BufferAttribute(new Float32Array(2 * 3), 3));
+            const line = new THREE.Line(geometry, lineMaterial);
+            line.renderOrder = 10; // Prevent visual glitches of dark lines on top of spheres by rendering them last
+            state.webglScene.add(link.line = line);
+        });
 
         if (state.camera.position.x === 0 && state.camera.position.y === 0) {
             // If camera still in default position (not user modified)
@@ -69,21 +87,42 @@ export default {
             layout.step();
 
             // Update nodes position
-            state.graphData.forEach(item => {
-                const sprite = item._sprite;
+            state.network.nodes.forEach(node => {
+                const sprite = node.sprite;
                 if (!sprite) return;
-                const pos = layout.getNodePosition(item[state.idField]);
+                const pos = layout.getNodePosition(node.id);
                 sprite.position.x = pos.x;
                 sprite.position.y = pos.y;
                 sprite.position.z = pos.z;
             });
             // Update links position
+            state.network.links.forEach(link => {
+                const line = link.line;
+                if (!line) return;
+
+                const pos = layout.getLinkPosition(layout.graph.getLink(link.sid, link.tid).id),
+                start = pos['from'],
+                end = pos['to'],
+                linePos = line.geometry.attributes.position;
+
+                linePos.array[0] = start.x;
+                linePos.array[1] = start.y || 0;
+                linePos.array[2] = start.z || 0;
+                linePos.array[3] = end.x;
+                linePos.array[4] = end.y || 0;
+                linePos.array[5] = end.z || 0;
+
+                linePos.needsUpdate = true;
+                line.geometry.computeBoundingSphere();
+            });
         }
     },
     cancel: function (state) {
         this.inUse = false;
+        state.network = { nodes : [], links : [] };
     },
     reset: function (state) {
+        state.network = { nodes : [], links : [] };
         while (state.webglScene.children.length) {
             state.webglScene.remove(state.webglScene.children[0])
         } // Clear the place
