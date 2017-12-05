@@ -96,9 +96,9 @@ export default Kapsule({
             if (state.onNodeClick) {
                 raycaster.setFromCamera(mousePos, state.camera);
                 const intersects = raycaster.intersectObjects(state.webglScene.children)
-                    .filter(o => o.object.__data); // Check only objects with data (nodes)
+                    .filter(o => o.object.vdata); // Check only objects with data (nodes)
                 if (intersects.length) {
-                    state.onNodeClick(intersects[0].object.__data);
+                    state.onNodeClick(intersects[0].object.vdata);
                 }
             }
         }, false);

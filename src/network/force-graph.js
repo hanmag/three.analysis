@@ -17,7 +17,7 @@ export default {
         state.network = { nodes : [], links : [] };
         state.graphData.forEach(item => {
             graph.addNode(item[state.idField]);
-            state.network.nodes.push({id : item[state.idField], name : item[state.nameField], color : item._color, size : item._size});
+            state.network.nodes.push({id : item[state.idField], name : item[state.nameField], color : item._color, size : item._size, data: item});
             if (Array.isArray(item[state.linkField])) {
                 item[state.linkField].forEach(tid => {
                     if(state.network.links.find(link => 
@@ -53,6 +53,7 @@ export default {
             let sprite = new THREE.Mesh(new THREE.SphereGeometry(nodeRadius, 32, 32), nodeMaterials[node.color]);
             sprite.vid = node.id;
             sprite.name = node.name;
+            sprite.vdata = node.data;
             state.webglScene.add(node.sprite = sprite);
         });
 
@@ -75,6 +76,10 @@ export default {
             state.camera.position.z = Math.cbrt(state.graphData.length) * CAMERA_DISTANCE2NODES_FACTOR;
             state.camera.lookAt(state.webglScene.position);
         }
+
+        // Setup render DOM
+        state.webglRenderer.domElement.style.display = 'block';
+        state.css3dRenderer.domElement.style.display = 'none';
 
         // Start rendering
         let cntTicks = 0;

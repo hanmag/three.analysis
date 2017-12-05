@@ -32,7 +32,8 @@
                     .graphData(JSON.parse(this.responseText))
                     .colorField('country')
                     .sizeField('age')
-                    .nameField('country');
+                    .nameField('country')
+                    .onNodeClick(data => console.log(data));
             }
         };
         xhttp.open("GET", "data/persons.json", true);
