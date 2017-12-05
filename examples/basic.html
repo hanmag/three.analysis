@@ -31,7 +31,8 @@
                     (document.getElementById('graph'))
                     .graphData(JSON.parse(this.responseText))
                     .colorField('country')
-                    .sizeField('age');
+                    .sizeField('age')
+                    .nameField('country');
             }
         };
         xhttp.open("GET", "data/persons.json", true);

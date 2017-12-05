@@ -26,6 +26,9 @@ export default Kapsule({
         idField: {
             default: 'id'
         },
+        nameField: {
+            default: 'name'
+        },
         linkField: {
             default: 'link'
         },
@@ -69,7 +72,7 @@ export default Kapsule({
 
             // Move tooltip
             toolTipElem.style.top = (relPos.y - 40) + 'px';
-            toolTipElem.style.left = (relPos.x - 20) + 'px';
+            toolTipElem.style.left = (relPos.x - 50) + 'px';
 
             function getOffset(el) {
                 const rect = el.getBoundingClientRect(),

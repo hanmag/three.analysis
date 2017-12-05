@@ -2,16 +2,20 @@
     position: absolute;
     top: calc(50% - 25px);
     width: 100%;
-    text-align: center;
-    color: lavender;
-    opacity: 0.7;
-    font-size: 22px;
 }
 
 .graph-tooltip {
     position: absolute;
     color: lavender;
     font-size: 18px;
+    width: 100px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    text-align: center;
+    overflow: hidden;
+    text-shadow: 0 0 4px white;
+    border-radius: 4px;
+    background: rgba(128, 128, 128, 0.45);
 }
 
 .loader-inner {
