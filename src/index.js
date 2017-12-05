@@ -9,6 +9,7 @@ import { linearSizeItems } from './utils/math-utils';
 
 import network from './network/force-graph'
 
+const VISUALIZE_DELAY = 1500;
 
 export default Kapsule({
     props: {
@@ -139,6 +140,8 @@ export default Kapsule({
         })();
     },
     update: function (state) {
+        let delay = state.init ? VISUALIZE_DELAY : 0;
+        state.init = true;
         // update layput
         this.resizeDom();
 
@@ -165,7 +168,7 @@ export default Kapsule({
                 // wait for cancel or reset
                 setTimeout(() => {
                     visualize.apply(state);
-                }, 1500);
+                }, delay);
             }
         });
 
