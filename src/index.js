@@ -1,4 +1,5 @@
 import './assets/css/graph.css';
+import 'loaders.css';
 
 import Kapsule from 'kapsule';
 import * as THREE from 'three';
@@ -146,7 +147,7 @@ export default Kapsule({
         this.resizeDom();
 
         // state.onFrame = null; // Pause simulation
-        state.infoElem.textContent = 'Loading...';
+        state.infoElem.innerHTML = '<div class="loader-inner line-scale-pulse-out-rapid"><div></div><div></div><div></div><div></div><div></div></div>';
 
         if (!Array.isArray(state.graphData)) return;
         validate();
@@ -172,7 +173,7 @@ export default Kapsule({
             }
         });
 
-        state.infoElem.textContent = '';
+        state.infoElem.innerHTML = '';
 
         function validate() {
             console.info('Graph loading', state.graphData.length, 'records');

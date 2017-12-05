@@ -1,6 +1,6 @@
 .graph-info-msg {
     position: absolute;
-    top: calc(50% - 4px);
+    top: calc(50% - 25px);
     width: 100%;
     text-align: center;
     color: lavender;
@@ -12,4 +12,11 @@
     position: absolute;
     color: lavender;
     font-size: 18px;
+}
+
+.loader-inner {
+    position: absolute;
+    left: calc(50% - 60px);
+    top: 0px;
+    width: 120px;
 }
