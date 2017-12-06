@@ -1,4 +1,4 @@
-const rate = 0.4, base = 0.9;
+const rate = 2.0, base = 1.0;
 
 function linearNumericItems(items, numField) {
     let min = Infinity,
@@ -10,7 +10,7 @@ function linearNumericItems(items, numField) {
     return {
         minim: min,
         maxim: max,
-        median: (max - min) / 2
+        median: (max + min) / 2
     };
 }
 
@@ -18,7 +18,7 @@ function linearSizeItems(items, sizeField) {
     if (typeof sizeField !== 'string') return;
     const numeric = linearNumericItems(items, sizeField);
     items.forEach(item => {
-        item._size = base + ((item[sizeField] - numeric.minim) / (numeric.median - numeric.minim)) * rate;
+        item._size = base + (((item[sizeField] - numeric.minim) / (numeric.median - numeric.minim)) * rate);
         if (isNaN(item._size)) item._size = 1.0;
     });
 }

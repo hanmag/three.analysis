@@ -6,7 +6,7 @@ import ngraph from 'ngraph.graph';
 import forcelayout3d from 'ngraph.forcelayout3d';
 
 const CAMERA_DISTANCE2NODES_FACTOR = 120;
-const NODE_BASE_SIZE = 7;
+const NODE_BASE_SIZE = 4;
 const COOLDOWNTICKS = 70;
 
 export default {
@@ -59,9 +59,9 @@ export default {
 
         // Create links
         let lineMaterial = new THREE.LineBasicMaterial({
-            color: 0xbbbbbb,
+            color: 0xffffff,
             transparent: true,
-            opacity: 0.2
+            opacity: 0.15
         });
         state.network.links.forEach(link => {
             const geometry = new THREE.BufferGeometry();
@@ -125,8 +125,8 @@ export default {
         }
     },
     cancel: function (state) {
-        this.inUse = false;
         state.network = { nodes : [], links : [] };
+        this.inUse = false;
     },
     reset: function (state) {
         state.network = { nodes : [], links : [] };
