@@ -91629,8 +91629,8 @@ function autoColorItems(items, colorField) {
     });
 }
 
-var rate = 0.4;
-var base = 0.9;
+var rate = 2.0;
+var base = 1.0;
 
 function linearNumericItems(items, numField) {
     var min = Infinity,
@@ -91642,7 +91642,7 @@ function linearNumericItems(items, numField) {
     return {
         minim: min,
         maxim: max,
-        median: (max - min) / 2
+        median: (max + min) / 2
     };
 }
 
@@ -94569,7 +94569,7 @@ function getIntegrator(physicsSettings) {
 }
 
 var CAMERA_DISTANCE2NODES_FACTOR = 120;
-var NODE_BASE_SIZE = 7;
+var NODE_BASE_SIZE = 4;
 var COOLDOWNTICKS = 70;
 
 var network = {
@@ -94621,9 +94621,9 @@ var network = {
 
         // Create links
         var lineMaterial = new LineBasicMaterial({
-            color: 0xbbbbbb,
+            color: 0xffffff,
             transparent: true,
-            opacity: 0.2
+            opacity: 0.15
         });
         state.network.links.forEach(function (link) {
             var geometry = new BufferGeometry();
@@ -94687,8 +94687,8 @@ var network = {
         }
     },
     cancel: function cancel(state) {
-        this.inUse = false;
         state.network = { nodes: [], links: [] };
+        this.inUse = false;
     },
     reset: function reset(state) {
         state.network = { nodes: [], links: [] };
@@ -94857,9 +94857,10 @@ var index = Kapsule({
             } else if (visualize.inUse && visualize.name === state.graphType) {
                 // reset current layout
                 visualize.reset(state);
+                delay = 0;
             }
             if (visualize.name === state.graphType) {
-                // wait for cancel or reset
+                // wait for cancel
                 setTimeout(function () {
                     visualize.apply(state);
                 }, delay);
