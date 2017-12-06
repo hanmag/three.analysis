@@ -23,4 +23,5 @@
     left: calc(50% - 60px);
     top: 0px;
     width: 120px;
+    text-align: center;
 }
