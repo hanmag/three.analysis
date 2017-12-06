@@ -18,19 +18,27 @@ export default Kapsule({
             default: [],
             onChange(_, state) {
                 state.onFrame = null;
+                state.resetData = true;
             }
         },
         graphType: {
             default: 'network'
         },
         idField: {
-            default: 'id'
+            default: 'id',
+            onChange(_, state) {
+                state.onFrame = null;
+                state.resetData = true;
+            }
         },
         nameField: {
             default: 'name'
         },
         linkField: {
-            default: 'link'
+            default: 'link',
+            onChange(_, state) {
+                state.resetRel = true;
+            }
         },
         colorField: {
             default: 'color'
@@ -149,11 +157,10 @@ export default Kapsule({
         // update layput
         this.resizeDom();
 
-        // state.onFrame = null; // Pause simulation
         state.infoElem.innerHTML = '<div class="loader-inner line-scale-pulse-out-rapid"><div></div><div></div><div></div><div></div><div></div></div>';
 
-        if (!Array.isArray(state.graphData)) return;
-        validate();
+        if (!Array.isArray(state.graphData) || state.graphData.length == 0) return;
+        if (state.resetData) validate();
 
         // set color
         autoColorItems(state.graphData, state.colorField);
@@ -167,17 +174,15 @@ export default Kapsule({
             } else if (visualize.inUse && visualize.name === state.graphType) {
                 // reset current layout
                 visualize.reset(state);
-                delay = 0;
-            }
-            if (visualize.name === state.graphType) {
+                state.infoElem.innerHTML = '';
+            } else if (visualize.name === state.graphType) {
                 // wait for cancel
                 setTimeout(() => {
                     visualize.apply(state);
+                    state.infoElem.innerHTML = '';
                 }, delay);
             }
         });
-
-        state.infoElem.innerHTML = '';
 
         function validate() {
             console.info('Graph loading', state.graphData.length, 'records');
