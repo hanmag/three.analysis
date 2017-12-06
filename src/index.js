@@ -167,9 +167,10 @@ export default Kapsule({
             } else if (visualize.inUse && visualize.name === state.graphType) {
                 // reset current layout
                 visualize.reset(state);
+                delay = 0;
             }
             if (visualize.name === state.graphType) {
-                // wait for cancel or reset
+                // wait for cancel
                 setTimeout(() => {
                     visualize.apply(state);
                 }, delay);
