@@ -1,6 +1,7 @@
 import nodeVertexShaderSource from '../shaders/node.vertex.glsl';
 import nodeFragmentShaderSource from '../shaders/node.fragment.glsl';
 
+import * as TWEEN from 'es6-tween';
 import * as THREE from 'three';
 import ngraph from 'ngraph.graph';
 import forcelayout3d from 'ngraph.forcelayout3d';
@@ -8,7 +9,6 @@ import forcelayout3d from 'ngraph.forcelayout3d';
 const CAMERA_DISTANCE2NODES_FACTOR = 140;
 const NODE_BASE_SIZE = 4;
 const COOLDOWNTICKS = 70;
-const NODEMATERIALS = {}; // indexed by color
 const LINEMATERIAL = new THREE.LineBasicMaterial({
     color: 0xffffff,
     transparent: true,
@@ -94,21 +94,19 @@ export default {
         // Create nodes
         state.network.nodes.forEach(node => {
             let nodeRadius = NODE_BASE_SIZE * node.size;
-            if (!NODEMATERIALS.hasOwnProperty(node.color)) {
-                NODEMATERIALS[node.color] = new THREE.ShaderMaterial({
-                    uniforms: {
-                        uColor: {
-                            value: new THREE.Color(node.color)
-                        }
-                    },
-                    vertexShader: nodeVertexShaderSource,
-                    fragmentShader: nodeFragmentShaderSource,
-                    blending: THREE.AdditiveBlending,
-                    depthTest: false,
-                    transparent: true
-                });
-            }
-            let sprite = new THREE.Mesh(new THREE.SphereGeometry(nodeRadius, 32, 32), NODEMATERIALS[node.color]);
+            let material = new THREE.ShaderMaterial({
+                uniforms: {
+                    uColor: {
+                        value: new THREE.Color(node.color)
+                    }
+                },
+                vertexShader: nodeVertexShaderSource,
+                fragmentShader: nodeFragmentShaderSource,
+                blending: THREE.AdditiveBlending,
+                depthTest: false,
+                transparent: true
+            });
+            let sprite = new THREE.Mesh(new THREE.SphereGeometry(nodeRadius, 32, 32), material);
             sprite.vid = node.id;
             sprite.name = node.name;
             sprite.vdata = node.data;
@@ -124,11 +122,13 @@ export default {
             state.webglScene.add(link.line = line);
         });
 
-        if (state.camera.position.x === 0 && state.camera.position.y === 0) {
-            // If camera still in default position (not user modified)
-            state.camera.position.z = Math.cbrt(state.graphData.length) * CAMERA_DISTANCE2NODES_FACTOR;
+        new TWEEN.Tween(state.camera.position).to({
+            x: 0,
+            y: 0,
+            z: Math.cbrt(state.graphData.length) * CAMERA_DISTANCE2NODES_FACTOR
+        }, 800).easing(TWEEN.Easing.Quadratic.InOut).on(() => {
             state.camera.lookAt(state.webglScene.position);
-        }
+        }).start();
 
         // Setup render DOM
         state.webglRenderer.domElement.style.display = 'block';
@@ -217,25 +217,22 @@ export default {
         // Update nodes style
         state.network.nodes.forEach(node => {
             let nodeRadius = NODE_BASE_SIZE * node.size;
-            if (!NODEMATERIALS.hasOwnProperty(node.color)) {
-                NODEMATERIALS[node.color] = new THREE.ShaderMaterial({
-                    uniforms: {
-                        uColor: {
-                            value: new THREE.Color(node.color)
-                        }
-                    },
-                    vertexShader: nodeVertexShaderSource,
-                    fragmentShader: nodeFragmentShaderSource,
-                    blending: THREE.AdditiveBlending,
-                    depthTest: false,
-                    transparent: true
-                });
-            }
-            node.sprite.geometry = new THREE.SphereGeometry(nodeRadius, 32, 32);
-            node.sprite.material = NODEMATERIALS[node.color];
+            let scaleRate = nodeRadius / node.sprite.geometry.parameters.radius;
+            new TWEEN.Tween(node.sprite.scale).to({
+                    x: scaleRate,
+                    y: scaleRate,
+                    z: scaleRate
+                }, 400)
+                .easing(TWEEN.Easing.Quadratic.InOut)
+                .start();
+
+            new TWEEN.Tween(node.sprite.material.uniforms.uColor.value)
+                .to(new THREE.Color(node.color), 400)
+                .easing(TWEEN.Easing.Quadratic.InOut)
+                .start();
+
             node.sprite.vid = node.id;
             node.sprite.name = node.name;
         });
-
     }
 };
