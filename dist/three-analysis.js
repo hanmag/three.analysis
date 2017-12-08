@@ -23,9 +23,7 @@ function __$styleInject(css, returnValue) {
   return returnValue;
 }
 
-__$styleInject(".graph-info-msg {\r\n    position: absolute;\r\n    top: calc(50% - 25px);\r\n    width: 100%;\r\n}\r\n\r\n.graph-tooltip {\r\n    position: absolute;\r\n    color: lavender;\r\n    font-size: 18px;\r\n    width: 100px;\r\n    line-height: 35px;\r\n    letter-spacing: 1px;\r\n    text-align: center;\r\n    overflow: hidden;\r\n    text-shadow: 0 0 4px white;\r\n    border-radius: 4px;\r\n    background: rgba(128, 128, 128, 0.45);\r\n}\r\n\r\n.loader-inner {\r\n    position: absolute;\r\n    left: calc(50% - 60px);\r\n    top: 0px;\r\n    width: 120px;\r\n}", undefined);
-
-__$styleInject("/**\n *\n * All animations must live in their own file\n * in the animations directory and be included\n * here.\n *\n */\n/**\n * Styles shared by multiple animations\n */\n/**\n * Dots\n */\n@-webkit-keyframes scale {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 1; }\n  45% {\n    -webkit-transform: scale(0.1);\n            transform: scale(0.1);\n    opacity: 0.7; }\n  80% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 1; } }\n@keyframes scale {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 1; }\n  45% {\n    -webkit-transform: scale(0.1);\n            transform: scale(0.1);\n    opacity: 0.7; }\n  80% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 1; } }\n\n.ball-pulse > div:nth-child(0) {\n  -webkit-animation: scale 0.75s -0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);\n          animation: scale 0.75s -0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }\n\n.ball-pulse > div:nth-child(1) {\n  -webkit-animation: scale 0.75s -0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);\n          animation: scale 0.75s -0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }\n\n.ball-pulse > div:nth-child(2) {\n  -webkit-animation: scale 0.75s -0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);\n          animation: scale 0.75s -0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }\n\n.ball-pulse > div:nth-child(3) {\n  -webkit-animation: scale 0.75s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);\n          animation: scale 0.75s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }\n\n.ball-pulse > div {\n  background-color: #fff;\n  width: 15px;\n  height: 15px;\n  border-radius: 100%;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  display: inline-block; }\n\n@-webkit-keyframes ball-pulse-sync {\n  33% {\n    -webkit-transform: translateY(10px);\n            transform: translateY(10px); }\n  66% {\n    -webkit-transform: translateY(-10px);\n            transform: translateY(-10px); }\n  100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0); } }\n\n@keyframes ball-pulse-sync {\n  33% {\n    -webkit-transform: translateY(10px);\n            transform: translateY(10px); }\n  66% {\n    -webkit-transform: translateY(-10px);\n            transform: translateY(-10px); }\n  100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0); } }\n\n.ball-pulse-sync > div:nth-child(0) {\n  -webkit-animation: ball-pulse-sync 0.6s -0.21s infinite ease-in-out;\n          animation: ball-pulse-sync 0.6s -0.21s infinite ease-in-out; }\n\n.ball-pulse-sync > div:nth-child(1) {\n  -webkit-animation: ball-pulse-sync 0.6s -0.14s infinite ease-in-out;\n          animation: ball-pulse-sync 0.6s -0.14s infinite ease-in-out; }\n\n.ball-pulse-sync > div:nth-child(2) {\n  -webkit-animation: ball-pulse-sync 0.6s -0.07s infinite ease-in-out;\n          animation: ball-pulse-sync 0.6s -0.07s infinite ease-in-out; }\n\n.ball-pulse-sync > div:nth-child(3) {\n  -webkit-animation: ball-pulse-sync 0.6s 0s infinite ease-in-out;\n          animation: ball-pulse-sync 0.6s 0s infinite ease-in-out; }\n\n.ball-pulse-sync > div {\n  background-color: #fff;\n  width: 15px;\n  height: 15px;\n  border-radius: 100%;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  display: inline-block; }\n\n@-webkit-keyframes ball-scale {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; } }\n\n@keyframes ball-scale {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; } }\n\n.ball-scale > div {\n  background-color: #fff;\n  width: 15px;\n  height: 15px;\n  border-radius: 100%;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  display: inline-block;\n  height: 60px;\n  width: 60px;\n  -webkit-animation: ball-scale 1s 0s ease-in-out infinite;\n          animation: ball-scale 1s 0s ease-in-out infinite; }\n\n@keyframes ball-scale {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; } }\n\n.ball-scale > div {\n  background-color: #fff;\n  width: 15px;\n  height: 15px;\n  border-radius: 100%;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  display: inline-block;\n  height: 60px;\n  width: 60px;\n  -webkit-animation: ball-scale 1s 0s ease-in-out infinite;\n          animation: ball-scale 1s 0s ease-in-out infinite; }\n\n.ball-scale-random {\n  width: 37px;\n  height: 40px; }\n  .ball-scale-random > div {\n    background-color: #fff;\n    width: 15px;\n    height: 15px;\n    border-radius: 100%;\n    margin: 2px;\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute;\n    display: inline-block;\n    height: 30px;\n    width: 30px;\n    -webkit-animation: ball-scale 1s 0s ease-in-out infinite;\n            animation: ball-scale 1s 0s ease-in-out infinite; }\n    .ball-scale-random > div:nth-child(1) {\n      margin-left: -7px;\n      -webkit-animation: ball-scale 1s 0.2s ease-in-out infinite;\n              animation: ball-scale 1s 0.2s ease-in-out infinite; }\n    .ball-scale-random > div:nth-child(3) {\n      margin-left: -2px;\n      margin-top: 9px;\n      -webkit-animation: ball-scale 1s 0.5s ease-in-out infinite;\n              animation: ball-scale 1s 0.5s ease-in-out infinite; }\n\n@-webkit-keyframes rotate {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  50% {\n    -webkit-transform: rotate(180deg);\n            transform: rotate(180deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n@keyframes rotate {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  50% {\n    -webkit-transform: rotate(180deg);\n            transform: rotate(180deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n.ball-rotate {\n  position: relative; }\n  .ball-rotate > div {\n    background-color: #fff;\n    width: 15px;\n    height: 15px;\n    border-radius: 100%;\n    margin: 2px;\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: relative; }\n    .ball-rotate > div:first-child {\n      -webkit-animation: rotate 1s 0s cubic-bezier(0.7, -0.13, 0.22, 0.86) infinite;\n              animation: rotate 1s 0s cubic-bezier(0.7, -0.13, 0.22, 0.86) infinite; }\n    .ball-rotate > div:before, .ball-rotate > div:after {\n      background-color: #fff;\n      width: 15px;\n      height: 15px;\n      border-radius: 100%;\n      margin: 2px;\n      content: \"\";\n      position: absolute;\n      opacity: 0.8; }\n    .ball-rotate > div:before {\n      top: 0px;\n      left: -28px; }\n    .ball-rotate > div:after {\n      top: 0px;\n      left: 25px; }\n\n@keyframes rotate {\n  0% {\n    -webkit-transform: rotate(0deg) scale(1);\n            transform: rotate(0deg) scale(1); }\n  50% {\n    -webkit-transform: rotate(180deg) scale(0.6);\n            transform: rotate(180deg) scale(0.6); }\n  100% {\n    -webkit-transform: rotate(360deg) scale(1);\n            transform: rotate(360deg) scale(1); } }\n\n.ball-clip-rotate > div {\n  background-color: #fff;\n  width: 15px;\n  height: 15px;\n  border-radius: 100%;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  border: 2px solid #fff;\n  border-bottom-color: transparent;\n  height: 25px;\n  width: 25px;\n  background: transparent !important;\n  display: inline-block;\n  -webkit-animation: rotate 0.75s 0s linear infinite;\n          animation: rotate 0.75s 0s linear infinite; }\n\n@keyframes rotate {\n  0% {\n    -webkit-transform: rotate(0deg) scale(1);\n            transform: rotate(0deg) scale(1); }\n  50% {\n    -webkit-transform: rotate(180deg) scale(0.6);\n            transform: rotate(180deg) scale(0.6); }\n  100% {\n    -webkit-transform: rotate(360deg) scale(1);\n            transform: rotate(360deg) scale(1); } }\n\n@keyframes scale {\n  30% {\n    -webkit-transform: scale(0.3);\n            transform: scale(0.3); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n.ball-clip-rotate-pulse {\n  position: relative;\n  -webkit-transform: translateY(-15px);\n      -ms-transform: translateY(-15px);\n          transform: translateY(-15px); }\n  .ball-clip-rotate-pulse > div {\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    border-radius: 100%; }\n    .ball-clip-rotate-pulse > div:first-child {\n      background: #fff;\n      height: 16px;\n      width: 16px;\n      top: 7px;\n      left: -7px;\n      -webkit-animation: scale 1s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;\n              animation: scale 1s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite; }\n    .ball-clip-rotate-pulse > div:last-child {\n      position: absolute;\n      border: 2px solid #fff;\n      width: 30px;\n      height: 30px;\n      left: -16px;\n      top: -2px;\n      background: transparent;\n      border: 2px solid;\n      border-color: #fff transparent #fff transparent;\n      -webkit-animation: rotate 1s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;\n              animation: rotate 1s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;\n      -webkit-animation-duration: 1s;\n              animation-duration: 1s; }\n\n@keyframes rotate {\n  0% {\n    -webkit-transform: rotate(0deg) scale(1);\n            transform: rotate(0deg) scale(1); }\n  50% {\n    -webkit-transform: rotate(180deg) scale(0.6);\n            transform: rotate(180deg) scale(0.6); }\n  100% {\n    -webkit-transform: rotate(360deg) scale(1);\n            transform: rotate(360deg) scale(1); } }\n\n.ball-clip-rotate-multiple {\n  position: relative; }\n  .ball-clip-rotate-multiple > div {\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute;\n    left: -20px;\n    top: -20px;\n    border: 2px solid #fff;\n    border-bottom-color: transparent;\n    border-top-color: transparent;\n    border-radius: 100%;\n    height: 35px;\n    width: 35px;\n    -webkit-animation: rotate 1s 0s ease-in-out infinite;\n            animation: rotate 1s 0s ease-in-out infinite; }\n    .ball-clip-rotate-multiple > div:last-child {\n      display: inline-block;\n      top: -10px;\n      left: -10px;\n      width: 15px;\n      height: 15px;\n      -webkit-animation-duration: 0.5s;\n              animation-duration: 0.5s;\n      border-color: #fff transparent #fff transparent;\n      -webkit-animation-direction: reverse;\n              animation-direction: reverse; }\n\n@-webkit-keyframes ball-scale-ripple {\n  0% {\n    -webkit-transform: scale(0.1);\n            transform: scale(0.1);\n    opacity: 1; }\n  70% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0.7; }\n  100% {\n    opacity: 0.0; } }\n\n@keyframes ball-scale-ripple {\n  0% {\n    -webkit-transform: scale(0.1);\n            transform: scale(0.1);\n    opacity: 1; }\n  70% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0.7; }\n  100% {\n    opacity: 0.0; } }\n\n.ball-scale-ripple > div {\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  height: 50px;\n  width: 50px;\n  border-radius: 100%;\n  border: 2px solid #fff;\n  -webkit-animation: ball-scale-ripple 1s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);\n          animation: ball-scale-ripple 1s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8); }\n\n@-webkit-keyframes ball-scale-ripple-multiple {\n  0% {\n    -webkit-transform: scale(0.1);\n            transform: scale(0.1);\n    opacity: 1; }\n  70% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0.7; }\n  100% {\n    opacity: 0.0; } }\n\n@keyframes ball-scale-ripple-multiple {\n  0% {\n    -webkit-transform: scale(0.1);\n            transform: scale(0.1);\n    opacity: 1; }\n  70% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0.7; }\n  100% {\n    opacity: 0.0; } }\n\n.ball-scale-ripple-multiple {\n  position: relative;\n  -webkit-transform: translateY(-25px);\n      -ms-transform: translateY(-25px);\n          transform: translateY(-25px); }\n  .ball-scale-ripple-multiple > div:nth-child(0) {\n    -webkit-animation-delay: -0.8s;\n            animation-delay: -0.8s; }\n  .ball-scale-ripple-multiple > div:nth-child(1) {\n    -webkit-animation-delay: -0.6s;\n            animation-delay: -0.6s; }\n  .ball-scale-ripple-multiple > div:nth-child(2) {\n    -webkit-animation-delay: -0.4s;\n            animation-delay: -0.4s; }\n  .ball-scale-ripple-multiple > div:nth-child(3) {\n    -webkit-animation-delay: -0.2s;\n            animation-delay: -0.2s; }\n  .ball-scale-ripple-multiple > div {\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute;\n    top: -2px;\n    left: -26px;\n    width: 50px;\n    height: 50px;\n    border-radius: 100%;\n    border: 2px solid #fff;\n    -webkit-animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);\n            animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8); }\n\n@-webkit-keyframes ball-beat {\n  50% {\n    opacity: 0.2;\n    -webkit-transform: scale(0.75);\n            transform: scale(0.75); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@keyframes ball-beat {\n  50% {\n    opacity: 0.2;\n    -webkit-transform: scale(0.75);\n            transform: scale(0.75); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n.ball-beat > div {\n  background-color: #fff;\n  width: 15px;\n  height: 15px;\n  border-radius: 100%;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  display: inline-block;\n  -webkit-animation: ball-beat 0.7s 0s infinite linear;\n          animation: ball-beat 0.7s 0s infinite linear; }\n  .ball-beat > div:nth-child(2n-1) {\n    -webkit-animation-delay: -0.35s !important;\n            animation-delay: -0.35s !important; }\n\n@-webkit-keyframes ball-scale-multiple {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    opacity: 0; }\n  5% {\n    opacity: 1; }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; } }\n\n@keyframes ball-scale-multiple {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    opacity: 0; }\n  5% {\n    opacity: 1; }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; } }\n\n.ball-scale-multiple {\n  position: relative;\n  -webkit-transform: translateY(-30px);\n      -ms-transform: translateY(-30px);\n          transform: translateY(-30px); }\n  .ball-scale-multiple > div:nth-child(2) {\n    -webkit-animation-delay: -0.4s;\n            animation-delay: -0.4s; }\n  .ball-scale-multiple > div:nth-child(3) {\n    -webkit-animation-delay: -0.2s;\n            animation-delay: -0.2s; }\n  .ball-scale-multiple > div {\n    background-color: #fff;\n    width: 15px;\n    height: 15px;\n    border-radius: 100%;\n    margin: 2px;\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute;\n    left: -30px;\n    top: 0px;\n    opacity: 0;\n    margin: 0;\n    width: 60px;\n    height: 60px;\n    -webkit-animation: ball-scale-multiple 1s 0s linear infinite;\n            animation: ball-scale-multiple 1s 0s linear infinite; }\n\n@-webkit-keyframes ball-triangle-path-1 {\n  33% {\n    -webkit-transform: translate(25px, -50px);\n            transform: translate(25px, -50px); }\n  66% {\n    -webkit-transform: translate(50px, 0px);\n            transform: translate(50px, 0px); }\n  100% {\n    -webkit-transform: translate(0px, 0px);\n            transform: translate(0px, 0px); } }\n\n@keyframes ball-triangle-path-1 {\n  33% {\n    -webkit-transform: translate(25px, -50px);\n            transform: translate(25px, -50px); }\n  66% {\n    -webkit-transform: translate(50px, 0px);\n            transform: translate(50px, 0px); }\n  100% {\n    -webkit-transform: translate(0px, 0px);\n            transform: translate(0px, 0px); } }\n\n@-webkit-keyframes ball-triangle-path-2 {\n  33% {\n    -webkit-transform: translate(25px, 50px);\n            transform: translate(25px, 50px); }\n  66% {\n    -webkit-transform: translate(-25px, 50px);\n            transform: translate(-25px, 50px); }\n  100% {\n    -webkit-transform: translate(0px, 0px);\n            transform: translate(0px, 0px); } }\n\n@keyframes ball-triangle-path-2 {\n  33% {\n    -webkit-transform: translate(25px, 50px);\n            transform: translate(25px, 50px); }\n  66% {\n    -webkit-transform: translate(-25px, 50px);\n            transform: translate(-25px, 50px); }\n  100% {\n    -webkit-transform: translate(0px, 0px);\n            transform: translate(0px, 0px); } }\n\n@-webkit-keyframes ball-triangle-path-3 {\n  33% {\n    -webkit-transform: translate(-50px, 0px);\n            transform: translate(-50px, 0px); }\n  66% {\n    -webkit-transform: translate(-25px, -50px);\n            transform: translate(-25px, -50px); }\n  100% {\n    -webkit-transform: translate(0px, 0px);\n            transform: translate(0px, 0px); } }\n\n@keyframes ball-triangle-path-3 {\n  33% {\n    -webkit-transform: translate(-50px, 0px);\n            transform: translate(-50px, 0px); }\n  66% {\n    -webkit-transform: translate(-25px, -50px);\n            transform: translate(-25px, -50px); }\n  100% {\n    -webkit-transform: translate(0px, 0px);\n            transform: translate(0px, 0px); } }\n\n.ball-triangle-path {\n  position: relative;\n  -webkit-transform: translate(-29.994px, -37.50938px);\n      -ms-transform: translate(-29.994px, -37.50938px);\n          transform: translate(-29.994px, -37.50938px); }\n  .ball-triangle-path > div:nth-child(1) {\n    -webkit-animation-name: ball-triangle-path-1;\n            animation-name: ball-triangle-path-1;\n    -webkit-animation-delay: 0;\n            animation-delay: 0;\n    -webkit-animation-duration: 2s;\n            animation-duration: 2s;\n    -webkit-animation-timing-function: ease-in-out;\n            animation-timing-function: ease-in-out;\n    -webkit-animation-iteration-count: infinite;\n            animation-iteration-count: infinite; }\n  .ball-triangle-path > div:nth-child(2) {\n    -webkit-animation-name: ball-triangle-path-2;\n            animation-name: ball-triangle-path-2;\n    -webkit-animation-delay: 0;\n            animation-delay: 0;\n    -webkit-animation-duration: 2s;\n            animation-duration: 2s;\n    -webkit-animation-timing-function: ease-in-out;\n            animation-timing-function: ease-in-out;\n    -webkit-animation-iteration-count: infinite;\n            animation-iteration-count: infinite; }\n  .ball-triangle-path > div:nth-child(3) {\n    -webkit-animation-name: ball-triangle-path-3;\n            animation-name: ball-triangle-path-3;\n    -webkit-animation-delay: 0;\n            animation-delay: 0;\n    -webkit-animation-duration: 2s;\n            animation-duration: 2s;\n    -webkit-animation-timing-function: ease-in-out;\n            animation-timing-function: ease-in-out;\n    -webkit-animation-iteration-count: infinite;\n            animation-iteration-count: infinite; }\n  .ball-triangle-path > div {\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 100%;\n    border: 1px solid #fff; }\n    .ball-triangle-path > div:nth-of-type(1) {\n      top: 50px; }\n    .ball-triangle-path > div:nth-of-type(2) {\n      left: 25px; }\n    .ball-triangle-path > div:nth-of-type(3) {\n      top: 50px;\n      left: 50px; }\n\n@-webkit-keyframes ball-pulse-rise-even {\n  0% {\n    -webkit-transform: scale(1.1);\n            transform: scale(1.1); }\n  25% {\n    -webkit-transform: translateY(-30px);\n            transform: translateY(-30px); }\n  50% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4); }\n  75% {\n    -webkit-transform: translateY(30px);\n            transform: translateY(30px); }\n  100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@keyframes ball-pulse-rise-even {\n  0% {\n    -webkit-transform: scale(1.1);\n            transform: scale(1.1); }\n  25% {\n    -webkit-transform: translateY(-30px);\n            transform: translateY(-30px); }\n  50% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4); }\n  75% {\n    -webkit-transform: translateY(30px);\n            transform: translateY(30px); }\n  100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@-webkit-keyframes ball-pulse-rise-odd {\n  0% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4); }\n  25% {\n    -webkit-transform: translateY(30px);\n            transform: translateY(30px); }\n  50% {\n    -webkit-transform: scale(1.1);\n            transform: scale(1.1); }\n  75% {\n    -webkit-transform: translateY(-30px);\n            transform: translateY(-30px); }\n  100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    -webkit-transform: scale(0.75);\n            transform: scale(0.75); } }\n\n@keyframes ball-pulse-rise-odd {\n  0% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4); }\n  25% {\n    -webkit-transform: translateY(30px);\n            transform: translateY(30px); }\n  50% {\n    -webkit-transform: scale(1.1);\n            transform: scale(1.1); }\n  75% {\n    -webkit-transform: translateY(-30px);\n            transform: translateY(-30px); }\n  100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    -webkit-transform: scale(0.75);\n            transform: scale(0.75); } }\n\n.ball-pulse-rise > div {\n  background-color: #fff;\n  width: 15px;\n  height: 15px;\n  border-radius: 100%;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  display: inline-block;\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s;\n  -webkit-animation-timing-function: cubic-bezier(0.15, 0.46, 0.9, 0.6);\n          animation-timing-function: cubic-bezier(0.15, 0.46, 0.9, 0.6);\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n  -webkit-animation-delay: 0;\n          animation-delay: 0; }\n  .ball-pulse-rise > div:nth-child(2n) {\n    -webkit-animation-name: ball-pulse-rise-even;\n            animation-name: ball-pulse-rise-even; }\n  .ball-pulse-rise > div:nth-child(2n-1) {\n    -webkit-animation-name: ball-pulse-rise-odd;\n            animation-name: ball-pulse-rise-odd; }\n\n@-webkit-keyframes ball-grid-beat {\n  50% {\n    opacity: 0.7; }\n  100% {\n    opacity: 1; } }\n\n@keyframes ball-grid-beat {\n  50% {\n    opacity: 0.7; }\n  100% {\n    opacity: 1; } }\n\n.ball-grid-beat {\n  width: 57px; }\n  .ball-grid-beat > div:nth-child(1) {\n    -webkit-animation-delay: 0.44s;\n            animation-delay: 0.44s;\n    -webkit-animation-duration: 1.27s;\n            animation-duration: 1.27s; }\n  .ball-grid-beat > div:nth-child(2) {\n    -webkit-animation-delay: 0.2s;\n            animation-delay: 0.2s;\n    -webkit-animation-duration: 1.52s;\n            animation-duration: 1.52s; }\n  .ball-grid-beat > div:nth-child(3) {\n    -webkit-animation-delay: 0.14s;\n            animation-delay: 0.14s;\n    -webkit-animation-duration: 0.61s;\n            animation-duration: 0.61s; }\n  .ball-grid-beat > div:nth-child(4) {\n    -webkit-animation-delay: 0.15s;\n            animation-delay: 0.15s;\n    -webkit-animation-duration: 0.82s;\n            animation-duration: 0.82s; }\n  .ball-grid-beat > div:nth-child(5) {\n    -webkit-animation-delay: -0.01s;\n            animation-delay: -0.01s;\n    -webkit-animation-duration: 1.24s;\n            animation-duration: 1.24s; }\n  .ball-grid-beat > div:nth-child(6) {\n    -webkit-animation-delay: -0.07s;\n            animation-delay: -0.07s;\n    -webkit-animation-duration: 1.35s;\n            animation-duration: 1.35s; }\n  .ball-grid-beat > div:nth-child(7) {\n    -webkit-animation-delay: 0.29s;\n            animation-delay: 0.29s;\n    -webkit-animation-duration: 1.44s;\n            animation-duration: 1.44s; }\n  .ball-grid-beat > div:nth-child(8) {\n    -webkit-animation-delay: 0.63s;\n            animation-delay: 0.63s;\n    -webkit-animation-duration: 1.19s;\n            animation-duration: 1.19s; }\n  .ball-grid-beat > div:nth-child(9) {\n    -webkit-animation-delay: -0.18s;\n            animation-delay: -0.18s;\n    -webkit-animation-duration: 1.48s;\n            animation-duration: 1.48s; }\n  .ball-grid-beat > div {\n    background-color: #fff;\n    width: 15px;\n    height: 15px;\n    border-radius: 100%;\n    margin: 2px;\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    display: inline-block;\n    float: left;\n    -webkit-animation-name: ball-grid-beat;\n            animation-name: ball-grid-beat;\n    -webkit-animation-iteration-count: infinite;\n            animation-iteration-count: infinite;\n    -webkit-animation-delay: 0;\n            animation-delay: 0; }\n\n@-webkit-keyframes ball-grid-pulse {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1); }\n  50% {\n    -webkit-transform: scale(0.5);\n            transform: scale(0.5);\n    opacity: 0.7; }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 1; } }\n\n@keyframes ball-grid-pulse {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1); }\n  50% {\n    -webkit-transform: scale(0.5);\n            transform: scale(0.5);\n    opacity: 0.7; }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 1; } }\n\n.ball-grid-pulse {\n  width: 57px; }\n  .ball-grid-pulse > div:nth-child(1) {\n    -webkit-animation-delay: 0.58s;\n            animation-delay: 0.58s;\n    -webkit-animation-duration: 0.9s;\n            animation-duration: 0.9s; }\n  .ball-grid-pulse > div:nth-child(2) {\n    -webkit-animation-delay: 0.01s;\n            animation-delay: 0.01s;\n    -webkit-animation-duration: 0.94s;\n            animation-duration: 0.94s; }\n  .ball-grid-pulse > div:nth-child(3) {\n    -webkit-animation-delay: 0.25s;\n            animation-delay: 0.25s;\n    -webkit-animation-duration: 1.43s;\n            animation-duration: 1.43s; }\n  .ball-grid-pulse > div:nth-child(4) {\n    -webkit-animation-delay: -0.03s;\n            animation-delay: -0.03s;\n    -webkit-animation-duration: 0.74s;\n            animation-duration: 0.74s; }\n  .ball-grid-pulse > div:nth-child(5) {\n    -webkit-animation-delay: 0.21s;\n            animation-delay: 0.21s;\n    -webkit-animation-duration: 0.68s;\n            animation-duration: 0.68s; }\n  .ball-grid-pulse > div:nth-child(6) {\n    -webkit-animation-delay: 0.25s;\n            animation-delay: 0.25s;\n    -webkit-animation-duration: 1.17s;\n            animation-duration: 1.17s; }\n  .ball-grid-pulse > div:nth-child(7) {\n    -webkit-animation-delay: 0.46s;\n            animation-delay: 0.46s;\n    -webkit-animation-duration: 1.41s;\n            animation-duration: 1.41s; }\n  .ball-grid-pulse > div:nth-child(8) {\n    -webkit-animation-delay: 0.02s;\n            animation-delay: 0.02s;\n    -webkit-animation-duration: 1.56s;\n            animation-duration: 1.56s; }\n  .ball-grid-pulse > div:nth-child(9) {\n    -webkit-animation-delay: 0.13s;\n            animation-delay: 0.13s;\n    -webkit-animation-duration: 0.78s;\n            animation-duration: 0.78s; }\n  .ball-grid-pulse > div {\n    background-color: #fff;\n    width: 15px;\n    height: 15px;\n    border-radius: 100%;\n    margin: 2px;\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    display: inline-block;\n    float: left;\n    -webkit-animation-name: ball-grid-pulse;\n            animation-name: ball-grid-pulse;\n    -webkit-animation-iteration-count: infinite;\n            animation-iteration-count: infinite;\n    -webkit-animation-delay: 0;\n            animation-delay: 0; }\n\n@-webkit-keyframes ball-spin-fade-loader {\n  50% {\n    opacity: 0.3;\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@keyframes ball-spin-fade-loader {\n  50% {\n    opacity: 0.3;\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n.ball-spin-fade-loader {\n  position: relative;\n  top: -10px;\n  left: -10px; }\n  .ball-spin-fade-loader > div:nth-child(1) {\n    top: 25px;\n    left: 0;\n    -webkit-animation: ball-spin-fade-loader 1s -0.96s infinite linear;\n            animation: ball-spin-fade-loader 1s -0.96s infinite linear; }\n  .ball-spin-fade-loader > div:nth-child(2) {\n    top: 17.04545px;\n    left: 17.04545px;\n    -webkit-animation: ball-spin-fade-loader 1s -0.84s infinite linear;\n            animation: ball-spin-fade-loader 1s -0.84s infinite linear; }\n  .ball-spin-fade-loader > div:nth-child(3) {\n    top: 0;\n    left: 25px;\n    -webkit-animation: ball-spin-fade-loader 1s -0.72s infinite linear;\n            animation: ball-spin-fade-loader 1s -0.72s infinite linear; }\n  .ball-spin-fade-loader > div:nth-child(4) {\n    top: -17.04545px;\n    left: 17.04545px;\n    -webkit-animation: ball-spin-fade-loader 1s -0.6s infinite linear;\n            animation: ball-spin-fade-loader 1s -0.6s infinite linear; }\n  .ball-spin-fade-loader > div:nth-child(5) {\n    top: -25px;\n    left: 0;\n    -webkit-animation: ball-spin-fade-loader 1s -0.48s infinite linear;\n            animation: ball-spin-fade-loader 1s -0.48s infinite linear; }\n  .ball-spin-fade-loader > div:nth-child(6) {\n    top: -17.04545px;\n    left: -17.04545px;\n    -webkit-animation: ball-spin-fade-loader 1s -0.36s infinite linear;\n            animation: ball-spin-fade-loader 1s -0.36s infinite linear; }\n  .ball-spin-fade-loader > div:nth-child(7) {\n    top: 0;\n    left: -25px;\n    -webkit-animation: ball-spin-fade-loader 1s -0.24s infinite linear;\n            animation: ball-spin-fade-loader 1s -0.24s infinite linear; }\n  .ball-spin-fade-loader > div:nth-child(8) {\n    top: 17.04545px;\n    left: -17.04545px;\n    -webkit-animation: ball-spin-fade-loader 1s -0.12s infinite linear;\n            animation: ball-spin-fade-loader 1s -0.12s infinite linear; }\n  .ball-spin-fade-loader > div {\n    background-color: #fff;\n    width: 15px;\n    height: 15px;\n    border-radius: 100%;\n    margin: 2px;\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute; }\n\n@-webkit-keyframes ball-spin-loader {\n  75% {\n    opacity: 0.2; }\n  100% {\n    opacity: 1; } }\n\n@keyframes ball-spin-loader {\n  75% {\n    opacity: 0.2; }\n  100% {\n    opacity: 1; } }\n\n.ball-spin-loader {\n  position: relative; }\n  .ball-spin-loader > span:nth-child(1) {\n    top: 45px;\n    left: 0;\n    -webkit-animation: ball-spin-loader 2s 0.9s infinite linear;\n            animation: ball-spin-loader 2s 0.9s infinite linear; }\n  .ball-spin-loader > span:nth-child(2) {\n    top: 30.68182px;\n    left: 30.68182px;\n    -webkit-animation: ball-spin-loader 2s 1.8s infinite linear;\n            animation: ball-spin-loader 2s 1.8s infinite linear; }\n  .ball-spin-loader > span:nth-child(3) {\n    top: 0;\n    left: 45px;\n    -webkit-animation: ball-spin-loader 2s 2.7s infinite linear;\n            animation: ball-spin-loader 2s 2.7s infinite linear; }\n  .ball-spin-loader > span:nth-child(4) {\n    top: -30.68182px;\n    left: 30.68182px;\n    -webkit-animation: ball-spin-loader 2s 3.6s infinite linear;\n            animation: ball-spin-loader 2s 3.6s infinite linear; }\n  .ball-spin-loader > span:nth-child(5) {\n    top: -45px;\n    left: 0;\n    -webkit-animation: ball-spin-loader 2s 4.5s infinite linear;\n            animation: ball-spin-loader 2s 4.5s infinite linear; }\n  .ball-spin-loader > span:nth-child(6) {\n    top: -30.68182px;\n    left: -30.68182px;\n    -webkit-animation: ball-spin-loader 2s 5.4s infinite linear;\n            animation: ball-spin-loader 2s 5.4s infinite linear; }\n  .ball-spin-loader > span:nth-child(7) {\n    top: 0;\n    left: -45px;\n    -webkit-animation: ball-spin-loader 2s 6.3s infinite linear;\n            animation: ball-spin-loader 2s 6.3s infinite linear; }\n  .ball-spin-loader > span:nth-child(8) {\n    top: 30.68182px;\n    left: -30.68182px;\n    -webkit-animation: ball-spin-loader 2s 7.2s infinite linear;\n            animation: ball-spin-loader 2s 7.2s infinite linear; }\n  .ball-spin-loader > div {\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute;\n    width: 15px;\n    height: 15px;\n    border-radius: 100%;\n    background: green; }\n\n@-webkit-keyframes ball-zig {\n  33% {\n    -webkit-transform: translate(-15px, -30px);\n            transform: translate(-15px, -30px); }\n  66% {\n    -webkit-transform: translate(15px, -30px);\n            transform: translate(15px, -30px); }\n  100% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); } }\n\n@keyframes ball-zig {\n  33% {\n    -webkit-transform: translate(-15px, -30px);\n            transform: translate(-15px, -30px); }\n  66% {\n    -webkit-transform: translate(15px, -30px);\n            transform: translate(15px, -30px); }\n  100% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); } }\n\n@-webkit-keyframes ball-zag {\n  33% {\n    -webkit-transform: translate(15px, 30px);\n            transform: translate(15px, 30px); }\n  66% {\n    -webkit-transform: translate(-15px, 30px);\n            transform: translate(-15px, 30px); }\n  100% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); } }\n\n@keyframes ball-zag {\n  33% {\n    -webkit-transform: translate(15px, 30px);\n            transform: translate(15px, 30px); }\n  66% {\n    -webkit-transform: translate(-15px, 30px);\n            transform: translate(-15px, 30px); }\n  100% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); } }\n\n.ball-zig-zag {\n  position: relative;\n  -webkit-transform: translate(-15px, -15px);\n      -ms-transform: translate(-15px, -15px);\n          transform: translate(-15px, -15px); }\n  .ball-zig-zag > div {\n    background-color: #fff;\n    width: 15px;\n    height: 15px;\n    border-radius: 100%;\n    margin: 2px;\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute;\n    margin-left: 15px;\n    top: 4px;\n    left: -7px; }\n    .ball-zig-zag > div:first-child {\n      -webkit-animation: ball-zig 0.7s 0s infinite linear;\n              animation: ball-zig 0.7s 0s infinite linear; }\n    .ball-zig-zag > div:last-child {\n      -webkit-animation: ball-zag 0.7s 0s infinite linear;\n              animation: ball-zag 0.7s 0s infinite linear; }\n\n@-webkit-keyframes ball-zig-deflect {\n  17% {\n    -webkit-transform: translate(-15px, -30px);\n            transform: translate(-15px, -30px); }\n  34% {\n    -webkit-transform: translate(15px, -30px);\n            transform: translate(15px, -30px); }\n  50% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); }\n  67% {\n    -webkit-transform: translate(15px, -30px);\n            transform: translate(15px, -30px); }\n  84% {\n    -webkit-transform: translate(-15px, -30px);\n            transform: translate(-15px, -30px); }\n  100% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); } }\n\n@keyframes ball-zig-deflect {\n  17% {\n    -webkit-transform: translate(-15px, -30px);\n            transform: translate(-15px, -30px); }\n  34% {\n    -webkit-transform: translate(15px, -30px);\n            transform: translate(15px, -30px); }\n  50% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); }\n  67% {\n    -webkit-transform: translate(15px, -30px);\n            transform: translate(15px, -30px); }\n  84% {\n    -webkit-transform: translate(-15px, -30px);\n            transform: translate(-15px, -30px); }\n  100% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); } }\n\n@-webkit-keyframes ball-zag-deflect {\n  17% {\n    -webkit-transform: translate(15px, 30px);\n            transform: translate(15px, 30px); }\n  34% {\n    -webkit-transform: translate(-15px, 30px);\n            transform: translate(-15px, 30px); }\n  50% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); }\n  67% {\n    -webkit-transform: translate(-15px, 30px);\n            transform: translate(-15px, 30px); }\n  84% {\n    -webkit-transform: translate(15px, 30px);\n            transform: translate(15px, 30px); }\n  100% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); } }\n\n@keyframes ball-zag-deflect {\n  17% {\n    -webkit-transform: translate(15px, 30px);\n            transform: translate(15px, 30px); }\n  34% {\n    -webkit-transform: translate(-15px, 30px);\n            transform: translate(-15px, 30px); }\n  50% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); }\n  67% {\n    -webkit-transform: translate(-15px, 30px);\n            transform: translate(-15px, 30px); }\n  84% {\n    -webkit-transform: translate(15px, 30px);\n            transform: translate(15px, 30px); }\n  100% {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); } }\n\n.ball-zig-zag-deflect {\n  position: relative;\n  -webkit-transform: translate(-15px, -15px);\n      -ms-transform: translate(-15px, -15px);\n          transform: translate(-15px, -15px); }\n  .ball-zig-zag-deflect > div {\n    background-color: #fff;\n    width: 15px;\n    height: 15px;\n    border-radius: 100%;\n    margin: 2px;\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute;\n    margin-left: 15px;\n    top: 4px;\n    left: -7px; }\n    .ball-zig-zag-deflect > div:first-child {\n      -webkit-animation: ball-zig-deflect 1.5s 0s infinite linear;\n              animation: ball-zig-deflect 1.5s 0s infinite linear; }\n    .ball-zig-zag-deflect > div:last-child {\n      -webkit-animation: ball-zag-deflect 1.5s 0s infinite linear;\n              animation: ball-zag-deflect 1.5s 0s infinite linear; }\n\n/**\n * Lines\n */\n@-webkit-keyframes line-scale {\n  0% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); }\n  50% {\n    -webkit-transform: scaley(0.4);\n            transform: scaley(0.4); }\n  100% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); } }\n@keyframes line-scale {\n  0% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); }\n  50% {\n    -webkit-transform: scaley(0.4);\n            transform: scaley(0.4); }\n  100% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); } }\n\n.line-scale > div:nth-child(1) {\n  -webkit-animation: line-scale 1s -0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);\n          animation: line-scale 1s -0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }\n\n.line-scale > div:nth-child(2) {\n  -webkit-animation: line-scale 1s -0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);\n          animation: line-scale 1s -0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }\n\n.line-scale > div:nth-child(3) {\n  -webkit-animation: line-scale 1s -0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);\n          animation: line-scale 1s -0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }\n\n.line-scale > div:nth-child(4) {\n  -webkit-animation: line-scale 1s -0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);\n          animation: line-scale 1s -0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }\n\n.line-scale > div:nth-child(5) {\n  -webkit-animation: line-scale 1s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);\n          animation: line-scale 1s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }\n\n.line-scale > div {\n  background-color: #fff;\n  width: 4px;\n  height: 35px;\n  border-radius: 2px;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  display: inline-block; }\n\n@-webkit-keyframes line-scale-party {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1); }\n  50% {\n    -webkit-transform: scale(0.5);\n            transform: scale(0.5); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@keyframes line-scale-party {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1); }\n  50% {\n    -webkit-transform: scale(0.5);\n            transform: scale(0.5); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n.line-scale-party > div:nth-child(1) {\n  -webkit-animation-delay: -0.09s;\n          animation-delay: -0.09s;\n  -webkit-animation-duration: 0.83s;\n          animation-duration: 0.83s; }\n\n.line-scale-party > div:nth-child(2) {\n  -webkit-animation-delay: 0.33s;\n          animation-delay: 0.33s;\n  -webkit-animation-duration: 0.64s;\n          animation-duration: 0.64s; }\n\n.line-scale-party > div:nth-child(3) {\n  -webkit-animation-delay: 0.32s;\n          animation-delay: 0.32s;\n  -webkit-animation-duration: 0.39s;\n          animation-duration: 0.39s; }\n\n.line-scale-party > div:nth-child(4) {\n  -webkit-animation-delay: 0.47s;\n          animation-delay: 0.47s;\n  -webkit-animation-duration: 0.52s;\n          animation-duration: 0.52s; }\n\n.line-scale-party > div {\n  background-color: #fff;\n  width: 4px;\n  height: 35px;\n  border-radius: 2px;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  display: inline-block;\n  -webkit-animation-name: line-scale-party;\n          animation-name: line-scale-party;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n  -webkit-animation-delay: 0;\n          animation-delay: 0; }\n\n@-webkit-keyframes line-scale-pulse-out {\n  0% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); }\n  50% {\n    -webkit-transform: scaley(0.4);\n            transform: scaley(0.4); }\n  100% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); } }\n\n@keyframes line-scale-pulse-out {\n  0% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); }\n  50% {\n    -webkit-transform: scaley(0.4);\n            transform: scaley(0.4); }\n  100% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); } }\n\n.line-scale-pulse-out > div {\n  background-color: #fff;\n  width: 4px;\n  height: 35px;\n  border-radius: 2px;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  display: inline-block;\n  -webkit-animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);\n          animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85); }\n  .line-scale-pulse-out > div:nth-child(2), .line-scale-pulse-out > div:nth-child(4) {\n    -webkit-animation-delay: -0.4s !important;\n            animation-delay: -0.4s !important; }\n  .line-scale-pulse-out > div:nth-child(1), .line-scale-pulse-out > div:nth-child(5) {\n    -webkit-animation-delay: -0.2s !important;\n            animation-delay: -0.2s !important; }\n\n@-webkit-keyframes line-scale-pulse-out-rapid {\n  0% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); }\n  80% {\n    -webkit-transform: scaley(0.3);\n            transform: scaley(0.3); }\n  90% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); } }\n\n@keyframes line-scale-pulse-out-rapid {\n  0% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); }\n  80% {\n    -webkit-transform: scaley(0.3);\n            transform: scaley(0.3); }\n  90% {\n    -webkit-transform: scaley(1);\n            transform: scaley(1); } }\n\n.line-scale-pulse-out-rapid > div {\n  background-color: #fff;\n  width: 4px;\n  height: 35px;\n  border-radius: 2px;\n  margin: 2px;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  display: inline-block;\n  -webkit-animation: line-scale-pulse-out-rapid 0.9s -0.5s infinite cubic-bezier(0.11, 0.49, 0.38, 0.78);\n          animation: line-scale-pulse-out-rapid 0.9s -0.5s infinite cubic-bezier(0.11, 0.49, 0.38, 0.78); }\n  .line-scale-pulse-out-rapid > div:nth-child(2), .line-scale-pulse-out-rapid > div:nth-child(4) {\n    -webkit-animation-delay: -0.25s !important;\n            animation-delay: -0.25s !important; }\n  .line-scale-pulse-out-rapid > div:nth-child(1), .line-scale-pulse-out-rapid > div:nth-child(5) {\n    -webkit-animation-delay: 0s !important;\n            animation-delay: 0s !important; }\n\n@-webkit-keyframes line-spin-fade-loader {\n  50% {\n    opacity: 0.3; }\n  100% {\n    opacity: 1; } }\n\n@keyframes line-spin-fade-loader {\n  50% {\n    opacity: 0.3; }\n  100% {\n    opacity: 1; } }\n\n.line-spin-fade-loader {\n  position: relative;\n  top: -10px;\n  left: -4px; }\n  .line-spin-fade-loader > div:nth-child(1) {\n    top: 20px;\n    left: 0;\n    -webkit-animation: line-spin-fade-loader 1.2s -0.84s infinite ease-in-out;\n            animation: line-spin-fade-loader 1.2s -0.84s infinite ease-in-out; }\n  .line-spin-fade-loader > div:nth-child(2) {\n    top: 13.63636px;\n    left: 13.63636px;\n    -webkit-transform: rotate(-45deg);\n        -ms-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n    -webkit-animation: line-spin-fade-loader 1.2s -0.72s infinite ease-in-out;\n            animation: line-spin-fade-loader 1.2s -0.72s infinite ease-in-out; }\n  .line-spin-fade-loader > div:nth-child(3) {\n    top: 0;\n    left: 20px;\n    -webkit-transform: rotate(90deg);\n        -ms-transform: rotate(90deg);\n            transform: rotate(90deg);\n    -webkit-animation: line-spin-fade-loader 1.2s -0.6s infinite ease-in-out;\n            animation: line-spin-fade-loader 1.2s -0.6s infinite ease-in-out; }\n  .line-spin-fade-loader > div:nth-child(4) {\n    top: -13.63636px;\n    left: 13.63636px;\n    -webkit-transform: rotate(45deg);\n        -ms-transform: rotate(45deg);\n            transform: rotate(45deg);\n    -webkit-animation: line-spin-fade-loader 1.2s -0.48s infinite ease-in-out;\n            animation: line-spin-fade-loader 1.2s -0.48s infinite ease-in-out; }\n  .line-spin-fade-loader > div:nth-child(5) {\n    top: -20px;\n    left: 0;\n    -webkit-animation: line-spin-fade-loader 1.2s -0.36s infinite ease-in-out;\n            animation: line-spin-fade-loader 1.2s -0.36s infinite ease-in-out; }\n  .line-spin-fade-loader > div:nth-child(6) {\n    top: -13.63636px;\n    left: -13.63636px;\n    -webkit-transform: rotate(-45deg);\n        -ms-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n    -webkit-animation: line-spin-fade-loader 1.2s -0.24s infinite ease-in-out;\n            animation: line-spin-fade-loader 1.2s -0.24s infinite ease-in-out; }\n  .line-spin-fade-loader > div:nth-child(7) {\n    top: 0;\n    left: -20px;\n    -webkit-transform: rotate(90deg);\n        -ms-transform: rotate(90deg);\n            transform: rotate(90deg);\n    -webkit-animation: line-spin-fade-loader 1.2s -0.12s infinite ease-in-out;\n            animation: line-spin-fade-loader 1.2s -0.12s infinite ease-in-out; }\n  .line-spin-fade-loader > div:nth-child(8) {\n    top: 13.63636px;\n    left: -13.63636px;\n    -webkit-transform: rotate(45deg);\n        -ms-transform: rotate(45deg);\n            transform: rotate(45deg);\n    -webkit-animation: line-spin-fade-loader 1.2s 0s infinite ease-in-out;\n            animation: line-spin-fade-loader 1.2s 0s infinite ease-in-out; }\n  .line-spin-fade-loader > div {\n    background-color: #fff;\n    width: 4px;\n    height: 35px;\n    border-radius: 2px;\n    margin: 2px;\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    position: absolute;\n    width: 5px;\n    height: 15px; }\n\n/**\n * Misc\n */\n@-webkit-keyframes triangle-skew-spin {\n  25% {\n    -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);\n            transform: perspective(100px) rotateX(180deg) rotateY(0); }\n  50% {\n    -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);\n            transform: perspective(100px) rotateX(180deg) rotateY(180deg); }\n  75% {\n    -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);\n            transform: perspective(100px) rotateX(0) rotateY(180deg); }\n  100% {\n    -webkit-transform: perspective(100px) rotateX(0) rotateY(0);\n            transform: perspective(100px) rotateX(0) rotateY(0); } }\n@keyframes triangle-skew-spin {\n  25% {\n    -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);\n            transform: perspective(100px) rotateX(180deg) rotateY(0); }\n  50% {\n    -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);\n            transform: perspective(100px) rotateX(180deg) rotateY(180deg); }\n  75% {\n    -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);\n            transform: perspective(100px) rotateX(0) rotateY(180deg); }\n  100% {\n    -webkit-transform: perspective(100px) rotateX(0) rotateY(0);\n            transform: perspective(100px) rotateX(0) rotateY(0); } }\n\n.triangle-skew-spin > div {\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  width: 0;\n  height: 0;\n  border-left: 20px solid transparent;\n  border-right: 20px solid transparent;\n  border-bottom: 20px solid #fff;\n  -webkit-animation: triangle-skew-spin 3s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;\n          animation: triangle-skew-spin 3s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite; }\n\n@-webkit-keyframes square-spin {\n  25% {\n    -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);\n            transform: perspective(100px) rotateX(180deg) rotateY(0); }\n  50% {\n    -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);\n            transform: perspective(100px) rotateX(180deg) rotateY(180deg); }\n  75% {\n    -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);\n            transform: perspective(100px) rotateX(0) rotateY(180deg); }\n  100% {\n    -webkit-transform: perspective(100px) rotateX(0) rotateY(0);\n            transform: perspective(100px) rotateX(0) rotateY(0); } }\n\n@keyframes square-spin {\n  25% {\n    -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);\n            transform: perspective(100px) rotateX(180deg) rotateY(0); }\n  50% {\n    -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);\n            transform: perspective(100px) rotateX(180deg) rotateY(180deg); }\n  75% {\n    -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);\n            transform: perspective(100px) rotateX(0) rotateY(180deg); }\n  100% {\n    -webkit-transform: perspective(100px) rotateX(0) rotateY(0);\n            transform: perspective(100px) rotateX(0) rotateY(0); } }\n\n.square-spin > div {\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  width: 50px;\n  height: 50px;\n  background: #fff;\n  border: 1px solid red;\n  -webkit-animation: square-spin 3s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;\n          animation: square-spin 3s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite; }\n\n@-webkit-keyframes rotate_pacman_half_up {\n  0% {\n    -webkit-transform: rotate(270deg);\n            transform: rotate(270deg); }\n  50% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); }\n  100% {\n    -webkit-transform: rotate(270deg);\n            transform: rotate(270deg); } }\n\n@keyframes rotate_pacman_half_up {\n  0% {\n    -webkit-transform: rotate(270deg);\n            transform: rotate(270deg); }\n  50% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); }\n  100% {\n    -webkit-transform: rotate(270deg);\n            transform: rotate(270deg); } }\n\n@-webkit-keyframes rotate_pacman_half_down {\n  0% {\n    -webkit-transform: rotate(90deg);\n            transform: rotate(90deg); }\n  50% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(90deg);\n            transform: rotate(90deg); } }\n\n@keyframes rotate_pacman_half_down {\n  0% {\n    -webkit-transform: rotate(90deg);\n            transform: rotate(90deg); }\n  50% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(90deg);\n            transform: rotate(90deg); } }\n\n@-webkit-keyframes pacman-balls {\n  75% {\n    opacity: 0.7; }\n  100% {\n    -webkit-transform: translate(-100px, -6.25px);\n            transform: translate(-100px, -6.25px); } }\n\n@keyframes pacman-balls {\n  75% {\n    opacity: 0.7; }\n  100% {\n    -webkit-transform: translate(-100px, -6.25px);\n            transform: translate(-100px, -6.25px); } }\n\n.pacman {\n  position: relative; }\n  .pacman > div:nth-child(2) {\n    -webkit-animation: pacman-balls 1s -0.99s infinite linear;\n            animation: pacman-balls 1s -0.99s infinite linear; }\n  .pacman > div:nth-child(3) {\n    -webkit-animation: pacman-balls 1s -0.66s infinite linear;\n            animation: pacman-balls 1s -0.66s infinite linear; }\n  .pacman > div:nth-child(4) {\n    -webkit-animation: pacman-balls 1s -0.33s infinite linear;\n            animation: pacman-balls 1s -0.33s infinite linear; }\n  .pacman > div:nth-child(5) {\n    -webkit-animation: pacman-balls 1s 0s infinite linear;\n            animation: pacman-balls 1s 0s infinite linear; }\n  .pacman > div:first-of-type {\n    width: 0px;\n    height: 0px;\n    border-right: 25px solid transparent;\n    border-top: 25px solid #fff;\n    border-left: 25px solid #fff;\n    border-bottom: 25px solid #fff;\n    border-radius: 25px;\n    -webkit-animation: rotate_pacman_half_up 0.5s 0s infinite;\n            animation: rotate_pacman_half_up 0.5s 0s infinite;\n    position: relative;\n    left: -30px; }\n  .pacman > div:nth-child(2) {\n    width: 0px;\n    height: 0px;\n    border-right: 25px solid transparent;\n    border-top: 25px solid #fff;\n    border-left: 25px solid #fff;\n    border-bottom: 25px solid #fff;\n    border-radius: 25px;\n    -webkit-animation: rotate_pacman_half_down 0.5s 0s infinite;\n            animation: rotate_pacman_half_down 0.5s 0s infinite;\n    margin-top: -50px;\n    position: relative;\n    left: -30px; }\n  .pacman > div:nth-child(3),\n  .pacman > div:nth-child(4),\n  .pacman > div:nth-child(5),\n  .pacman > div:nth-child(6) {\n    background-color: #fff;\n    width: 15px;\n    height: 15px;\n    border-radius: 100%;\n    margin: 2px;\n    width: 10px;\n    height: 10px;\n    position: absolute;\n    -webkit-transform: translate(0, -6.25px);\n        -ms-transform: translate(0, -6.25px);\n            transform: translate(0, -6.25px);\n    top: 25px;\n    left: 70px; }\n\n@-webkit-keyframes cube-transition {\n  25% {\n    -webkit-transform: translateX(50px) scale(0.5) rotate(-90deg);\n            transform: translateX(50px) scale(0.5) rotate(-90deg); }\n  50% {\n    -webkit-transform: translate(50px, 50px) rotate(-180deg);\n            transform: translate(50px, 50px) rotate(-180deg); }\n  75% {\n    -webkit-transform: translateY(50px) scale(0.5) rotate(-270deg);\n            transform: translateY(50px) scale(0.5) rotate(-270deg); }\n  100% {\n    -webkit-transform: rotate(-360deg);\n            transform: rotate(-360deg); } }\n\n@keyframes cube-transition {\n  25% {\n    -webkit-transform: translateX(50px) scale(0.5) rotate(-90deg);\n            transform: translateX(50px) scale(0.5) rotate(-90deg); }\n  50% {\n    -webkit-transform: translate(50px, 50px) rotate(-180deg);\n            transform: translate(50px, 50px) rotate(-180deg); }\n  75% {\n    -webkit-transform: translateY(50px) scale(0.5) rotate(-270deg);\n            transform: translateY(50px) scale(0.5) rotate(-270deg); }\n  100% {\n    -webkit-transform: rotate(-360deg);\n            transform: rotate(-360deg); } }\n\n.cube-transition {\n  position: relative;\n  -webkit-transform: translate(-25px, -25px);\n      -ms-transform: translate(-25px, -25px);\n          transform: translate(-25px, -25px); }\n  .cube-transition > div {\n    -webkit-animation-fill-mode: both;\n            animation-fill-mode: both;\n    width: 10px;\n    height: 10px;\n    position: absolute;\n    top: -5px;\n    left: -5px;\n    background-color: #fff;\n    -webkit-animation: cube-transition 1.6s 0s infinite ease-in-out;\n            animation: cube-transition 1.6s 0s infinite ease-in-out; }\n    .cube-transition > div:last-child {\n      -webkit-animation-delay: -0.8s;\n              animation-delay: -0.8s; }\n\n@-webkit-keyframes spin-rotate {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  50% {\n    -webkit-transform: rotate(180deg);\n            transform: rotate(180deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n@keyframes spin-rotate {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  50% {\n    -webkit-transform: rotate(180deg);\n            transform: rotate(180deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n.semi-circle-spin {\n  position: relative;\n  width: 35px;\n  height: 35px;\n  overflow: hidden; }\n  .semi-circle-spin > div {\n    position: absolute;\n    border-width: 0px;\n    border-radius: 100%;\n    -webkit-animation: spin-rotate 0.6s 0s infinite linear;\n            animation: spin-rotate 0.6s 0s infinite linear;\n    background-image: -webkit-linear-gradient(transparent 0%, transparent 70%, #fff 30%, #fff 100%);\n    background-image: linear-gradient(transparent 0%, transparent 70%, #fff 30%, #fff 100%);\n    width: 100%;\n    height: 100%; }\n\n@-webkit-keyframes bar-progress {\n  0% {\n    -webkit-transform: scaleY(20%);\n            transform: scaleY(20%);\n    opacity: 1; }\n  25% {\n    -webkit-transform: translateX(6%) scaleY(10%);\n            transform: translateX(6%) scaleY(10%);\n    opacity: 0.7; }\n  50% {\n    -webkit-transform: translateX(20%) scaleY(20%);\n            transform: translateX(20%) scaleY(20%);\n    opacity: 1; }\n  75% {\n    -webkit-transform: translateX(6%) scaleY(10%);\n            transform: translateX(6%) scaleY(10%);\n    opacity: 0.7; }\n  100% {\n    -webkit-transform: scaleY(20%);\n            transform: scaleY(20%);\n    opacity: 1; } }\n\n@keyframes bar-progress {\n  0% {\n    -webkit-transform: scaleY(20%);\n            transform: scaleY(20%);\n    opacity: 1; }\n  25% {\n    -webkit-transform: translateX(6%) scaleY(10%);\n            transform: translateX(6%) scaleY(10%);\n    opacity: 0.7; }\n  50% {\n    -webkit-transform: translateX(20%) scaleY(20%);\n            transform: translateX(20%) scaleY(20%);\n    opacity: 1; }\n  75% {\n    -webkit-transform: translateX(6%) scaleY(10%);\n            transform: translateX(6%) scaleY(10%);\n    opacity: 0.7; }\n  100% {\n    -webkit-transform: scaleY(20%);\n            transform: scaleY(20%);\n    opacity: 1; } }\n\n.bar-progress {\n  width: 30%;\n  height: 12px; }\n  .bar-progress > div {\n    position: relative;\n    width: 20%;\n    height: 12px;\n    border-radius: 10px;\n    background-color: #fff;\n    -webkit-animation: bar-progress 3s cubic-bezier(0.57, 0.1, 0.44, 0.93) infinite;\n            animation: bar-progress 3s cubic-bezier(0.57, 0.1, 0.44, 0.93) infinite;\n    opacity: 1; }\n\n@-webkit-keyframes bar-swing {\n  0% {\n    left: 0; }\n  50% {\n    left: 70%; }\n  100% {\n    left: 0; } }\n\n@keyframes bar-swing {\n  0% {\n    left: 0; }\n  50% {\n    left: 70%; }\n  100% {\n    left: 0; } }\n\n.bar-swing {\n  width: 30%;\n  height: 8px; }\n  .bar-swing > div {\n    position: relative;\n    width: 30%;\n    height: 8px;\n    border-radius: 10px;\n    background-color: #fff;\n    -webkit-animation: bar-swing 1.5s infinite;\n            animation: bar-swing 1.5s infinite; }\n\n@-webkit-keyframes bar-swing-container {\n  0% {\n    left: 0;\n    -webkit-transform: translateX(0);\n            transform: translateX(0); }\n  50% {\n    left: 70%;\n    -webkit-transform: translateX(-4px);\n            transform: translateX(-4px); }\n  100% {\n    left: 0;\n    -webkit-transform: translateX(0);\n            transform: translateX(0); } }\n\n@keyframes bar-swing-container {\n  0% {\n    left: 0;\n    -webkit-transform: translateX(0);\n            transform: translateX(0); }\n  50% {\n    left: 70%;\n    -webkit-transform: translateX(-4px);\n            transform: translateX(-4px); }\n  100% {\n    left: 0;\n    -webkit-transform: translateX(0);\n            transform: translateX(0); } }\n\n.bar-swing-container {\n  width: 20%;\n  height: 8px;\n  position: relative; }\n  .bar-swing-container div:nth-child(1) {\n    position: absolute;\n    width: 100%;\n    background-color: rgba(255, 255, 255, 0.2);\n    height: 12px;\n    border-radius: 10px; }\n  .bar-swing-container div:nth-child(2) {\n    position: absolute;\n    width: 30%;\n    height: 8px;\n    border-radius: 10px;\n    background-color: #fff;\n    -webkit-animation: bar-swing-container 2s cubic-bezier(0.91, 0.35, 0.12, 0.6) infinite;\n            animation: bar-swing-container 2s cubic-bezier(0.91, 0.35, 0.12, 0.6) infinite;\n    margin: 2px 2px 0; }\n",undefined);
+__$styleInject(".graph-info-msg {\r\n    position: absolute;\r\n    top: calc(50% - 25px);\r\n    width: 100%;\r\n}\r\n\r\n.graph-tooltip {\r\n    position: absolute;\r\n    color: lavender;\r\n    font-size: 18px;\r\n    width: 100px;\r\n    line-height: 35px;\r\n    letter-spacing: 1px;\r\n    text-align: center;\r\n    overflow: hidden;\r\n    text-shadow: 0 0 4px white;\r\n    border-radius: 4px;\r\n    background: rgba(128, 128, 128, 0.45);\r\n}\r\n\r\n@-webkit-keyframes pulse {\r\n    50% {\r\n        background: white;\r\n    }\r\n}\r\n\r\n@keyframes pulse {\r\n    50% {\r\n        background: white;\r\n    }\r\n}\r\n\r\n.loading-pulse {\r\n    position: absolute;\r\n    left: calc(50% - 3px);\r\n    top: 50%;\r\n    width: 6px;\r\n    height: 24px;\r\n    background: rgba(255, 255, 255, 0.2);\r\n    -webkit-animation: pulse 750ms infinite;\r\n    animation: pulse 750ms infinite;\r\n    -webkit-animation-delay: 250ms;\r\n    animation-delay: 250ms;\r\n}\r\n\r\n.loading-pulse:before,\r\n.loading-pulse:after {\r\n    content: '';\r\n    position: absolute;\r\n    display: block;\r\n    height: 16px;\r\n    width: 6px;\r\n    background: rgba(255, 255, 255, 0.2);\r\n    top: 50%;\r\n    -webkit-transform: translateY(-50%);\r\n    transform: translateY(-50%);\r\n    -webkit-animation: pulse 750ms infinite;\r\n    animation: pulse 750ms infinite;\r\n}\r\n\r\n.loading-pulse:before {\r\n    left: -12px;\r\n}\r\n\r\n.loading-pulse:after {\r\n    left: 12px;\r\n    -webkit-animation-delay: 500ms;\r\n    animation-delay: 500ms;\r\n}", undefined);
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -45,6 +43,1756 @@ var kapsule_min = createCommonjsModule(function (module, exports) {
 
 var Kapsule = unwrapExports(kapsule_min);
 var kapsule_min_1 = kapsule_min.Kapsule;
+
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+/* global global */
+
+
+var root = typeof window !== 'undefined'
+    ? window
+    : typeof global !== 'undefined' ? global : this;
+var requestAnimationFrame$1 = root.requestAnimationFrame ||
+    (function (fn) { return root.setTimeout(fn, 16); });
+var cancelAnimationFrame = root.cancelAnimationFrame ||
+    (function (id) { return root.clearTimeout(id); });
+
+/* global process */
+/**
+ * Get browser/Node.js current time-stamp
+ * @return Normalised current time-stamp in milliseconds
+ * @memberof TWEEN
+ * @example
+ * TWEEN.now
+ */
+var now = (function () {
+    if (typeof process !== 'undefined' && process.hrtime !== undefined) {
+        return function () {
+            var time = process.hrtime();
+            // Convert [seconds, nanoseconds] to milliseconds.
+            return time[0] * 1000 + time[1] / 1000000;
+        };
+        // In a browser, use window.performance.now if it is available.
+    }
+    else if (root.performance !== undefined &&
+        root.performance.now !== undefined) {
+        // This must be bound, because directly assigning this function
+        // leads to an invocation exception in Chrome.
+        return root.performance.now.bind(root.performance);
+        // Use Date.now if it is available.
+    }
+    else {
+        var offset_1 = root.performance &&
+            root.performance.timing &&
+            root.performance.timing.navigationStart
+            ? root.performance.timing.navigationStart
+            : Date.now();
+        return function () {
+            return Date.now() - offset_1;
+        };
+    }
+})();
+/**
+ * Lightweight, effecient and modular ES6 version of tween.js
+ * @copyright 2017 @dalisoft and es6-tween contributors
+ * @license MIT
+ * @namespace TWEEN
+ * @example
+ * // ES6
+ * const {add, remove, isRunning, autoPlay} = TWEEN
+ */
+var _tweens = [];
+var isStarted = false;
+var _autoPlay = false;
+var _tick;
+var _ticker = requestAnimationFrame$1;
+var _stopTicker = cancelAnimationFrame;
+var emptyFrame = 0;
+var powerModeThrottle = 120;
+/**
+ * Adds tween to list
+ * @param {Tween} tween Tween instance
+ * @memberof TWEEN
+ * @example
+ * let tween = new Tween({x:0})
+ * tween.to({x:200}, 1000)
+ * TWEEN.add(tween)
+ */
+var add = function (tween) {
+    var i = _tweens.indexOf(tween);
+    if (i > -1) {
+        _tweens.splice(i, 1);
+    }
+    if (_tweens.length > 0) {
+        i = _tweens.length - 1;
+        var tweenPrev = _tweens[i];
+        tween.prev = tweenPrev;
+        tweenPrev.next = tween;
+    }
+    _tweens.push(tween);
+    emptyFrame = 0;
+    if (_autoPlay && !isStarted) {
+        _tick = _ticker(update);
+        isStarted = true;
+    }
+};
+/**
+ * Removes tween from list
+ * @param {Tween} tween Tween instance
+ * @memberof TWEEN
+ * @example
+ * TWEEN.remove(tween)
+ */
+var remove = function (tween) {
+    var i = _tweens.indexOf(tween);
+    if (i !== -1) {
+        _tweens.splice(i, 1);
+    }
+};
+/**
+ * Updates global tweens by given time
+ * @param {number|Time} time Timestamp
+ * @param {Boolean=} preserve Prevents tween to be removed after finish
+ * @memberof TWEEN
+ * @example
+ * TWEEN.update(500)
+ */
+var update = function (time, preserve) {
+    time = time !== undefined ? time : now();
+    if (_autoPlay && isStarted) {
+        _tick = _ticker(update);
+    }
+    if (!_tweens.length) {
+        emptyFrame++;
+    }
+    if (emptyFrame > powerModeThrottle) {
+        _stopTicker(_tick);
+        isStarted = false;
+        emptyFrame = 0;
+        return false;
+    }
+    var i = 0;
+    while (i < _tweens.length) {
+        _tweens[i++].update(time, preserve);
+    }
+    return true;
+};
+/**
+ * The plugins store object
+ * @namespace TWEEN.Plugins
+ * @memberof TWEEN
+ * @example
+ * let num = Plugins.num = function (node, start, end) {
+ * return t => start + (end - start) * t
+ * }
+ *
+ * @static
+ */
+var Plugins = {};
+
+/**
+ * List of full easings
+ * @namespace TWEEN.Easing
+ * @example
+ * import {Tween, Easing} from 'es6-tween'
+ *
+ * // then set via new Tween({x:0}).to({x:100}, 1000).easing(Easing.Quadratic.InOut).start()
+ */
+var Easing = {
+    Linear: {
+        None: function (k) {
+            return k;
+        }
+    },
+    Quadratic: {
+        In: function (k) {
+            return k * k;
+        },
+        Out: function (k) {
+            return k * (2 - k);
+        },
+        InOut: function (k) {
+            if ((k *= 2) < 1) {
+                return 0.5 * k * k;
+            }
+            return -0.5 * (--k * (k - 2) - 1);
+        }
+    },
+    Cubic: {
+        In: function (k) {
+            return k * k * k;
+        },
+        Out: function (k) {
+            return --k * k * k + 1;
+        },
+        InOut: function (k) {
+            if ((k *= 2) < 1) {
+                return 0.5 * k * k * k;
+            }
+            return 0.5 * ((k -= 2) * k * k + 2);
+        }
+    },
+    Quartic: {
+        In: function (k) {
+            return k * k * k * k;
+        },
+        Out: function (k) {
+            return 1 - --k * k * k * k;
+        },
+        InOut: function (k) {
+            if ((k *= 2) < 1) {
+                return 0.5 * k * k * k * k;
+            }
+            return -0.5 * ((k -= 2) * k * k * k - 2);
+        }
+    },
+    Quintic: {
+        In: function (k) {
+            return k * k * k * k * k;
+        },
+        Out: function (k) {
+            return --k * k * k * k * k + 1;
+        },
+        InOut: function (k) {
+            if ((k *= 2) < 1) {
+                return 0.5 * k * k * k * k * k;
+            }
+            return 0.5 * ((k -= 2) * k * k * k * k + 2);
+        }
+    },
+    Sinusoidal: {
+        In: function (k) {
+            return 1 - Math.cos(k * Math.PI / 2);
+        },
+        Out: function (k) {
+            return Math.sin(k * Math.PI / 2);
+        },
+        InOut: function (k) {
+            return 0.5 * (1 - Math.cos(Math.PI * k));
+        }
+    },
+    Exponential: {
+        In: function (k) {
+            return k === 0 ? 0 : Math.pow(1024, k - 1);
+        },
+        Out: function (k) {
+            return k === 1 ? 1 : 1 - Math.pow(2, -10 * k);
+        },
+        InOut: function (k) {
+            if (k === 0) {
+                return 0;
+            }
+            if (k === 1) {
+                return 1;
+            }
+            if ((k *= 2) < 1) {
+                return 0.5 * Math.pow(1024, k - 1);
+            }
+            return 0.5 * (-Math.pow(2, -10 * (k - 1)) + 2);
+        }
+    },
+    Circular: {
+        In: function (k) {
+            return 1 - Math.sqrt(1 - k * k);
+        },
+        Out: function (k) {
+            return Math.sqrt(1 - --k * k);
+        },
+        InOut: function (k) {
+            if ((k *= 2) < 1) {
+                return -0.5 * (Math.sqrt(1 - k * k) - 1);
+            }
+            return 0.5 * (Math.sqrt(1 - (k -= 2) * k) + 1);
+        }
+    },
+    Elastic: {
+        In: function (k) {
+            if (k === 0) {
+                return 0;
+            }
+            if (k === 1) {
+                return 1;
+            }
+            return -Math.pow(2, 10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI);
+        },
+        Out: function (k) {
+            if (k === 0) {
+                return 0;
+            }
+            if (k === 1) {
+                return 1;
+            }
+            return Math.pow(2, -10 * k) * Math.sin((k - 0.1) * 5 * Math.PI) + 1;
+        },
+        InOut: function (k) {
+            if (k === 0) {
+                return 0;
+            }
+            if (k === 1) {
+                return 1;
+            }
+            k *= 2;
+            if (k < 1) {
+                return (-0.5 * Math.pow(2, 10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI));
+            }
+            return (0.5 * Math.pow(2, -10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI) + 1);
+        }
+    },
+    Back: {
+        In: function (k) {
+            var s = 1.70158;
+            return k * k * ((s + 1) * k - s);
+        },
+        Out: function (k) {
+            var s = 1.70158;
+            return --k * k * ((s + 1) * k + s) + 1;
+        },
+        InOut: function (k) {
+            var s = 1.70158 * 1.525;
+            if ((k *= 2) < 1) {
+                return 0.5 * (k * k * ((s + 1) * k - s));
+            }
+            return 0.5 * ((k -= 2) * k * ((s + 1) * k + s) + 2);
+        }
+    },
+    Bounce: {
+        In: function (k) {
+            return 1 - Easing.Bounce.Out(1 - k);
+        },
+        Out: function (k) {
+            if (k < 1 / 2.75) {
+                return 7.5625 * k * k;
+            }
+            else if (k < 2 / 2.75) {
+                return 7.5625 * (k -= 1.5 / 2.75) * k + 0.75;
+            }
+            else if (k < 2.5 / 2.75) {
+                return 7.5625 * (k -= 2.25 / 2.75) * k + 0.9375;
+            }
+            else {
+                return 7.5625 * (k -= 2.625 / 2.75) * k + 0.984375;
+            }
+        },
+        InOut: function (k) {
+            if (k < 0.5) {
+                return Easing.Bounce.In(k * 2) * 0.5;
+            }
+            return Easing.Bounce.Out(k * 2 - 1) * 0.5 + 0.5;
+        }
+    },
+    Stepped: {
+        steps: function (steps) { return function (k) { return ((k * steps) | 0) / steps; }; }
+    }
+};
+
+/**
+ * List of full Interpolation
+ * @namespace TWEEN.Interpolation
+ * @example
+ * import {Interpolation, Tween} from 'es6-tween'
+ *
+ * let bezier = Interpolation.Bezier
+ * new Tween({x:0}).to({x:[0, 4, 8, 12, 15, 20, 30, 40, 20, 40, 10, 50]}, 1000).interpolation(bezier).start()
+ * @memberof TWEEN
+ */
+var Interpolation = {
+    Linear: function (v, k, value) {
+        var m = v.length - 1;
+        var f = m * k;
+        var i = Math.floor(f);
+        var fn = Interpolation.Utils.Linear;
+        if (k < 0) {
+            return fn(v[0], v[1], f, value);
+        }
+        if (k > 1) {
+            return fn(v[m], v[m - 1], m - f, value);
+        }
+        return fn(v[i], v[i + 1 > m ? m : i + 1], f - i, value);
+    },
+    Bezier: function (v, k, value) {
+        var b = 0;
+        var n = v.length - 1;
+        var pw = Math.pow;
+        var bn = Interpolation.Utils.Bernstein;
+        for (var i = 0; i <= n; i++) {
+            b += pw(1 - k, n - i) * pw(k, i) * v[i] * bn(n, i);
+        }
+        return b;
+    },
+    CatmullRom: function (v, k, value) {
+        var m = v.length - 1;
+        var f = m * k;
+        var i = Math.floor(f);
+        var fn = Interpolation.Utils.CatmullRom;
+        if (v[0] === v[m]) {
+            if (k < 0) {
+                i = Math.floor(f = m * (1 + k));
+            }
+            return fn(v[(i - 1 + m) % m], v[i], v[(i + 1) % m], v[(i + 2) % m], f - i, value);
+        }
+        else {
+            if (k < 0) {
+                return v[0] - (fn(v[0], v[0], v[1], v[1], -f, value) - v[0]);
+            }
+            if (k > 1) {
+                return v[m] - (fn(v[m], v[m], v[m - 1], v[m - 1], f - m, value) - v[m]);
+            }
+            return fn(v[i ? i - 1 : 0], v[i], v[m < i + 1 ? m : i + 1], v[m < i + 2 ? m : i + 2], f - i, value);
+        }
+    },
+    Utils: {
+        Linear: function (p0, p1, t, v) {
+            if (typeof v === 'string') {
+                return p1;
+            }
+            else if (typeof v === 'number') {
+                return typeof p0 === 'function' ? p0(t) : (p1 - p0) * t + p0;
+            }
+            else if (typeof v === 'object') {
+                if (v.length !== undefined) {
+                    for (var p = 0, len = v.length; p < len; p++) {
+                        v[p] = Interpolation.Utils.Linear(p0[p], p1[p], t, v[p]);
+                    }
+                }
+                else {
+                    for (var p in v) {
+                        v[p] = Interpolation.Utils.Linear(p0[p], p1[p], t, v[p]);
+                    }
+                }
+                return v;
+            }
+        },
+        Bernstein: function (n, i) {
+            var fc = Interpolation.Utils.Factorial;
+            return fc(n) / fc(i) / fc(n - i);
+        },
+        Factorial: (function () {
+            var a = [1];
+            return function (n) {
+                var s = 1;
+                if (a[n]) {
+                    return a[n];
+                }
+                for (var i = n; i > 1; i--) {
+                    s *= i;
+                }
+                a[n] = s;
+                return s;
+            };
+        })(),
+        CatmullRom: function (p0, p1, p2, p3, t, v) {
+            if (typeof v === 'string') {
+                return p1;
+            }
+            else if (typeof v === 'number') {
+                var v0 = (p2 - p0) * 0.5;
+                var v1 = (p3 - p1) * 0.5;
+                var t2 = t * t;
+                var t3 = t * t2;
+                return (2 * p1 - 2 * p2 + v0 + v1) * t3 + (-3 * p1 + 3 * p2 - 2 * v0 - v1) * t2 + v0 * t + p1;
+            }
+            else if (typeof v === 'object') {
+                if (v.length !== undefined) {
+                    for (var p = 0, len = v.length; p < len; p++) {
+                        v[p] = Interpolation.Utils.CatmullRom(p0[p], p1[p], p2[p], p3[p], t, v[p]);
+                    }
+                }
+                else {
+                    for (var p in v) {
+                        v[p] = Interpolation.Utils.CatmullRom(p0[p], p1[p], p2[p], p3[p], t, v[p]);
+                    }
+                }
+                return v;
+            }
+        }
+    }
+};
+
+var PlaybackPosition = /** @class */ (function () {
+    function PlaybackPosition() {
+        this.totalTime = 0;
+        this.labels = [];
+        this.offsets = [];
+    }
+    PlaybackPosition.prototype.parseLabel = function (name, offset) {
+        var _a = this, offsets = _a.offsets, labels = _a.labels;
+        var i = labels.indexOf(name);
+        if (typeof name === 'string' &&
+            name.indexOf('=') !== -1 &&
+            !offset &&
+            i === -1) {
+            var rty = name.substr(name.indexOf('=') - 1, 2);
+            var rt = name.split(rty);
+            offset = rt.length === 2 ? rty + rt[1] : null;
+            name = rt[0];
+            i = labels.indexOf(name);
+        }
+        if (i !== -1 && name) {
+            var currOffset = offsets[i] || 0;
+            if (typeof offset === 'number') {
+                currOffset = offset;
+            }
+            else if (typeof offset === 'string') {
+                if (offset.indexOf('=') !== -1) {
+                    var type = offset.charAt(0);
+                    offset = Number(offset.substr(2));
+                    if (type === '+' || type === '-') {
+                        currOffset += parseFloat(type + offset);
+                    }
+                    else if (type === '*') {
+                        currOffset *= offset;
+                    }
+                    else if (type === '/') {
+                        currOffset /= offset;
+                    }
+                    else if (type === '%') {
+                        currOffset *= offset / 100;
+                    }
+                }
+            }
+            return currOffset;
+        }
+        return typeof offset === 'number' ? offset : 0;
+    };
+    PlaybackPosition.prototype.addLabel = function (name, offset) {
+        this.labels.push(name);
+        this.offsets.push(this.parseLabel(name, offset));
+        return this;
+    };
+    PlaybackPosition.prototype.setLabel = function (name, offset) {
+        var i = this.labels.indexOf(name);
+        if (i !== -1) {
+            this.offsets.splice(i, 1, this.parseLabel(name, offset));
+        }
+        return this;
+    };
+    PlaybackPosition.prototype.eraseLabel = function (name) {
+        var i = this.labels.indexOf(name);
+        if (i !== -1) {
+            this.labels.splice(i, 1);
+            this.offsets.splice(i, 1);
+        }
+        return this;
+    };
+    return PlaybackPosition;
+}());
+
+var Store = {};
+var NodeCache = function (node, object, tween) {
+    if (!node || !node.nodeType) {
+        return object;
+    }
+    var ID = node.queueID || 'q_' + Date.now();
+    if (!node.queueID) {
+        node.queueID = ID;
+    }
+    var storeID = Store[ID];
+    if (storeID) {
+        if (storeID.object === object &&
+            node === storeID.tween.node &&
+            tween._startTime === storeID.tween._startTime) {
+            remove(storeID.tween);
+        }
+        else {
+            for (var prop in object) {
+                if (prop in storeID.object) {
+                    if (tween._startTime === storeID.tween._startTime) {
+                        delete storeID.object[prop];
+                    }
+                    else {
+                        storeID.propNormaliseRequired = true;
+                    }
+                }
+            }
+            return object;
+        }
+        return storeID.object;
+    }
+    Store[ID] = { tween: tween, object: object, propNormaliseRequired: false };
+    return Store[ID].object;
+};
+
+var Selector = function (selector, collection) {
+    if (collection) {
+        return !selector
+            ? null
+            : selector === window || selector === document
+                ? [selector]
+                : typeof selector === 'string'
+                    ? !!document.querySelectorAll && document.querySelectorAll(selector)
+                    : Array.isArray(selector)
+                        ? selector
+                        : selector.nodeType ? [selector] : [];
+    }
+    return !selector
+        ? null
+        : selector === window || selector === document
+            ? selector
+            : typeof selector === 'string'
+                ? !!document.querySelector && document.querySelector(selector)
+                : Array.isArray(selector)
+                    ? selector[0]
+                    : selector.nodeType ? selector : null;
+};
+
+// Frame lag-fix constants
+var FRAME_MS = 50 / 3;
+var TOO_LONG_FRAME_MS = 250;
+var CHAINED_TWEENS = '_chainedTweens';
+// Event System
+var EVENT_CALLBACK = 'Callback';
+var EVENT_UPDATE = 'update';
+var EVENT_COMPLETE = 'complete';
+var EVENT_START = 'start';
+var EVENT_REPEAT = 'repeat';
+var EVENT_REVERSE = 'reverse';
+var EVENT_PAUSE = 'pause';
+var EVENT_PLAY = 'play';
+var EVENT_RESTART = 'restart';
+var EVENT_STOP = 'stop';
+var EVENT_SEEK = 'seek';
+// For String tweening stuffs
+var STRING_PROP = 'STRING_PROP';
+// Also RegExp's for string tweening
+var NUM_REGEX = /\s+|([A-Za-z?().,{}:""[\]#\%]+)|([-+]+)?(?:\d+\.?\d*|\.?\d+)(?:[eE][-+]?\d+)?/g;
+
+// Copies everything, duplicates, no shallow-copy
+function deepCopy(source) {
+    if (source === undefined || typeof source !== 'object') {
+        return source;
+    }
+    else if (Array.isArray(source)) {
+        return [].concat(source);
+    }
+    else if (typeof source === 'object') {
+        var target = {};
+        for (var prop in source) {
+            target[prop] = deepCopy(source[prop]);
+        }
+        return target;
+    }
+    return source;
+}
+var isNaNForST = function (v) {
+    return isNaN(+v) || v[0] === '+' || v[0] === '-' || v === '' || v === ' ';
+};
+// Decompose value, now for only `string` that required
+function decompose(prop, obj, from, to) {
+    var fromValue = from[prop];
+    var toValue = to[prop];
+    if (typeof fromValue === 'string' && typeof toValue === 'string') {
+        var fromValue1 = fromValue
+            .match(NUM_REGEX)
+            .map(function (v) { return (isNaNForST(v) ? v : +v); });
+        var toValue1 = toValue
+            .match(NUM_REGEX)
+            .map(function (v, i) { return (isNaNForST(v) ? v : +v); });
+        fromValue1.unshift(STRING_PROP);
+        from[prop] = fromValue1;
+        to[prop] = toValue1;
+        return true;
+    }
+    else if (typeof fromValue === 'object' && typeof toValue === 'object') {
+        if (Array.isArray(fromValue)) {
+            return fromValue.map(function (v, i) {
+                return decompose(i, obj[prop], fromValue, toValue);
+            });
+        }
+        else {
+            for (var prop2 in toValue) {
+                decompose(prop2, obj[prop], fromValue, toValue);
+            }
+        }
+        return true;
+    }
+    return false;
+}
+// Recompose value
+var DECIMAL = Math.pow(10, 4);
+function recompose(prop, obj, from, to, t, originalT) {
+    var fromValue = from[prop];
+    var toValue = to[prop];
+    if (toValue === undefined) {
+        return fromValue;
+    }
+    if (fromValue === undefined ||
+        typeof fromValue === 'string' ||
+        fromValue === toValue) {
+        return toValue;
+    }
+    else if (typeof fromValue === 'object' && typeof toValue === 'object') {
+        if (!fromValue || !toValue) {
+            return obj[prop];
+        }
+        if (fromValue[0] === STRING_PROP) {
+            var STRING_BUFFER = '';
+            for (var i = 1, len = fromValue.length; i < len; i++) {
+                var isRelative = typeof toValue[i - 1] === 'string';
+                STRING_BUFFER +=
+                    typeof toValue[i - 1] !== 'number'
+                        ? fromValue[i]
+                        : (((isRelative
+                            ? fromValue[i] + +toValue[i - 1]
+                            : fromValue[i] + (toValue[i - 1] - fromValue[i]) * t) *
+                            DECIMAL) |
+                            0) /
+                            DECIMAL;
+                if (originalT === 1) {
+                    fromValue[i] = fromValue[i] + +toValue[i - 1];
+                }
+            }
+            obj[prop] = STRING_BUFFER;
+            return STRING_BUFFER;
+        }
+        else if (Array.isArray(fromValue)) {
+            for (var i = 0, len = fromValue.length; i < len; i++) {
+                if (fromValue[i] === toValue[i]) {
+                    continue;
+                }
+                recompose(i, obj[prop], fromValue, toValue, t, originalT);
+            }
+        }
+        else {
+            for (var i in fromValue) {
+                if (fromValue[i] === toValue[i]) {
+                    continue;
+                }
+                recompose(i, obj[prop], fromValue, toValue, t, originalT);
+            }
+        }
+    }
+    else if (typeof fromValue === 'number') {
+        var isRelative = typeof toValue === 'string';
+        obj[prop] =
+            (((isRelative
+                ? fromValue + +toValue * t
+                : fromValue + (toValue - fromValue) * t) *
+                DECIMAL) |
+                0) /
+                DECIMAL;
+        if (isRelative && originalT === 1) {
+            from[prop] = obj[prop];
+        }
+    }
+    else if (typeof toValue === 'function') {
+        obj[prop] = toValue(t);
+    }
+    return obj[prop];
+}
+// Dot notation => Object structure converter
+// example
+// {'scale.x.y.z':'VALUE'} => {scale:{x:{y:{z:'VALUE'}}}}
+// Only works for 3-level parsing, after 3-level, parsing dot-notation not works as it's not affects
+var propRegExp = /([.\[])/g;
+var replaceBrace = /\]/g;
+var propExtract = function (obj, property) {
+    var value = obj[property];
+    var props = property.replace(replaceBrace, '').split(propRegExp);
+    var propsLastIndex = props.length - 1;
+    var lastArr = Array.isArray(obj);
+    var lastObj = typeof obj === 'object' && !lastArr;
+    if (lastObj) {
+        obj[property] = null;
+        delete obj[property];
+    }
+    else if (lastArr) {
+        obj.splice(property, 1);
+    }
+    return props.reduce(function (nested, prop, index) {
+        if (lastArr) {
+            if (prop !== '.' && prop !== '[') {
+                prop *= 1;
+            }
+        }
+        var nextProp = props[index + 1];
+        var nextIsArray = nextProp === '[';
+        if (prop === '.' || prop === '[') {
+            if (prop === '.') {
+                lastObj = true;
+                lastArr = false;
+            }
+            else if (prop === '[') {
+                lastObj = false;
+                lastArr = true;
+            }
+            return nested;
+        }
+        else if (nested[prop] === undefined) {
+            if (lastArr || lastObj) {
+                nested[prop] =
+                    index === propsLastIndex
+                        ? value
+                        : lastArr || nextIsArray ? [] : lastObj ? {} : null;
+                lastObj = lastArr = false;
+                return nested[prop];
+            }
+        }
+        else if (nested[prop] !== undefined) {
+            if (index === propsLastIndex) {
+                nested[prop] = value;
+            }
+            return nested[prop];
+        }
+        return nested;
+    }, obj);
+};
+var SET_NESTED = function (nested) {
+    if (typeof nested === 'object' && !!nested) {
+        for (var prop in nested) {
+            if (prop.indexOf('.') !== -1 || prop.indexOf('[') !== -1) {
+                propExtract(nested, prop);
+            }
+            else if (typeof nested[prop] === 'object' && !!nested[prop]) {
+                var nested2 = nested[prop];
+                for (var prop2 in nested2) {
+                    if (prop2.indexOf('.') !== -1 || prop2.indexOf('[') !== -1) {
+                        propExtract(nested2, prop2);
+                    }
+                    else if (typeof nested2[prop2] === 'object' && !!nested2[prop2]) {
+                        var nested3 = nested2[prop2];
+                        for (var prop3 in nested3) {
+                            if (prop3.indexOf('.') !== -1 || prop3.indexOf('[') !== -1) {
+                                propExtract(nested3, prop3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return nested;
+};
+
+var _id$1 = 0; // Unique ID
+var defaultEasing = Easing.Linear.None;
+/**
+ * Tween main constructor
+ * @constructor
+ * @class
+ * @namespace Tween
+ * @extends Tween
+ * @param {Object|Element} node Node Element or Tween initial object
+ * @param {Object=} object If Node Element is using, second argument is used for Tween initial object
+ * @example let tween = new Tween(myNode, {width:'100px'}).to({width:'300px'}, 2000).start()
+ */
+var Tween = /** @class */ (function () {
+    function Tween(node, object) {
+        this._chainedTweensCount = 0;
+        this.id = _id$1++;
+        if (!!node && typeof node === 'object' && !object && !node.nodeType) {
+            object = this.object = node;
+            node = null;
+        }
+        else if (!!node &&
+            (node.nodeType || node.length || typeof node === 'string')) {
+            node = this.node = Selector(node);
+            object = this.object = NodeCache(node, object, this);
+        }
+        this._valuesEnd = null;
+        this._valuesStart = {};
+        this._duration = 1000;
+        this._easingFunction = defaultEasing;
+        this._easingReverse = defaultEasing;
+        this._interpolationFunction = Interpolation.Linear;
+        this._startTime = 0;
+        this._initTime = 0;
+        this._delayTime = 0;
+        this._repeat = 0;
+        this._r = 0;
+        this._isPlaying = false;
+        this._yoyo = false;
+        this._reversed = false;
+        this._onStartCallbackFired = false;
+        this._pausedTime = null;
+        this._isFinite = true;
+        this._maxListener = 15;
+        this._prevTime = null;
+        return this;
+    }
+    /**
+     * Easier way to call the Tween
+     * @param {Element} node DOM Element
+     * @param {object} object - Initial value
+     * @param {object} to - Target value
+     * @param {object} params - Options of tweens
+     * @example Tween.fromTo(node, {x:0}, {x:200}, {duration:1000})
+     * @memberof Tween
+     * @static
+     */
+    Tween.fromTo = function (node, object, to, params) {
+        if (params === void 0) { params = {}; }
+        params.quickRender = params.quickRender ? params.quickRender : !to;
+        var tween = new Tween(node, object).to(to, params);
+        if (params.quickRender) {
+            tween.render().update(tween._startTime);
+            tween._rendered = false;
+            tween._onStartCallbackFired = false;
+        }
+        return tween;
+    };
+    /**
+     * Easier way calling constructor only applies the `to` value, useful for CSS Animation
+     * @param {Element} node DOM Element
+     * @param {object} to - Target value
+     * @param {object} params - Options of tweens
+     * @example Tween.to(node, {x:200}, {duration:1000})
+     * @memberof Tween
+     * @static
+     */
+    Tween.to = function (node, to, params) {
+        return Tween.fromTo(node, null, to, params);
+    };
+    /**
+     * Easier way calling constructor only applies the `from` value, useful for CSS Animation
+     * @param {Element} node DOM Element
+     * @param {object} from - Initial value
+     * @param {object} params - Options of tweens
+     * @example Tween.from(node, {x:200}, {duration:1000})
+     * @memberof Tween
+     * @static
+     */
+    Tween.from = function (node, from, params) {
+        return Tween.fromTo(node, from, null, params);
+    };
+    /**
+     * Sets max `event` listener's count to Events system
+     * @param {number} count - Event listener's count
+     * @memberof Tween
+     */
+    Tween.prototype.setMaxListener = function (count) {
+        if (count === void 0) { count = 15; }
+        this._maxListener = count;
+        return this;
+    };
+    /**
+     * Adds `event` to Events system
+     * @param {string} event - Event listener name
+     * @param {Function} callback - Event listener callback
+     * @memberof Tween
+     */
+    Tween.prototype.on = function (event, callback) {
+        var _maxListener = this._maxListener;
+        var callbackName = event + EVENT_CALLBACK;
+        for (var i = 0; i < _maxListener; i++) {
+            var callbackId = callbackName + i;
+            if (!this[callbackId]) {
+                this[callbackId] = callback;
+                break;
+            }
+        }
+        return this;
+    };
+    /**
+     * Adds `event` to Events system.
+     * Removes itself after fired once
+     * @param {string} event - Event listener name
+     * @param {Function} callback - Event listener callback
+     * @memberof Tween
+     */
+    Tween.prototype.once = function (event, callback) {
+        var _this = this;
+        var _maxListener = this._maxListener;
+        var callbackName = event + EVENT_CALLBACK;
+        var _loop_1 = function (i) {
+            var callbackId = callbackName + i;
+            if (!this_1[callbackId]) {
+                this_1[callbackId] = function () {
+                    var args = [];
+                    for (var _i = 0; _i < arguments.length; _i++) {
+                        args[_i] = arguments[_i];
+                    }
+                    callback.apply(_this, args);
+                    _this[callbackId] = null;
+                };
+                return "break";
+            }
+        };
+        var this_1 = this;
+        for (var i = 0; i < _maxListener; i++) {
+            var state_1 = _loop_1(i);
+            if (state_1 === "break")
+                break;
+        }
+        return this;
+    };
+    /**
+     * Removes `event` from Events system
+     * @param {string} event - Event listener name
+     * @param {Function} callback - Event listener callback
+     * @memberof Tween
+     */
+    Tween.prototype.off = function (event, callback) {
+        var _maxListener = this._maxListener;
+        var callbackName = event + EVENT_CALLBACK;
+        for (var i = 0; i < _maxListener; i++) {
+            var callbackId = callbackName + i;
+            if (this[callbackId] === callback) {
+                this[callbackId] = null;
+            }
+        }
+        return this;
+    };
+    /**
+     * Emits/Fired/Trigger `event` from Events system listeners
+     * @param {string} event - Event listener name
+     * @memberof Tween
+     */
+    Tween.prototype.emit = function (event, arg1, arg2, arg3, arg4) {
+        var _maxListener = this._maxListener;
+        var callbackName = event + EVENT_CALLBACK;
+        if (!this[callbackName + 0]) {
+            return this;
+        }
+        for (var i = 0; i < _maxListener; i++) {
+            var callbackId = callbackName + i;
+            if (this[callbackId]) {
+                this[callbackId](arg1, arg2, arg3, arg4);
+            }
+        }
+        return this;
+    };
+    /**
+     * @return {boolean} State of playing of tween
+     * @example tween.isPlaying() // returns `true` if tween in progress
+     * @memberof Tween
+     */
+    Tween.prototype.isPlaying = function () {
+        return this._isPlaying;
+    };
+    /**
+     * @return {boolean} State of started of tween
+     * @example tween.isStarted() // returns `true` if tween in started
+     * @memberof Tween
+     */
+    Tween.prototype.isStarted = function () {
+        return this._onStartCallbackFired;
+    };
+    /**
+     * Reverses the tween state/direction
+     * @example tween.reverse()
+     * @param {boolean=} state Set state of current reverse
+     * @memberof Tween
+     */
+    Tween.prototype.reverse = function (state) {
+        var _reversed = this._reversed;
+        this._reversed = state !== undefined ? state : !_reversed;
+        return this;
+    };
+    /**
+     * @return {boolean} State of reversed
+     * @example tween.reversed() // returns `true` if tween in reversed state
+     * @memberof Tween
+     */
+    Tween.prototype.reversed = function () {
+        return this._reversed;
+    };
+    /**
+     * Pauses tween
+     * @example tween.pause()
+     * @memberof Tween
+     */
+    Tween.prototype.pause = function () {
+        if (!this._isPlaying) {
+            return this;
+        }
+        this._isPlaying = false;
+        remove(this);
+        this._pausedTime = now();
+        return this.emit(EVENT_PAUSE, this.object);
+    };
+    /**
+     * Play/Resume the tween
+     * @example tween.play()
+     * @memberof Tween
+     */
+    Tween.prototype.play = function () {
+        if (this._isPlaying) {
+            return this;
+        }
+        this._isPlaying = true;
+        this._startTime += now() - this._pausedTime;
+        this._initTime = this._startTime;
+        add(this);
+        this._pausedTime = now();
+        return this.emit(EVENT_PLAY, this.object);
+    };
+    /**
+     * Restarts tween from initial value
+     * @param {boolean=} noDelay If this param is set to `true`, restarts tween without `delay`
+     * @example tween.restart()
+     * @memberof Tween
+     */
+    Tween.prototype.restart = function (noDelay) {
+        this._repeat = this._r;
+        this.reassignValues();
+        add(this);
+        return this.emit(EVENT_RESTART, this.object);
+    };
+    /**
+     * Seek tween value by `time`. Note: Not works as excepted. PR are welcome
+     * @param {Time} time Tween update time
+     * @param {boolean=} keepPlaying When this param is set to `false`, tween pausing after seek
+     * @example tween.seek(500)
+     * @memberof Tween
+     * @deprecated Not works as excepted, so we deprecated this method
+     */
+    Tween.prototype.seek = function (time, keepPlaying) {
+        var _a = this, _duration = _a._duration, _repeat = _a._repeat, _initTime = _a._initTime, _startTime = _a._startTime, _delayTime = _a._delayTime, _reversed = _a._reversed;
+        var updateTime = _initTime + time;
+        this._isPlaying = true;
+        if (updateTime < _startTime && _startTime >= _initTime) {
+            this._startTime -= _duration;
+            this._reversed = !_reversed;
+        }
+        this.update(time, false);
+        this.emit(EVENT_SEEK, time, this.object);
+        return keepPlaying ? this : this.pause();
+    };
+    /**
+     * Sets tween duration
+     * @param {number} amount Duration is milliseconds
+     * @example tween.duration(2000)
+     * @memberof Tween
+     */
+    Tween.prototype.duration = function (amount) {
+        this._duration =
+            typeof amount === 'function' ? amount(this._duration) : amount;
+        return this;
+    };
+    /**
+     * Sets target value and duration
+     * @param {object} properties Target value (to value)
+     * @param {number|Object=} [duration=1000] Duration of tween
+     * @example let tween = new Tween({x:0}).to({x:100}, 2000)
+     * @memberof Tween
+     */
+    Tween.prototype.to = function (properties, duration, maybeUsed) {
+        if (duration === void 0) { duration = 1000; }
+        this._valuesEnd = properties;
+        if (typeof duration === 'number' || typeof duration === 'function') {
+            this._duration =
+                typeof duration === 'function' ? duration(this._duration) : duration;
+        }
+        else if (typeof duration === 'object') {
+            for (var prop in duration) {
+                if (typeof this[prop] === 'function') {
+                    var _a = Array.isArray(duration[prop]) ? duration[prop] : [duration[prop]], _b = _a[0], arg1 = _b === void 0 ? null : _b, _c = _a[1], arg2 = _c === void 0 ? null : _c, _d = _a[2], arg3 = _d === void 0 ? null : _d, _e = _a[3], arg4 = _e === void 0 ? null : _e;
+                    this[prop](arg1, arg2, arg3, arg4);
+                }
+            }
+        }
+        return this;
+    };
+    /**
+     * Renders and computes value at first render
+     * @private
+     * @memberof Tween
+     */
+    Tween.prototype.render = function () {
+        if (this._rendered) {
+            return this;
+        }
+        var _a = this, _valuesStart = _a._valuesStart, _valuesEnd = _a._valuesEnd, object = _a.object, Renderer = _a.Renderer, node = _a.node, InitialValues = _a.InitialValues, _easingFunction = _a._easingFunction;
+        if (node && node.queueID && Store[node.queueID]) {
+            var prevTweenByNode = Store[node.queueID];
+            if (prevTweenByNode.propNormaliseRequired &&
+                prevTweenByNode.tween !== this) {
+                for (var property in _valuesEnd) {
+                    if (prevTweenByNode.tween._valuesEnd[property] !== undefined) {
+                        delete prevTweenByNode.tween._valuesEnd[property];
+                    }
+                }
+                prevTweenByNode.normalisedProp = true;
+                prevTweenByNode.propNormaliseRequired = false;
+            }
+        }
+        SET_NESTED(object);
+        SET_NESTED(_valuesEnd);
+        if (node && InitialValues) {
+            if (!object) {
+                object = this.object = NodeCache(node, InitialValues(node, _valuesEnd), this);
+            }
+            else if (!_valuesEnd) {
+                _valuesEnd = this._valuesEnd = InitialValues(node, object);
+            }
+        }
+        for (var property in _valuesEnd) {
+            var start = object && object[property];
+            var end = _valuesEnd[property];
+            if (Plugins[property]) {
+                var plugin = Plugins[property].prototype.update
+                    ? new Plugins[property](this, start, end, property, object)
+                    : Plugins[property](this, start, end, property, object);
+                if (plugin) {
+                    _valuesEnd[property] = plugin;
+                }
+                continue;
+            }
+            if ((typeof start === 'number' && isNaN(start)) ||
+                start === null ||
+                end === null ||
+                start === undefined ||
+                end === undefined ||
+                start === end) {
+                continue;
+            }
+            if (Array.isArray(end) && !Array.isArray(start)) {
+                end.unshift(start);
+            }
+            _valuesStart[property] = deepCopy(start);
+            decompose(property, object, _valuesStart, _valuesEnd);
+        }
+        if (Renderer && this.node) {
+            this.__render = new Renderer(this, object, _valuesEnd);
+        }
+        return this;
+    };
+    /**
+     * Start the tweening
+     * @param {number|string} time setting manual time instead of Current browser timestamp or like `+1000` relative to current timestamp
+     * @example tween.start()
+     * @memberof Tween
+     */
+    Tween.prototype.start = function (time) {
+        this._startTime =
+            time !== undefined
+                ? typeof time === 'string' ? now() + parseFloat(time) : time
+                : now();
+        this._startTime += this._delayTime;
+        this._initTime = this._prevTime = this._startTime;
+        this._onStartCallbackFired = false;
+        this._rendered = false;
+        this._isPlaying = true;
+        add(this);
+        return this;
+    };
+    /**
+     * Stops the tween
+     * @example tween.stop()
+     * @memberof Tween
+     */
+    Tween.prototype.stop = function () {
+        var _a = this, _isPlaying = _a._isPlaying, _isFinite = _a._isFinite, object = _a.object, _startTime = _a._startTime, _delayTime = _a._delayTime, _duration = _a._duration, _r = _a._r, _yoyo = _a._yoyo, _reversed = _a._reversed;
+        if (!_isPlaying) {
+            return this;
+        }
+        var atStart = _isFinite ? (_r + 1) % 2 === 1 : !_reversed;
+        this._reversed = false;
+        if (_yoyo && atStart) {
+            this.update(_startTime);
+        }
+        else {
+            this.update(_startTime + _duration);
+        }
+        remove(this);
+        return this.emit(EVENT_STOP, object);
+    };
+    /**
+     * Set delay of tween
+     * @param {number} amount Sets tween delay / wait duration
+     * @example tween.delay(500)
+     * @memberof Tween
+     */
+    Tween.prototype.delay = function (amount) {
+        this._delayTime =
+            typeof amount === 'function' ? amount(this._delayTime) : amount;
+        return this;
+    };
+    /**
+     * Chained tweens
+     * @param {any} arguments Arguments list
+     * @example tween.chainedTweens(tween1, tween2)
+     * @memberof Tween
+     */
+    Tween.prototype.chainedTweens = function () {
+        this._chainedTweensCount = arguments.length;
+        if (!this._chainedTweensCount) {
+            return this;
+        }
+        for (var i = 0, len = this._chainedTweensCount; i < len; i++) {
+            this[CHAINED_TWEENS + i] = arguments[i];
+        }
+        return this;
+    };
+    /**
+     * Sets how times tween is repeating
+     * @param {amount} amount the times of repeat
+     * @example tween.repeat(5)
+     * @memberof Tween
+     */
+    Tween.prototype.repeat = function (amount) {
+        this._repeat = !this._duration
+            ? 0
+            : typeof amount === 'function' ? amount(this._repeat) : amount;
+        this._r = this._repeat;
+        this._isFinite = isFinite(amount);
+        return this;
+    };
+    /**
+     * Set delay of each repeat alternate of tween
+     * @param {number} amount Sets tween repeat alternate delay / repeat alternate wait duration
+     * @example tween.reverseDelay(500)
+     * @memberof Tween
+     */
+    Tween.prototype.reverseDelay = function (amount) {
+        this._reverseDelayTime =
+            typeof amount === 'function' ? amount(this._reverseDelayTime) : amount;
+        return this;
+    };
+    /**
+     * Set `yoyo` state (enables reverse in repeat)
+     * @param {boolean} state Enables alternate direction for repeat
+     * @param {Function=} _easingReverse Easing function in reverse direction
+     * @example tween.yoyo(true)
+     * @memberof Tween
+     */
+    Tween.prototype.yoyo = function (state, _easingReverse) {
+        this._yoyo =
+            typeof state === 'function'
+                ? state(this._yoyo)
+                : state === null ? this._yoyo : state;
+        if (!state) {
+            this._reversed = false;
+        }
+        this._easingReverse = _easingReverse || null;
+        return this;
+    };
+    /**
+     * Set easing
+     * @param {Function} _easingFunction Easing function, applies in non-reverse direction if Tween#yoyo second argument is applied
+     * @example tween.easing(Easing.Elastic.InOut)
+     * @memberof Tween
+     */
+    Tween.prototype.easing = function (_easingFunction) {
+        this._easingFunction = _easingFunction;
+        return this;
+    };
+    /**
+     * Set interpolation
+     * @param {Function} _interpolationFunction Interpolation function
+     * @example tween.interpolation(Interpolation.Bezier)
+     * @memberof Tween
+     */
+    Tween.prototype.interpolation = function (_interpolationFunction) {
+        if (typeof _interpolationFunction === 'function') {
+            this._interpolationFunction = _interpolationFunction;
+        }
+        return this;
+    };
+    /**
+     * Reassigns value for rare-case like Tween#restart or for Timeline
+     * @private
+     * @memberof Tween
+     */
+    Tween.prototype.reassignValues = function (time) {
+        var _a = this, _valuesStart = _a._valuesStart, object = _a.object, _delayTime = _a._delayTime;
+        this._isPlaying = true;
+        this._startTime = time !== undefined ? time : now();
+        this._startTime += _delayTime;
+        this._reversed = false;
+        add(this);
+        for (var property in _valuesStart) {
+            var start = _valuesStart[property];
+            object[property] = start;
+        }
+        return this;
+    };
+    /**
+     * Updates initial object to target value by given `time`
+     * @param {Time} time Current time
+     * @param {boolean=} preserve Prevents from removing tween from store
+     * @param {boolean=} forceTime Forces to be frame rendered, even mismatching time
+     * @example tween.update(100)
+     * @memberof Tween
+     */
+    Tween.prototype.update = function (time, preserve, forceTime) {
+        var _a = this, _onStartCallbackFired = _a._onStartCallbackFired, _easingFunction = _a._easingFunction, _interpolationFunction = _a._interpolationFunction, _easingReverse = _a._easingReverse, _repeat = _a._repeat, _delayTime = _a._delayTime, _reverseDelayTime = _a._reverseDelayTime, _yoyo = _a._yoyo, _reversed = _a._reversed, _startTime = _a._startTime, _prevTime = _a._prevTime, _duration = _a._duration, _valuesStart = _a._valuesStart, _valuesEnd = _a._valuesEnd, object = _a.object, _isFinite = _a._isFinite, _isPlaying = _a._isPlaying, __render = _a.__render, _chainedTweensCount = _a._chainedTweensCount;
+        var elapsed;
+        var currentEasing;
+        var property;
+        var propCount = 0;
+        if (!_duration) {
+            elapsed = 1;
+        }
+        else {
+            time = time !== undefined ? time : now();
+            var delta = time - _prevTime;
+            if (delta > TOO_LONG_FRAME_MS) {
+                time += delta - FRAME_MS;
+            }
+            this._prevTime = time;
+            if (!_isPlaying || (time < _startTime && !forceTime)) {
+                return true;
+            }
+            elapsed = (time - _startTime) / _duration;
+            elapsed = elapsed > 1 ? 1 : elapsed;
+            elapsed = _reversed ? 1 - elapsed : elapsed;
+        }
+        if (!_onStartCallbackFired) {
+            if (!this._rendered) {
+                this.render();
+                this._rendered = true;
+            }
+            this.emit(EVENT_START, object);
+            this._onStartCallbackFired = true;
+        }
+        currentEasing = _reversed
+            ? _easingReverse || _easingFunction
+            : _easingFunction;
+        if (!object) {
+            return true;
+        }
+        for (property in _valuesEnd) {
+            var start = _valuesStart[property];
+            if (start === undefined || start === null) {
+                continue;
+            }
+            var end = _valuesEnd[property];
+            var value = currentEasing[property]
+                ? currentEasing[property](elapsed)
+                : typeof currentEasing === 'function'
+                    ? currentEasing(elapsed)
+                    : defaultEasing(elapsed);
+            if (typeof end === 'number') {
+                object[property] =
+                    (((start + (end - start) * value) * DECIMAL) | 0) / DECIMAL;
+            }
+            else if (Array.isArray(end) && !Array.isArray(start)) {
+                object[property] = _interpolationFunction(end, value, object[property]);
+            }
+            else if (end && end.update) {
+                end.update(value);
+            }
+            else if (typeof end === 'function') {
+                object[property] = end(value);
+            }
+            else {
+                recompose(property, object, _valuesStart, _valuesEnd, value, elapsed);
+            }
+            propCount++;
+        }
+        if (!propCount) {
+            remove(this);
+            return false;
+        }
+        if (__render) {
+            __render.update(object, elapsed);
+        }
+        this.emit(EVENT_UPDATE, object, elapsed, time);
+        if (elapsed === 1 || (_reversed && !elapsed)) {
+            if (_repeat > 0 && _duration > 0) {
+                if (_isFinite) {
+                    this._repeat--;
+                }
+                if (_yoyo) {
+                    this._reversed = !_reversed;
+                }
+                this.emit(_yoyo && !_reversed ? EVENT_REVERSE : EVENT_REPEAT, object);
+                if (_reversed && _reverseDelayTime) {
+                    this._startTime = time - _reverseDelayTime;
+                }
+                else {
+                    this._startTime = time + _delayTime;
+                }
+                return true;
+            }
+            else {
+                if (!preserve) {
+                    this._isPlaying = false;
+                    remove(this);
+                    _id$1--;
+                }
+                this.emit(EVENT_COMPLETE, object);
+                this._repeat = this._r;
+                if (_chainedTweensCount) {
+                    for (var i = 0; i < _chainedTweensCount; i++) {
+                        this[CHAINED_TWEENS + i].start(time + _duration);
+                    }
+                }
+                return false;
+            }
+        }
+        return true;
+    };
+    return Tween;
+}());
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign$1 = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var shuffle = function (a) {
+    var j;
+    var x;
+    var i;
+    for (i = a.length; i; i -= 1) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+    return a;
+};
+var _id = 0;
+/**
+ * Timeline main constructor.
+ *
+ * It works same as `Tween` instance, using `.repeat`, `.restart` or `etc` works like a `Tween`, so please see `Tween` class for methods
+ * @constructor
+ * @class
+ * @namespace Timeline
+ * @param {Object=} params Default params for new tweens
+ * @example let tl = new Timeline({delay:200})
+ * @extends Tween
+ */
+var Timeline = /** @class */ (function (_super) {
+    __extends(Timeline, _super);
+    function Timeline(params) {
+        var _this = _super.call(this) || this;
+        _this._duration = 0;
+        _this._startTime = now();
+        _this._tweens = [];
+        _this.elapsed = 0;
+        _this._id = _id++;
+        _this._defaultParams = params;
+        _this.position = new PlaybackPosition();
+        _this.position.addLabel('afterLast', _this._duration);
+        _this.position.addLabel('afterInit', _this._startTime);
+        return _this;
+    }
+    Timeline.prototype.mapTotal = function (fn) {
+        fn.call(this, this._tweens);
+        return this;
+    };
+    Timeline.prototype.timingOrder = function (fn) {
+        var timing = fn(this._tweens.map(function (t) { return t._startTime; }));
+        this._tweens.map(function (tween, i) {
+            tween._startTime = timing[i];
+        });
+        return this;
+    };
+    Timeline.prototype.getTiming = function (mode, nodes, params, offset) {
+        if (offset === void 0) { offset = 0; }
+        if (mode === 'reverse') {
+            var stagger_1 = params.stagger;
+            var totalStagger_1 = (stagger_1 || 0) * (nodes.length - 1);
+            return nodes.map(function (node, i) { return totalStagger_1 - (stagger_1 || 0) * i + offset; });
+        }
+        else if (mode === 'async') {
+            return nodes.map(function (node) { return offset; });
+        }
+        else if (mode === 'sequence' || mode === 'delayed') {
+            var stagger_2 = params.stagger;
+            if (!stagger_2) {
+                stagger_2 = (params.duration || 1000) / (nodes.length - 1);
+            }
+            return nodes.map(function (node, i) { return stagger_2 * i + offset; });
+        }
+        else if (mode === 'oneByOne') {
+            return nodes.map(function (node) { return params.duration; });
+        }
+        else if (mode === 'shuffle') {
+            var stagger_3 = params.stagger;
+            return shuffle(nodes.map(function (node, i) { return (stagger_3 || 0) * i + offset; }));
+        }
+        else {
+            var stagger_4 = params.stagger;
+            return nodes.map(function (node, i) { return (stagger_4 || 0) * i + offset; });
+        }
+    };
+    /**
+     * @param {Array<Element>} nodes DOM Elements Collection (converted to Array)
+     * @param {object} from - Initial value
+     * @param {object} to - Target value
+     * @param {object} params - Options of tweens
+     * @example tl.fromTo(nodes, {x:0}, {x:200}, {duration:1000, stagger:200})
+     * @memberof Timeline
+     * @static
+     */
+    Timeline.prototype.fromTo = function (nodes, from, to, params) {
+        nodes = Selector(nodes, true);
+        if (nodes && nodes.length) {
+            if (this._defaultParams) {
+                params = __assign$1({}, this._defaultParams, params);
+            }
+            var position = params.label;
+            var offset = typeof position === 'number'
+                ? position
+                : this.position.parseLabel(typeof position !== 'undefined' ? position : 'afterLast', null);
+            var mode = this.getTiming(params.mode, nodes, params, offset);
+            for (var i = 0, node = void 0, len = nodes.length; i < len; i++) {
+                node = nodes[i];
+                this.add(Tween.fromTo(node, typeof from === 'function' ? from(i, nodes.length) : __assign$1({}, from), typeof to === 'function' ? to(i, nodes.length) : to, typeof params === 'function' ? params(i, nodes.length) : params), mode[i]);
+            }
+        }
+        return this.start();
+    };
+    /**
+     * @param {Array<Element>} nodes DOM Elements Collection (converted to Array)
+     * @param {object} from - Initial value
+     * @param {object} params - Options of tweens
+     * @example tl.from(nodes, {x:200}, {duration:1000, stagger:200})
+     * @memberof Timeline
+     * @static
+     */
+    Timeline.prototype.from = function (nodes, from, params) {
+        return this.fromTo(nodes, from, null, params);
+    };
+    /**
+     * @param {Array<Element>} nodes DOM Elements Collection (converted to Array)
+     * @param {object} to - Target value
+     * @param {object} params - Options of tweens
+     * @example tl.to(nodes, {x:200}, {duration:1000, stagger:200})
+     * @memberof Timeline
+     * @static
+     */
+    Timeline.prototype.to = function (nodes, to, params) {
+        return this.fromTo(nodes, null, to, params);
+    };
+    /**
+     * Add label to Timeline
+     * @param {string} name Label name
+     * @param {any} offset Label value, can be `number` and/or `string`
+     * @example tl.add('label1', 200)
+     * @memberof Timeline
+     */
+    Timeline.prototype.addLabel = function (name, offset) {
+        this.position.addLabel(name, offset);
+        return this;
+    };
+    Timeline.prototype.map = function (fn) {
+        for (var i = 0, len = this._tweens.length; i < len; i++) {
+            var _tween = this._tweens[i];
+            fn(_tween, i);
+            this._duration = Math.max(this._duration, _tween._duration + _tween._startTime);
+        }
+        return this;
+    };
+    /**
+     * Add tween to Timeline
+     * @param {Tween} tween Tween instance
+     * @param {position} position Can be label name, number or relative number to label
+     * @example tl.add(new Tween(node, {x:0}).to({x:200}, 200))
+     * @memberof Timeline
+     */
+    Timeline.prototype.add = function (tween, position) {
+        var _this = this;
+        if (Array.isArray(tween)) {
+            tween.map(function (_tween) {
+                _this.add(_tween, position);
+            });
+            return this;
+        }
+        else if (typeof tween === 'object' && !(tween instanceof Tween)) {
+            tween = new Tween(tween.from).to(tween.to, tween);
+        }
+        var _a = this, _defaultParams = _a._defaultParams, _duration = _a._duration;
+        if (_defaultParams) {
+            for (var method in _defaultParams) {
+                if (typeof tween[method] === 'function') {
+                    tween[method](_defaultParams[method]);
+                }
+            }
+        }
+        var offset = typeof position === 'number'
+            ? position
+            : this.position.parseLabel(typeof position !== 'undefined' ? position : 'afterLast', null);
+        tween._startTime = Math.max(this._startTime, tween._delayTime, offset);
+        tween._delayTime = offset;
+        tween._isPlaying = true;
+        this._duration = Math.max(_duration, tween._startTime + tween._delayTime + tween._duration);
+        this._tweens.push(tween);
+        this.position.setLabel('afterLast', this._duration);
+        return this;
+    };
+    Timeline.prototype.restart = function () {
+        this._startTime += now();
+        add(this);
+        return this.emit(EVENT_RESTART);
+    };
+    Timeline.prototype.easing = function (easing) {
+        return this.map(function (tween) { return tween.easing(easing); });
+    };
+    Timeline.prototype.interpolation = function (interpolation) {
+        return this.map(function (tween) { return tween.interpolation(interpolation); });
+    };
+    Timeline.prototype.update = function (time) {
+        var _a = this, _tweens = _a._tweens, _duration = _a._duration, _reverseDelayTime = _a._reverseDelayTime, _startTime = _a._startTime, _reversed = _a._reversed, _yoyo = _a._yoyo, _repeat = _a._repeat, _isFinite = _a._isFinite, _isPlaying = _a._isPlaying;
+        if (!_isPlaying || time < _startTime) {
+            return true;
+        }
+        var elapsed = (time - _startTime) / _duration;
+        elapsed = elapsed > 1 ? 1 : elapsed;
+        elapsed = _reversed ? 1 - elapsed : elapsed;
+        this.elapsed = elapsed;
+        var timing = time - _startTime;
+        var _timing = _reversed ? _duration - timing : timing;
+        var i = 0;
+        while (i < _tweens.length) {
+            _tweens[i].update(_timing);
+            i++;
+        }
+        this.emit(EVENT_UPDATE, elapsed, timing);
+        if (elapsed === 1 || (_reversed && elapsed === 0)) {
+            if (_repeat) {
+                if (_isFinite) {
+                    this._repeat--;
+                }
+                this.emit(_reversed ? EVENT_REVERSE : EVENT_REPEAT);
+                if (_yoyo) {
+                    this._reversed = !_reversed;
+                    this.timingOrder(function (timing) { return timing.reverse(); });
+                }
+                if (_reversed && _reverseDelayTime) {
+                    this._startTime = time + _reverseDelayTime;
+                }
+                else {
+                    this._startTime = time;
+                }
+                i = 0;
+                while (i < _tweens.length) {
+                    _tweens[i].reassignValues(time);
+                    i++;
+                }
+                return true;
+            }
+            else {
+                this.emit(EVENT_COMPLETE);
+                this._repeat = this._r;
+                remove(this);
+                this._isPlaying = false;
+                return false;
+            }
+        }
+        return true;
+    };
+    Timeline.prototype.progress = function (value) {
+        return value !== undefined
+            ? this.update(value * this._duration)
+            : this.elapsed;
+    };
+    return Timeline;
+}(Tween));
 
 // Polyfills
 
@@ -89492,2128 +91240,11 @@ var threeTrackballcontrols = TrackballControls = function ( object, domElement )
 
 TrackballControls.prototype = Object.create( THREE.EventDispatcher.prototype );
 
-var colors = function(specifier) {
-  var n = specifier.length / 6 | 0, colors = new Array(n), i = 0;
-  while (i < n) colors[i] = "#" + specifier.slice(i * 6, ++i * 6);
-  return colors;
-};
-
-colors("7fc97fbeaed4fdc086ffff99386cb0f0027fbf5b17666666");
-
-colors("1b9e77d95f027570b3e7298a66a61ee6ab02a6761d666666");
-
-var schemePaired = colors("a6cee31f78b4b2df8a33a02cfb9a99e31a1cfdbf6fff7f00cab2d66a3d9affff99b15928");
-
-colors("fbb4aeb3cde3ccebc5decbe4fed9a6ffffcce5d8bdfddaecf2f2f2");
-
-colors("b3e2cdfdcdaccbd5e8f4cae4e6f5c9fff2aef1e2cccccccc");
-
-colors("e41a1c377eb84daf4a984ea3ff7f00ffff33a65628f781bf999999");
-
-colors("66c2a5fc8d628da0cbe78ac3a6d854ffd92fe5c494b3b3b3");
-
-colors("8dd3c7ffffb3bebadafb807280b1d3fdb462b3de69fccde5d9d9d9bc80bdccebc5ffed6f");
-
-var define = function(constructor, factory, prototype) {
-  constructor.prototype = factory.prototype = prototype;
-  prototype.constructor = constructor;
-};
-
-function extend(parent, definition) {
-  var prototype = Object.create(parent.prototype);
-  for (var key in definition) prototype[key] = definition[key];
-  return prototype;
-}
-
-function Color$2() {}
-
-var darker = 0.7;
-var brighter = 1 / darker;
-
-var reI = "\\s*([+-]?\\d+)\\s*";
-var reN = "\\s*([+-]?\\d*\\.?\\d+(?:[eE][+-]?\\d+)?)\\s*";
-var reP = "\\s*([+-]?\\d*\\.?\\d+(?:[eE][+-]?\\d+)?)%\\s*";
-var reHex3 = /^#([0-9a-f]{3})$/;
-var reHex6 = /^#([0-9a-f]{6})$/;
-var reRgbInteger = new RegExp("^rgb\\(" + [reI, reI, reI] + "\\)$");
-var reRgbPercent = new RegExp("^rgb\\(" + [reP, reP, reP] + "\\)$");
-var reRgbaInteger = new RegExp("^rgba\\(" + [reI, reI, reI, reN] + "\\)$");
-var reRgbaPercent = new RegExp("^rgba\\(" + [reP, reP, reP, reN] + "\\)$");
-var reHslPercent = new RegExp("^hsl\\(" + [reN, reP, reP] + "\\)$");
-var reHslaPercent = new RegExp("^hsla\\(" + [reN, reP, reP, reN] + "\\)$");
-
-var named = {
-  aliceblue: 0xf0f8ff,
-  antiquewhite: 0xfaebd7,
-  aqua: 0x00ffff,
-  aquamarine: 0x7fffd4,
-  azure: 0xf0ffff,
-  beige: 0xf5f5dc,
-  bisque: 0xffe4c4,
-  black: 0x000000,
-  blanchedalmond: 0xffebcd,
-  blue: 0x0000ff,
-  blueviolet: 0x8a2be2,
-  brown: 0xa52a2a,
-  burlywood: 0xdeb887,
-  cadetblue: 0x5f9ea0,
-  chartreuse: 0x7fff00,
-  chocolate: 0xd2691e,
-  coral: 0xff7f50,
-  cornflowerblue: 0x6495ed,
-  cornsilk: 0xfff8dc,
-  crimson: 0xdc143c,
-  cyan: 0x00ffff,
-  darkblue: 0x00008b,
-  darkcyan: 0x008b8b,
-  darkgoldenrod: 0xb8860b,
-  darkgray: 0xa9a9a9,
-  darkgreen: 0x006400,
-  darkgrey: 0xa9a9a9,
-  darkkhaki: 0xbdb76b,
-  darkmagenta: 0x8b008b,
-  darkolivegreen: 0x556b2f,
-  darkorange: 0xff8c00,
-  darkorchid: 0x9932cc,
-  darkred: 0x8b0000,
-  darksalmon: 0xe9967a,
-  darkseagreen: 0x8fbc8f,
-  darkslateblue: 0x483d8b,
-  darkslategray: 0x2f4f4f,
-  darkslategrey: 0x2f4f4f,
-  darkturquoise: 0x00ced1,
-  darkviolet: 0x9400d3,
-  deeppink: 0xff1493,
-  deepskyblue: 0x00bfff,
-  dimgray: 0x696969,
-  dimgrey: 0x696969,
-  dodgerblue: 0x1e90ff,
-  firebrick: 0xb22222,
-  floralwhite: 0xfffaf0,
-  forestgreen: 0x228b22,
-  fuchsia: 0xff00ff,
-  gainsboro: 0xdcdcdc,
-  ghostwhite: 0xf8f8ff,
-  gold: 0xffd700,
-  goldenrod: 0xdaa520,
-  gray: 0x808080,
-  green: 0x008000,
-  greenyellow: 0xadff2f,
-  grey: 0x808080,
-  honeydew: 0xf0fff0,
-  hotpink: 0xff69b4,
-  indianred: 0xcd5c5c,
-  indigo: 0x4b0082,
-  ivory: 0xfffff0,
-  khaki: 0xf0e68c,
-  lavender: 0xe6e6fa,
-  lavenderblush: 0xfff0f5,
-  lawngreen: 0x7cfc00,
-  lemonchiffon: 0xfffacd,
-  lightblue: 0xadd8e6,
-  lightcoral: 0xf08080,
-  lightcyan: 0xe0ffff,
-  lightgoldenrodyellow: 0xfafad2,
-  lightgray: 0xd3d3d3,
-  lightgreen: 0x90ee90,
-  lightgrey: 0xd3d3d3,
-  lightpink: 0xffb6c1,
-  lightsalmon: 0xffa07a,
-  lightseagreen: 0x20b2aa,
-  lightskyblue: 0x87cefa,
-  lightslategray: 0x778899,
-  lightslategrey: 0x778899,
-  lightsteelblue: 0xb0c4de,
-  lightyellow: 0xffffe0,
-  lime: 0x00ff00,
-  limegreen: 0x32cd32,
-  linen: 0xfaf0e6,
-  magenta: 0xff00ff,
-  maroon: 0x800000,
-  mediumaquamarine: 0x66cdaa,
-  mediumblue: 0x0000cd,
-  mediumorchid: 0xba55d3,
-  mediumpurple: 0x9370db,
-  mediumseagreen: 0x3cb371,
-  mediumslateblue: 0x7b68ee,
-  mediumspringgreen: 0x00fa9a,
-  mediumturquoise: 0x48d1cc,
-  mediumvioletred: 0xc71585,
-  midnightblue: 0x191970,
-  mintcream: 0xf5fffa,
-  mistyrose: 0xffe4e1,
-  moccasin: 0xffe4b5,
-  navajowhite: 0xffdead,
-  navy: 0x000080,
-  oldlace: 0xfdf5e6,
-  olive: 0x808000,
-  olivedrab: 0x6b8e23,
-  orange: 0xffa500,
-  orangered: 0xff4500,
-  orchid: 0xda70d6,
-  palegoldenrod: 0xeee8aa,
-  palegreen: 0x98fb98,
-  paleturquoise: 0xafeeee,
-  palevioletred: 0xdb7093,
-  papayawhip: 0xffefd5,
-  peachpuff: 0xffdab9,
-  peru: 0xcd853f,
-  pink: 0xffc0cb,
-  plum: 0xdda0dd,
-  powderblue: 0xb0e0e6,
-  purple: 0x800080,
-  rebeccapurple: 0x663399,
-  red: 0xff0000,
-  rosybrown: 0xbc8f8f,
-  royalblue: 0x4169e1,
-  saddlebrown: 0x8b4513,
-  salmon: 0xfa8072,
-  sandybrown: 0xf4a460,
-  seagreen: 0x2e8b57,
-  seashell: 0xfff5ee,
-  sienna: 0xa0522d,
-  silver: 0xc0c0c0,
-  skyblue: 0x87ceeb,
-  slateblue: 0x6a5acd,
-  slategray: 0x708090,
-  slategrey: 0x708090,
-  snow: 0xfffafa,
-  springgreen: 0x00ff7f,
-  steelblue: 0x4682b4,
-  tan: 0xd2b48c,
-  teal: 0x008080,
-  thistle: 0xd8bfd8,
-  tomato: 0xff6347,
-  turquoise: 0x40e0d0,
-  violet: 0xee82ee,
-  wheat: 0xf5deb3,
-  white: 0xffffff,
-  whitesmoke: 0xf5f5f5,
-  yellow: 0xffff00,
-  yellowgreen: 0x9acd32
-};
-
-define(Color$2, color, {
-  displayable: function() {
-    return this.rgb().displayable();
-  },
-  toString: function() {
-    return this.rgb() + "";
-  }
-});
-
-function color(format) {
-  var m;
-  format = (format + "").trim().toLowerCase();
-  return (m = reHex3.exec(format)) ? (m = parseInt(m[1], 16), new Rgb((m >> 8 & 0xf) | (m >> 4 & 0x0f0), (m >> 4 & 0xf) | (m & 0xf0), ((m & 0xf) << 4) | (m & 0xf), 1)) // #f00
-      : (m = reHex6.exec(format)) ? rgbn(parseInt(m[1], 16)) // #ff0000
-      : (m = reRgbInteger.exec(format)) ? new Rgb(m[1], m[2], m[3], 1) // rgb(255, 0, 0)
-      : (m = reRgbPercent.exec(format)) ? new Rgb(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, 1) // rgb(100%, 0%, 0%)
-      : (m = reRgbaInteger.exec(format)) ? rgba(m[1], m[2], m[3], m[4]) // rgba(255, 0, 0, 1)
-      : (m = reRgbaPercent.exec(format)) ? rgba(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, m[4]) // rgb(100%, 0%, 0%, 1)
-      : (m = reHslPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, 1) // hsl(120, 50%, 50%)
-      : (m = reHslaPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, m[4]) // hsla(120, 50%, 50%, 1)
-      : named.hasOwnProperty(format) ? rgbn(named[format])
-      : format === "transparent" ? new Rgb(NaN, NaN, NaN, 0)
-      : null;
-}
-
-function rgbn(n) {
-  return new Rgb(n >> 16 & 0xff, n >> 8 & 0xff, n & 0xff, 1);
-}
-
-function rgba(r, g, b, a) {
-  if (a <= 0) r = g = b = NaN;
-  return new Rgb(r, g, b, a);
-}
-
-function rgbConvert(o) {
-  if (!(o instanceof Color$2)) o = color(o);
-  if (!o) return new Rgb;
-  o = o.rgb();
-  return new Rgb(o.r, o.g, o.b, o.opacity);
-}
-
-function rgb(r, g, b, opacity) {
-  return arguments.length === 1 ? rgbConvert(r) : new Rgb(r, g, b, opacity == null ? 1 : opacity);
-}
-
-function Rgb(r, g, b, opacity) {
-  this.r = +r;
-  this.g = +g;
-  this.b = +b;
-  this.opacity = +opacity;
-}
-
-define(Rgb, rgb, extend(Color$2, {
-  brighter: function(k) {
-    k = k == null ? brighter : Math.pow(brighter, k);
-    return new Rgb(this.r * k, this.g * k, this.b * k, this.opacity);
-  },
-  darker: function(k) {
-    k = k == null ? darker : Math.pow(darker, k);
-    return new Rgb(this.r * k, this.g * k, this.b * k, this.opacity);
-  },
-  rgb: function() {
-    return this;
-  },
-  displayable: function() {
-    return (0 <= this.r && this.r <= 255)
-        && (0 <= this.g && this.g <= 255)
-        && (0 <= this.b && this.b <= 255)
-        && (0 <= this.opacity && this.opacity <= 1);
-  },
-  toString: function() {
-    var a = this.opacity; a = isNaN(a) ? 1 : Math.max(0, Math.min(1, a));
-    return (a === 1 ? "rgb(" : "rgba(")
-        + Math.max(0, Math.min(255, Math.round(this.r) || 0)) + ", "
-        + Math.max(0, Math.min(255, Math.round(this.g) || 0)) + ", "
-        + Math.max(0, Math.min(255, Math.round(this.b) || 0))
-        + (a === 1 ? ")" : ", " + a + ")");
-  }
-}));
-
-function hsla(h, s, l, a) {
-  if (a <= 0) h = s = l = NaN;
-  else if (l <= 0 || l >= 1) h = s = NaN;
-  else if (s <= 0) h = NaN;
-  return new Hsl(h, s, l, a);
-}
-
-function hslConvert(o) {
-  if (o instanceof Hsl) return new Hsl(o.h, o.s, o.l, o.opacity);
-  if (!(o instanceof Color$2)) o = color(o);
-  if (!o) return new Hsl;
-  if (o instanceof Hsl) return o;
-  o = o.rgb();
-  var r = o.r / 255,
-      g = o.g / 255,
-      b = o.b / 255,
-      min = Math.min(r, g, b),
-      max = Math.max(r, g, b),
-      h = NaN,
-      s = max - min,
-      l = (max + min) / 2;
-  if (s) {
-    if (r === max) h = (g - b) / s + (g < b) * 6;
-    else if (g === max) h = (b - r) / s + 2;
-    else h = (r - g) / s + 4;
-    s /= l < 0.5 ? max + min : 2 - max - min;
-    h *= 60;
-  } else {
-    s = l > 0 && l < 1 ? 0 : h;
-  }
-  return new Hsl(h, s, l, o.opacity);
-}
-
-function hsl(h, s, l, opacity) {
-  return arguments.length === 1 ? hslConvert(h) : new Hsl(h, s, l, opacity == null ? 1 : opacity);
-}
-
-function Hsl(h, s, l, opacity) {
-  this.h = +h;
-  this.s = +s;
-  this.l = +l;
-  this.opacity = +opacity;
-}
-
-define(Hsl, hsl, extend(Color$2, {
-  brighter: function(k) {
-    k = k == null ? brighter : Math.pow(brighter, k);
-    return new Hsl(this.h, this.s, this.l * k, this.opacity);
-  },
-  darker: function(k) {
-    k = k == null ? darker : Math.pow(darker, k);
-    return new Hsl(this.h, this.s, this.l * k, this.opacity);
-  },
-  rgb: function() {
-    var h = this.h % 360 + (this.h < 0) * 360,
-        s = isNaN(h) || isNaN(this.s) ? 0 : this.s,
-        l = this.l,
-        m2 = l + (l < 0.5 ? l : 1 - l) * s,
-        m1 = 2 * l - m2;
-    return new Rgb(
-      hsl2rgb(h >= 240 ? h - 240 : h + 120, m1, m2),
-      hsl2rgb(h, m1, m2),
-      hsl2rgb(h < 120 ? h + 240 : h - 120, m1, m2),
-      this.opacity
-    );
-  },
-  displayable: function() {
-    return (0 <= this.s && this.s <= 1 || isNaN(this.s))
-        && (0 <= this.l && this.l <= 1)
-        && (0 <= this.opacity && this.opacity <= 1);
-  }
-}));
-
-/* From FvD 13.37, CSS Color Module Level 3 */
-function hsl2rgb(h, m1, m2) {
-  return (h < 60 ? m1 + (m2 - m1) * h / 60
-      : h < 180 ? m2
-      : h < 240 ? m1 + (m2 - m1) * (240 - h) / 60
-      : m1) * 255;
-}
-
-var deg2rad = Math.PI / 180;
-var rad2deg = 180 / Math.PI;
-
-var Kn = 18;
-var Xn = 0.950470;
-var Yn = 1;
-var Zn = 1.088830;
-var t0 = 4 / 29;
-var t1 = 6 / 29;
-var t2 = 3 * t1 * t1;
-var t3 = t1 * t1 * t1;
-
-function labConvert(o) {
-  if (o instanceof Lab) return new Lab(o.l, o.a, o.b, o.opacity);
-  if (o instanceof Hcl) {
-    var h = o.h * deg2rad;
-    return new Lab(o.l, Math.cos(h) * o.c, Math.sin(h) * o.c, o.opacity);
-  }
-  if (!(o instanceof Rgb)) o = rgbConvert(o);
-  var b = rgb2xyz(o.r),
-      a = rgb2xyz(o.g),
-      l = rgb2xyz(o.b),
-      x = xyz2lab((0.4124564 * b + 0.3575761 * a + 0.1804375 * l) / Xn),
-      y = xyz2lab((0.2126729 * b + 0.7151522 * a + 0.0721750 * l) / Yn),
-      z = xyz2lab((0.0193339 * b + 0.1191920 * a + 0.9503041 * l) / Zn);
-  return new Lab(116 * y - 16, 500 * (x - y), 200 * (y - z), o.opacity);
-}
-
-function lab(l, a, b, opacity) {
-  return arguments.length === 1 ? labConvert(l) : new Lab(l, a, b, opacity == null ? 1 : opacity);
-}
-
-function Lab(l, a, b, opacity) {
-  this.l = +l;
-  this.a = +a;
-  this.b = +b;
-  this.opacity = +opacity;
-}
-
-define(Lab, lab, extend(Color$2, {
-  brighter: function(k) {
-    return new Lab(this.l + Kn * (k == null ? 1 : k), this.a, this.b, this.opacity);
-  },
-  darker: function(k) {
-    return new Lab(this.l - Kn * (k == null ? 1 : k), this.a, this.b, this.opacity);
-  },
-  rgb: function() {
-    var y = (this.l + 16) / 116,
-        x = isNaN(this.a) ? y : y + this.a / 500,
-        z = isNaN(this.b) ? y : y - this.b / 200;
-    y = Yn * lab2xyz(y);
-    x = Xn * lab2xyz(x);
-    z = Zn * lab2xyz(z);
-    return new Rgb(
-      xyz2rgb( 3.2404542 * x - 1.5371385 * y - 0.4985314 * z), // D65 -> sRGB
-      xyz2rgb(-0.9692660 * x + 1.8760108 * y + 0.0415560 * z),
-      xyz2rgb( 0.0556434 * x - 0.2040259 * y + 1.0572252 * z),
-      this.opacity
-    );
-  }
-}));
-
-function xyz2lab(t) {
-  return t > t3 ? Math.pow(t, 1 / 3) : t / t2 + t0;
-}
-
-function lab2xyz(t) {
-  return t > t1 ? t * t * t : t2 * (t - t0);
-}
-
-function xyz2rgb(x) {
-  return 255 * (x <= 0.0031308 ? 12.92 * x : 1.055 * Math.pow(x, 1 / 2.4) - 0.055);
-}
-
-function rgb2xyz(x) {
-  return (x /= 255) <= 0.04045 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4);
-}
-
-function hclConvert(o) {
-  if (o instanceof Hcl) return new Hcl(o.h, o.c, o.l, o.opacity);
-  if (!(o instanceof Lab)) o = labConvert(o);
-  var h = Math.atan2(o.b, o.a) * rad2deg;
-  return new Hcl(h < 0 ? h + 360 : h, Math.sqrt(o.a * o.a + o.b * o.b), o.l, o.opacity);
-}
-
-function hcl(h, c, l, opacity) {
-  return arguments.length === 1 ? hclConvert(h) : new Hcl(h, c, l, opacity == null ? 1 : opacity);
-}
-
-function Hcl(h, c, l, opacity) {
-  this.h = +h;
-  this.c = +c;
-  this.l = +l;
-  this.opacity = +opacity;
-}
-
-define(Hcl, hcl, extend(Color$2, {
-  brighter: function(k) {
-    return new Hcl(this.h, this.c, this.l + Kn * (k == null ? 1 : k), this.opacity);
-  },
-  darker: function(k) {
-    return new Hcl(this.h, this.c, this.l - Kn * (k == null ? 1 : k), this.opacity);
-  },
-  rgb: function() {
-    return labConvert(this).rgb();
-  }
-}));
-
-var A = -0.14861;
-var B = +1.78277;
-var C = -0.29227;
-var D = -0.90649;
-var E = +1.97294;
-var ED = E * D;
-var EB = E * B;
-var BC_DA = B * C - D * A;
-
-function cubehelixConvert(o) {
-  if (o instanceof Cubehelix) return new Cubehelix(o.h, o.s, o.l, o.opacity);
-  if (!(o instanceof Rgb)) o = rgbConvert(o);
-  var r = o.r / 255,
-      g = o.g / 255,
-      b = o.b / 255,
-      l = (BC_DA * b + ED * r - EB * g) / (BC_DA + ED - EB),
-      bl = b - l,
-      k = (E * (g - l) - C * bl) / D,
-      s = Math.sqrt(k * k + bl * bl) / (E * l * (1 - l)), // NaN if l=0 or l=1
-      h = s ? Math.atan2(k, bl) * rad2deg - 120 : NaN;
-  return new Cubehelix(h < 0 ? h + 360 : h, s, l, o.opacity);
-}
-
-function cubehelix(h, s, l, opacity) {
-  return arguments.length === 1 ? cubehelixConvert(h) : new Cubehelix(h, s, l, opacity == null ? 1 : opacity);
-}
-
-function Cubehelix(h, s, l, opacity) {
-  this.h = +h;
-  this.s = +s;
-  this.l = +l;
-  this.opacity = +opacity;
-}
-
-define(Cubehelix, cubehelix, extend(Color$2, {
-  brighter: function(k) {
-    k = k == null ? brighter : Math.pow(brighter, k);
-    return new Cubehelix(this.h, this.s, this.l * k, this.opacity);
-  },
-  darker: function(k) {
-    k = k == null ? darker : Math.pow(darker, k);
-    return new Cubehelix(this.h, this.s, this.l * k, this.opacity);
-  },
-  rgb: function() {
-    var h = isNaN(this.h) ? 0 : (this.h + 120) * deg2rad,
-        l = +this.l,
-        a = isNaN(this.s) ? 0 : this.s * l * (1 - l),
-        cosh = Math.cos(h),
-        sinh = Math.sin(h);
-    return new Rgb(
-      255 * (l + a * (A * cosh + B * sinh)),
-      255 * (l + a * (C * cosh + D * sinh)),
-      255 * (l + a * (E * cosh)),
-      this.opacity
-    );
-  }
-}));
-
-function basis(t1, v0, v1, v2, v3) {
-  var t2 = t1 * t1, t3 = t2 * t1;
-  return ((1 - 3 * t1 + 3 * t2 - t3) * v0
-      + (4 - 6 * t2 + 3 * t3) * v1
-      + (1 + 3 * t1 + 3 * t2 - 3 * t3) * v2
-      + t3 * v3) / 6;
-}
-
-var basis$1 = function(values) {
-  var n = values.length - 1;
-  return function(t) {
-    var i = t <= 0 ? (t = 0) : t >= 1 ? (t = 1, n - 1) : Math.floor(t * n),
-        v1 = values[i],
-        v2 = values[i + 1],
-        v0 = i > 0 ? values[i - 1] : 2 * v1 - v2,
-        v3 = i < n - 1 ? values[i + 2] : 2 * v2 - v1;
-    return basis((t - i / n) * n, v0, v1, v2, v3);
-  };
-};
-
-function rgbSpline(spline) {
-  return function(colors) {
-    var n = colors.length,
-        r = new Array(n),
-        g = new Array(n),
-        b = new Array(n),
-        i, color$$1;
-    for (i = 0; i < n; ++i) {
-      color$$1 = rgb(colors[i]);
-      r[i] = color$$1.r || 0;
-      g[i] = color$$1.g || 0;
-      b[i] = color$$1.b || 0;
-    }
-    r = spline(r);
-    g = spline(g);
-    b = spline(b);
-    color$$1.opacity = 1;
-    return function(t) {
-      color$$1.r = r(t);
-      color$$1.g = g(t);
-      color$$1.b = b(t);
-      return color$$1 + "";
-    };
-  };
-}
-
-var rgbBasis = rgbSpline(basis$1);
-
-var degrees = 180 / Math.PI;
-
-var rho = Math.SQRT2;
-
-var ramp = function(scheme) {
-  return rgbBasis(scheme[scheme.length - 1]);
-};
-
-var scheme = new Array(3).concat(
-  "d8b365f5f5f55ab4ac",
-  "a6611adfc27d80cdc1018571",
-  "a6611adfc27df5f5f580cdc1018571",
-  "8c510ad8b365f6e8c3c7eae55ab4ac01665e",
-  "8c510ad8b365f6e8c3f5f5f5c7eae55ab4ac01665e",
-  "8c510abf812ddfc27df6e8c3c7eae580cdc135978f01665e",
-  "8c510abf812ddfc27df6e8c3f5f5f5c7eae580cdc135978f01665e",
-  "5430058c510abf812ddfc27df6e8c3c7eae580cdc135978f01665e003c30",
-  "5430058c510abf812ddfc27df6e8c3f5f5f5c7eae580cdc135978f01665e003c30"
-).map(colors);
-
-ramp(scheme);
-
-var scheme$1 = new Array(3).concat(
-  "af8dc3f7f7f77fbf7b",
-  "7b3294c2a5cfa6dba0008837",
-  "7b3294c2a5cff7f7f7a6dba0008837",
-  "762a83af8dc3e7d4e8d9f0d37fbf7b1b7837",
-  "762a83af8dc3e7d4e8f7f7f7d9f0d37fbf7b1b7837",
-  "762a839970abc2a5cfe7d4e8d9f0d3a6dba05aae611b7837",
-  "762a839970abc2a5cfe7d4e8f7f7f7d9f0d3a6dba05aae611b7837",
-  "40004b762a839970abc2a5cfe7d4e8d9f0d3a6dba05aae611b783700441b",
-  "40004b762a839970abc2a5cfe7d4e8f7f7f7d9f0d3a6dba05aae611b783700441b"
-).map(colors);
-
-ramp(scheme$1);
-
-var scheme$2 = new Array(3).concat(
-  "e9a3c9f7f7f7a1d76a",
-  "d01c8bf1b6dab8e1864dac26",
-  "d01c8bf1b6daf7f7f7b8e1864dac26",
-  "c51b7de9a3c9fde0efe6f5d0a1d76a4d9221",
-  "c51b7de9a3c9fde0eff7f7f7e6f5d0a1d76a4d9221",
-  "c51b7dde77aef1b6dafde0efe6f5d0b8e1867fbc414d9221",
-  "c51b7dde77aef1b6dafde0eff7f7f7e6f5d0b8e1867fbc414d9221",
-  "8e0152c51b7dde77aef1b6dafde0efe6f5d0b8e1867fbc414d9221276419",
-  "8e0152c51b7dde77aef1b6dafde0eff7f7f7e6f5d0b8e1867fbc414d9221276419"
-).map(colors);
-
-ramp(scheme$2);
-
-var scheme$3 = new Array(3).concat(
-  "998ec3f7f7f7f1a340",
-  "5e3c99b2abd2fdb863e66101",
-  "5e3c99b2abd2f7f7f7fdb863e66101",
-  "542788998ec3d8daebfee0b6f1a340b35806",
-  "542788998ec3d8daebf7f7f7fee0b6f1a340b35806",
-  "5427888073acb2abd2d8daebfee0b6fdb863e08214b35806",
-  "5427888073acb2abd2d8daebf7f7f7fee0b6fdb863e08214b35806",
-  "2d004b5427888073acb2abd2d8daebfee0b6fdb863e08214b358067f3b08",
-  "2d004b5427888073acb2abd2d8daebf7f7f7fee0b6fdb863e08214b358067f3b08"
-).map(colors);
-
-ramp(scheme$3);
-
-var scheme$4 = new Array(3).concat(
-  "ef8a62f7f7f767a9cf",
-  "ca0020f4a58292c5de0571b0",
-  "ca0020f4a582f7f7f792c5de0571b0",
-  "b2182bef8a62fddbc7d1e5f067a9cf2166ac",
-  "b2182bef8a62fddbc7f7f7f7d1e5f067a9cf2166ac",
-  "b2182bd6604df4a582fddbc7d1e5f092c5de4393c32166ac",
-  "b2182bd6604df4a582fddbc7f7f7f7d1e5f092c5de4393c32166ac",
-  "67001fb2182bd6604df4a582fddbc7d1e5f092c5de4393c32166ac053061",
-  "67001fb2182bd6604df4a582fddbc7f7f7f7d1e5f092c5de4393c32166ac053061"
-).map(colors);
-
-ramp(scheme$4);
-
-var scheme$5 = new Array(3).concat(
-  "ef8a62ffffff999999",
-  "ca0020f4a582bababa404040",
-  "ca0020f4a582ffffffbababa404040",
-  "b2182bef8a62fddbc7e0e0e09999994d4d4d",
-  "b2182bef8a62fddbc7ffffffe0e0e09999994d4d4d",
-  "b2182bd6604df4a582fddbc7e0e0e0bababa8787874d4d4d",
-  "b2182bd6604df4a582fddbc7ffffffe0e0e0bababa8787874d4d4d",
-  "67001fb2182bd6604df4a582fddbc7e0e0e0bababa8787874d4d4d1a1a1a",
-  "67001fb2182bd6604df4a582fddbc7ffffffe0e0e0bababa8787874d4d4d1a1a1a"
-).map(colors);
-
-ramp(scheme$5);
-
-var scheme$6 = new Array(3).concat(
-  "fc8d59ffffbf91bfdb",
-  "d7191cfdae61abd9e92c7bb6",
-  "d7191cfdae61ffffbfabd9e92c7bb6",
-  "d73027fc8d59fee090e0f3f891bfdb4575b4",
-  "d73027fc8d59fee090ffffbfe0f3f891bfdb4575b4",
-  "d73027f46d43fdae61fee090e0f3f8abd9e974add14575b4",
-  "d73027f46d43fdae61fee090ffffbfe0f3f8abd9e974add14575b4",
-  "a50026d73027f46d43fdae61fee090e0f3f8abd9e974add14575b4313695",
-  "a50026d73027f46d43fdae61fee090ffffbfe0f3f8abd9e974add14575b4313695"
-).map(colors);
-
-ramp(scheme$6);
-
-var scheme$7 = new Array(3).concat(
-  "fc8d59ffffbf91cf60",
-  "d7191cfdae61a6d96a1a9641",
-  "d7191cfdae61ffffbfa6d96a1a9641",
-  "d73027fc8d59fee08bd9ef8b91cf601a9850",
-  "d73027fc8d59fee08bffffbfd9ef8b91cf601a9850",
-  "d73027f46d43fdae61fee08bd9ef8ba6d96a66bd631a9850",
-  "d73027f46d43fdae61fee08bffffbfd9ef8ba6d96a66bd631a9850",
-  "a50026d73027f46d43fdae61fee08bd9ef8ba6d96a66bd631a9850006837",
-  "a50026d73027f46d43fdae61fee08bffffbfd9ef8ba6d96a66bd631a9850006837"
-).map(colors);
-
-ramp(scheme$7);
-
-var scheme$8 = new Array(3).concat(
-  "fc8d59ffffbf99d594",
-  "d7191cfdae61abdda42b83ba",
-  "d7191cfdae61ffffbfabdda42b83ba",
-  "d53e4ffc8d59fee08be6f59899d5943288bd",
-  "d53e4ffc8d59fee08bffffbfe6f59899d5943288bd",
-  "d53e4ff46d43fdae61fee08be6f598abdda466c2a53288bd",
-  "d53e4ff46d43fdae61fee08bffffbfe6f598abdda466c2a53288bd",
-  "9e0142d53e4ff46d43fdae61fee08be6f598abdda466c2a53288bd5e4fa2",
-  "9e0142d53e4ff46d43fdae61fee08bffffbfe6f598abdda466c2a53288bd5e4fa2"
-).map(colors);
-
-ramp(scheme$8);
-
-var scheme$9 = new Array(3).concat(
-  "e5f5f999d8c92ca25f",
-  "edf8fbb2e2e266c2a4238b45",
-  "edf8fbb2e2e266c2a42ca25f006d2c",
-  "edf8fbccece699d8c966c2a42ca25f006d2c",
-  "edf8fbccece699d8c966c2a441ae76238b45005824",
-  "f7fcfde5f5f9ccece699d8c966c2a441ae76238b45005824",
-  "f7fcfde5f5f9ccece699d8c966c2a441ae76238b45006d2c00441b"
-).map(colors);
-
-ramp(scheme$9);
-
-var scheme$10 = new Array(3).concat(
-  "e0ecf49ebcda8856a7",
-  "edf8fbb3cde38c96c688419d",
-  "edf8fbb3cde38c96c68856a7810f7c",
-  "edf8fbbfd3e69ebcda8c96c68856a7810f7c",
-  "edf8fbbfd3e69ebcda8c96c68c6bb188419d6e016b",
-  "f7fcfde0ecf4bfd3e69ebcda8c96c68c6bb188419d6e016b",
-  "f7fcfde0ecf4bfd3e69ebcda8c96c68c6bb188419d810f7c4d004b"
-).map(colors);
-
-ramp(scheme$10);
-
-var scheme$11 = new Array(3).concat(
-  "e0f3dba8ddb543a2ca",
-  "f0f9e8bae4bc7bccc42b8cbe",
-  "f0f9e8bae4bc7bccc443a2ca0868ac",
-  "f0f9e8ccebc5a8ddb57bccc443a2ca0868ac",
-  "f0f9e8ccebc5a8ddb57bccc44eb3d32b8cbe08589e",
-  "f7fcf0e0f3dbccebc5a8ddb57bccc44eb3d32b8cbe08589e",
-  "f7fcf0e0f3dbccebc5a8ddb57bccc44eb3d32b8cbe0868ac084081"
-).map(colors);
-
-ramp(scheme$11);
-
-var scheme$12 = new Array(3).concat(
-  "fee8c8fdbb84e34a33",
-  "fef0d9fdcc8afc8d59d7301f",
-  "fef0d9fdcc8afc8d59e34a33b30000",
-  "fef0d9fdd49efdbb84fc8d59e34a33b30000",
-  "fef0d9fdd49efdbb84fc8d59ef6548d7301f990000",
-  "fff7ecfee8c8fdd49efdbb84fc8d59ef6548d7301f990000",
-  "fff7ecfee8c8fdd49efdbb84fc8d59ef6548d7301fb300007f0000"
-).map(colors);
-
-ramp(scheme$12);
-
-var scheme$13 = new Array(3).concat(
-  "ece2f0a6bddb1c9099",
-  "f6eff7bdc9e167a9cf02818a",
-  "f6eff7bdc9e167a9cf1c9099016c59",
-  "f6eff7d0d1e6a6bddb67a9cf1c9099016c59",
-  "f6eff7d0d1e6a6bddb67a9cf3690c002818a016450",
-  "fff7fbece2f0d0d1e6a6bddb67a9cf3690c002818a016450",
-  "fff7fbece2f0d0d1e6a6bddb67a9cf3690c002818a016c59014636"
-).map(colors);
-
-ramp(scheme$13);
-
-var scheme$14 = new Array(3).concat(
-  "ece7f2a6bddb2b8cbe",
-  "f1eef6bdc9e174a9cf0570b0",
-  "f1eef6bdc9e174a9cf2b8cbe045a8d",
-  "f1eef6d0d1e6a6bddb74a9cf2b8cbe045a8d",
-  "f1eef6d0d1e6a6bddb74a9cf3690c00570b0034e7b",
-  "fff7fbece7f2d0d1e6a6bddb74a9cf3690c00570b0034e7b",
-  "fff7fbece7f2d0d1e6a6bddb74a9cf3690c00570b0045a8d023858"
-).map(colors);
-
-ramp(scheme$14);
-
-var scheme$15 = new Array(3).concat(
-  "e7e1efc994c7dd1c77",
-  "f1eef6d7b5d8df65b0ce1256",
-  "f1eef6d7b5d8df65b0dd1c77980043",
-  "f1eef6d4b9dac994c7df65b0dd1c77980043",
-  "f1eef6d4b9dac994c7df65b0e7298ace125691003f",
-  "f7f4f9e7e1efd4b9dac994c7df65b0e7298ace125691003f",
-  "f7f4f9e7e1efd4b9dac994c7df65b0e7298ace125698004367001f"
-).map(colors);
-
-ramp(scheme$15);
-
-var scheme$16 = new Array(3).concat(
-  "fde0ddfa9fb5c51b8a",
-  "feebe2fbb4b9f768a1ae017e",
-  "feebe2fbb4b9f768a1c51b8a7a0177",
-  "feebe2fcc5c0fa9fb5f768a1c51b8a7a0177",
-  "feebe2fcc5c0fa9fb5f768a1dd3497ae017e7a0177",
-  "fff7f3fde0ddfcc5c0fa9fb5f768a1dd3497ae017e7a0177",
-  "fff7f3fde0ddfcc5c0fa9fb5f768a1dd3497ae017e7a017749006a"
-).map(colors);
-
-ramp(scheme$16);
-
-var scheme$17 = new Array(3).concat(
-  "edf8b17fcdbb2c7fb8",
-  "ffffcca1dab441b6c4225ea8",
-  "ffffcca1dab441b6c42c7fb8253494",
-  "ffffccc7e9b47fcdbb41b6c42c7fb8253494",
-  "ffffccc7e9b47fcdbb41b6c41d91c0225ea80c2c84",
-  "ffffd9edf8b1c7e9b47fcdbb41b6c41d91c0225ea80c2c84",
-  "ffffd9edf8b1c7e9b47fcdbb41b6c41d91c0225ea8253494081d58"
-).map(colors);
-
-ramp(scheme$17);
-
-var scheme$18 = new Array(3).concat(
-  "f7fcb9addd8e31a354",
-  "ffffccc2e69978c679238443",
-  "ffffccc2e69978c67931a354006837",
-  "ffffccd9f0a3addd8e78c67931a354006837",
-  "ffffccd9f0a3addd8e78c67941ab5d238443005a32",
-  "ffffe5f7fcb9d9f0a3addd8e78c67941ab5d238443005a32",
-  "ffffe5f7fcb9d9f0a3addd8e78c67941ab5d238443006837004529"
-).map(colors);
-
-ramp(scheme$18);
-
-var scheme$19 = new Array(3).concat(
-  "fff7bcfec44fd95f0e",
-  "ffffd4fed98efe9929cc4c02",
-  "ffffd4fed98efe9929d95f0e993404",
-  "ffffd4fee391fec44ffe9929d95f0e993404",
-  "ffffd4fee391fec44ffe9929ec7014cc4c028c2d04",
-  "ffffe5fff7bcfee391fec44ffe9929ec7014cc4c028c2d04",
-  "ffffe5fff7bcfee391fec44ffe9929ec7014cc4c02993404662506"
-).map(colors);
-
-ramp(scheme$19);
-
-var scheme$20 = new Array(3).concat(
-  "ffeda0feb24cf03b20",
-  "ffffb2fecc5cfd8d3ce31a1c",
-  "ffffb2fecc5cfd8d3cf03b20bd0026",
-  "ffffb2fed976feb24cfd8d3cf03b20bd0026",
-  "ffffb2fed976feb24cfd8d3cfc4e2ae31a1cb10026",
-  "ffffccffeda0fed976feb24cfd8d3cfc4e2ae31a1cb10026",
-  "ffffccffeda0fed976feb24cfd8d3cfc4e2ae31a1cbd0026800026"
-).map(colors);
-
-ramp(scheme$20);
-
-var scheme$21 = new Array(3).concat(
-  "deebf79ecae13182bd",
-  "eff3ffbdd7e76baed62171b5",
-  "eff3ffbdd7e76baed63182bd08519c",
-  "eff3ffc6dbef9ecae16baed63182bd08519c",
-  "eff3ffc6dbef9ecae16baed64292c62171b5084594",
-  "f7fbffdeebf7c6dbef9ecae16baed64292c62171b5084594",
-  "f7fbffdeebf7c6dbef9ecae16baed64292c62171b508519c08306b"
-).map(colors);
-
-ramp(scheme$21);
-
-var scheme$22 = new Array(3).concat(
-  "e5f5e0a1d99b31a354",
-  "edf8e9bae4b374c476238b45",
-  "edf8e9bae4b374c47631a354006d2c",
-  "edf8e9c7e9c0a1d99b74c47631a354006d2c",
-  "edf8e9c7e9c0a1d99b74c47641ab5d238b45005a32",
-  "f7fcf5e5f5e0c7e9c0a1d99b74c47641ab5d238b45005a32",
-  "f7fcf5e5f5e0c7e9c0a1d99b74c47641ab5d238b45006d2c00441b"
-).map(colors);
-
-ramp(scheme$22);
-
-var scheme$23 = new Array(3).concat(
-  "f0f0f0bdbdbd636363",
-  "f7f7f7cccccc969696525252",
-  "f7f7f7cccccc969696636363252525",
-  "f7f7f7d9d9d9bdbdbd969696636363252525",
-  "f7f7f7d9d9d9bdbdbd969696737373525252252525",
-  "fffffff0f0f0d9d9d9bdbdbd969696737373525252252525",
-  "fffffff0f0f0d9d9d9bdbdbd969696737373525252252525000000"
-).map(colors);
-
-ramp(scheme$23);
-
-var scheme$24 = new Array(3).concat(
-  "efedf5bcbddc756bb1",
-  "f2f0f7cbc9e29e9ac86a51a3",
-  "f2f0f7cbc9e29e9ac8756bb154278f",
-  "f2f0f7dadaebbcbddc9e9ac8756bb154278f",
-  "f2f0f7dadaebbcbddc9e9ac8807dba6a51a34a1486",
-  "fcfbfdefedf5dadaebbcbddc9e9ac8807dba6a51a34a1486",
-  "fcfbfdefedf5dadaebbcbddc9e9ac8807dba6a51a354278f3f007d"
-).map(colors);
-
-ramp(scheme$24);
-
-var scheme$25 = new Array(3).concat(
-  "fee0d2fc9272de2d26",
-  "fee5d9fcae91fb6a4acb181d",
-  "fee5d9fcae91fb6a4ade2d26a50f15",
-  "fee5d9fcbba1fc9272fb6a4ade2d26a50f15",
-  "fee5d9fcbba1fc9272fb6a4aef3b2ccb181d99000d",
-  "fff5f0fee0d2fcbba1fc9272fb6a4aef3b2ccb181d99000d",
-  "fff5f0fee0d2fcbba1fc9272fb6a4aef3b2ccb181da50f1567000d"
-).map(colors);
-
-ramp(scheme$25);
-
-var scheme$26 = new Array(3).concat(
-  "fee6cefdae6be6550d",
-  "feeddefdbe85fd8d3cd94701",
-  "feeddefdbe85fd8d3ce6550da63603",
-  "feeddefdd0a2fdae6bfd8d3ce6550da63603",
-  "feeddefdd0a2fdae6bfd8d3cf16913d948018c2d04",
-  "fff5ebfee6cefdd0a2fdae6bfd8d3cf16913d948018c2d04",
-  "fff5ebfee6cefdd0a2fdae6bfd8d3cf16913d94801a636037f2704"
-).map(colors);
-
-ramp(scheme$26);
-
-var tinycolor = createCommonjsModule(function (module) {
-// TinyColor v1.4.1
-// https://github.com/bgrins/TinyColor
-// Brian Grinstead, MIT License
-
-(function(Math) {
-
-var trimLeft = /^\s+/,
-    trimRight = /\s+$/,
-    tinyCounter = 0,
-    mathRound = Math.round,
-    mathMin = Math.min,
-    mathMax = Math.max,
-    mathRandom = Math.random;
-
-function tinycolor (color, opts) {
-
-    color = (color) ? color : '';
-    opts = opts || { };
-
-    // If input is already a tinycolor, return itself
-    if (color instanceof tinycolor) {
-       return color;
-    }
-    // If we are called as a function, call using new instead
-    if (!(this instanceof tinycolor)) {
-        return new tinycolor(color, opts);
-    }
-
-    var rgb = inputToRGB(color);
-    this._originalInput = color, this._r = rgb.r, this._g = rgb.g, this._b = rgb.b, this._a = rgb.a, this._roundA = mathRound(100*this._a) / 100, this._format = opts.format || rgb.format;
-    this._gradientType = opts.gradientType;
-
-    // Don't let the range of [0,255] come back in [0,1].
-    // Potentially lose a little bit of precision here, but will fix issues where
-    // .5 gets interpreted as half of the total, instead of half of 1
-    // If it was supposed to be 128, this was already taken care of by `inputToRgb`
-    if (this._r < 1) { this._r = mathRound(this._r); }
-    if (this._g < 1) { this._g = mathRound(this._g); }
-    if (this._b < 1) { this._b = mathRound(this._b); }
-
-    this._ok = rgb.ok;
-    this._tc_id = tinyCounter++;
-}
-
-tinycolor.prototype = {
-    isDark: function() {
-        return this.getBrightness() < 128;
-    },
-    isLight: function() {
-        return !this.isDark();
-    },
-    isValid: function() {
-        return this._ok;
-    },
-    getOriginalInput: function() {
-      return this._originalInput;
-    },
-    getFormat: function() {
-        return this._format;
-    },
-    getAlpha: function() {
-        return this._a;
-    },
-    getBrightness: function() {
-        //http://www.w3.org/TR/AERT#color-contrast
-        var rgb = this.toRgb();
-        return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
-    },
-    getLuminance: function() {
-        //http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
-        var rgb = this.toRgb();
-        var RsRGB, GsRGB, BsRGB, R, G, B;
-        RsRGB = rgb.r/255;
-        GsRGB = rgb.g/255;
-        BsRGB = rgb.b/255;
-
-        if (RsRGB <= 0.03928) {R = RsRGB / 12.92;} else {R = Math.pow(((RsRGB + 0.055) / 1.055), 2.4);}
-        if (GsRGB <= 0.03928) {G = GsRGB / 12.92;} else {G = Math.pow(((GsRGB + 0.055) / 1.055), 2.4);}
-        if (BsRGB <= 0.03928) {B = BsRGB / 12.92;} else {B = Math.pow(((BsRGB + 0.055) / 1.055), 2.4);}
-        return (0.2126 * R) + (0.7152 * G) + (0.0722 * B);
-    },
-    setAlpha: function(value) {
-        this._a = boundAlpha(value);
-        this._roundA = mathRound(100*this._a) / 100;
-        return this;
-    },
-    toHsv: function() {
-        var hsv = rgbToHsv(this._r, this._g, this._b);
-        return { h: hsv.h * 360, s: hsv.s, v: hsv.v, a: this._a };
-    },
-    toHsvString: function() {
-        var hsv = rgbToHsv(this._r, this._g, this._b);
-        var h = mathRound(hsv.h * 360), s = mathRound(hsv.s * 100), v = mathRound(hsv.v * 100);
-        return (this._a == 1) ?
-          "hsv("  + h + ", " + s + "%, " + v + "%)" :
-          "hsva(" + h + ", " + s + "%, " + v + "%, "+ this._roundA + ")";
-    },
-    toHsl: function() {
-        var hsl = rgbToHsl(this._r, this._g, this._b);
-        return { h: hsl.h * 360, s: hsl.s, l: hsl.l, a: this._a };
-    },
-    toHslString: function() {
-        var hsl = rgbToHsl(this._r, this._g, this._b);
-        var h = mathRound(hsl.h * 360), s = mathRound(hsl.s * 100), l = mathRound(hsl.l * 100);
-        return (this._a == 1) ?
-          "hsl("  + h + ", " + s + "%, " + l + "%)" :
-          "hsla(" + h + ", " + s + "%, " + l + "%, "+ this._roundA + ")";
-    },
-    toHex: function(allow3Char) {
-        return rgbToHex(this._r, this._g, this._b, allow3Char);
-    },
-    toHexString: function(allow3Char) {
-        return '#' + this.toHex(allow3Char);
-    },
-    toHex8: function(allow4Char) {
-        return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
-    },
-    toHex8String: function(allow4Char) {
-        return '#' + this.toHex8(allow4Char);
-    },
-    toRgb: function() {
-        return { r: mathRound(this._r), g: mathRound(this._g), b: mathRound(this._b), a: this._a };
-    },
-    toRgbString: function() {
-        return (this._a == 1) ?
-          "rgb("  + mathRound(this._r) + ", " + mathRound(this._g) + ", " + mathRound(this._b) + ")" :
-          "rgba(" + mathRound(this._r) + ", " + mathRound(this._g) + ", " + mathRound(this._b) + ", " + this._roundA + ")";
-    },
-    toPercentageRgb: function() {
-        return { r: mathRound(bound01(this._r, 255) * 100) + "%", g: mathRound(bound01(this._g, 255) * 100) + "%", b: mathRound(bound01(this._b, 255) * 100) + "%", a: this._a };
-    },
-    toPercentageRgbString: function() {
-        return (this._a == 1) ?
-          "rgb("  + mathRound(bound01(this._r, 255) * 100) + "%, " + mathRound(bound01(this._g, 255) * 100) + "%, " + mathRound(bound01(this._b, 255) * 100) + "%)" :
-          "rgba(" + mathRound(bound01(this._r, 255) * 100) + "%, " + mathRound(bound01(this._g, 255) * 100) + "%, " + mathRound(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
-    },
-    toName: function() {
-        if (this._a === 0) {
-            return "transparent";
-        }
-
-        if (this._a < 1) {
-            return false;
-        }
-
-        return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
-    },
-    toFilter: function(secondColor) {
-        var hex8String = '#' + rgbaToArgbHex(this._r, this._g, this._b, this._a);
-        var secondHex8String = hex8String;
-        var gradientType = this._gradientType ? "GradientType = 1, " : "";
-
-        if (secondColor) {
-            var s = tinycolor(secondColor);
-            secondHex8String = '#' + rgbaToArgbHex(s._r, s._g, s._b, s._a);
-        }
-
-        return "progid:DXImageTransform.Microsoft.gradient("+gradientType+"startColorstr="+hex8String+",endColorstr="+secondHex8String+")";
-    },
-    toString: function(format) {
-        var formatSet = !!format;
-        format = format || this._format;
-
-        var formattedString = false;
-        var hasAlpha = this._a < 1 && this._a >= 0;
-        var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "hex4" || format === "hex8" || format === "name");
-
-        if (needsAlphaFormat) {
-            // Special case for "transparent", all other non-alpha formats
-            // will return rgba when there is transparency.
-            if (format === "name" && this._a === 0) {
-                return this.toName();
-            }
-            return this.toRgbString();
-        }
-        if (format === "rgb") {
-            formattedString = this.toRgbString();
-        }
-        if (format === "prgb") {
-            formattedString = this.toPercentageRgbString();
-        }
-        if (format === "hex" || format === "hex6") {
-            formattedString = this.toHexString();
-        }
-        if (format === "hex3") {
-            formattedString = this.toHexString(true);
-        }
-        if (format === "hex4") {
-            formattedString = this.toHex8String(true);
-        }
-        if (format === "hex8") {
-            formattedString = this.toHex8String();
-        }
-        if (format === "name") {
-            formattedString = this.toName();
-        }
-        if (format === "hsl") {
-            formattedString = this.toHslString();
-        }
-        if (format === "hsv") {
-            formattedString = this.toHsvString();
-        }
-
-        return formattedString || this.toHexString();
-    },
-    clone: function() {
-        return tinycolor(this.toString());
-    },
-
-    _applyModification: function(fn, args) {
-        var color = fn.apply(null, [this].concat([].slice.call(args)));
-        this._r = color._r;
-        this._g = color._g;
-        this._b = color._b;
-        this.setAlpha(color._a);
-        return this;
-    },
-    lighten: function() {
-        return this._applyModification(lighten, arguments);
-    },
-    brighten: function() {
-        return this._applyModification(brighten, arguments);
-    },
-    darken: function() {
-        return this._applyModification(darken, arguments);
-    },
-    desaturate: function() {
-        return this._applyModification(desaturate, arguments);
-    },
-    saturate: function() {
-        return this._applyModification(saturate, arguments);
-    },
-    greyscale: function() {
-        return this._applyModification(greyscale, arguments);
-    },
-    spin: function() {
-        return this._applyModification(spin, arguments);
-    },
-
-    _applyCombination: function(fn, args) {
-        return fn.apply(null, [this].concat([].slice.call(args)));
-    },
-    analogous: function() {
-        return this._applyCombination(analogous, arguments);
-    },
-    complement: function() {
-        return this._applyCombination(complement, arguments);
-    },
-    monochromatic: function() {
-        return this._applyCombination(monochromatic, arguments);
-    },
-    splitcomplement: function() {
-        return this._applyCombination(splitcomplement, arguments);
-    },
-    triad: function() {
-        return this._applyCombination(triad, arguments);
-    },
-    tetrad: function() {
-        return this._applyCombination(tetrad, arguments);
-    }
-};
-
-// If input is an object, force 1 into "1.0" to handle ratios properly
-// String input requires "1.0" as input, so 1 will be treated as 1
-tinycolor.fromRatio = function(color, opts) {
-    if (typeof color == "object") {
-        var newColor = {};
-        for (var i in color) {
-            if (color.hasOwnProperty(i)) {
-                if (i === "a") {
-                    newColor[i] = color[i];
-                }
-                else {
-                    newColor[i] = convertToPercentage(color[i]);
-                }
-            }
-        }
-        color = newColor;
-    }
-
-    return tinycolor(color, opts);
-};
-
-// Given a string or object, convert that input to RGB
-// Possible string inputs:
-//
-//     "red"
-//     "#f00" or "f00"
-//     "#ff0000" or "ff0000"
-//     "#ff000000" or "ff000000"
-//     "rgb 255 0 0" or "rgb (255, 0, 0)"
-//     "rgb 1.0 0 0" or "rgb (1, 0, 0)"
-//     "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
-//     "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
-//     "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
-//     "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
-//     "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
-//
-function inputToRGB(color) {
-
-    var rgb = { r: 0, g: 0, b: 0 };
-    var a = 1;
-    var s = null;
-    var v = null;
-    var l = null;
-    var ok = false;
-    var format = false;
-
-    if (typeof color == "string") {
-        color = stringInputToObject(color);
-    }
-
-    if (typeof color == "object") {
-        if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
-            rgb = rgbToRgb(color.r, color.g, color.b);
-            ok = true;
-            format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
-        }
-        else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
-            s = convertToPercentage(color.s);
-            v = convertToPercentage(color.v);
-            rgb = hsvToRgb(color.h, s, v);
-            ok = true;
-            format = "hsv";
-        }
-        else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
-            s = convertToPercentage(color.s);
-            l = convertToPercentage(color.l);
-            rgb = hslToRgb(color.h, s, l);
-            ok = true;
-            format = "hsl";
-        }
-
-        if (color.hasOwnProperty("a")) {
-            a = color.a;
-        }
-    }
-
-    a = boundAlpha(a);
-
-    return {
-        ok: ok,
-        format: color.format || format,
-        r: mathMin(255, mathMax(rgb.r, 0)),
-        g: mathMin(255, mathMax(rgb.g, 0)),
-        b: mathMin(255, mathMax(rgb.b, 0)),
-        a: a
-    };
-}
-
-
-// Conversion Functions
-// --------------------
-
-// `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
-// <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
-
-// `rgbToRgb`
-// Handle bounds / percentage checking to conform to CSS color spec
-// <http://www.w3.org/TR/css3-color/>
-// *Assumes:* r, g, b in [0, 255] or [0, 1]
-// *Returns:* { r, g, b } in [0, 255]
-function rgbToRgb(r, g, b){
-    return {
-        r: bound01(r, 255) * 255,
-        g: bound01(g, 255) * 255,
-        b: bound01(b, 255) * 255
-    };
-}
-
-// `rgbToHsl`
-// Converts an RGB color value to HSL.
-// *Assumes:* r, g, and b are contained in [0, 255] or [0, 1]
-// *Returns:* { h, s, l } in [0,1]
-function rgbToHsl(r, g, b) {
-
-    r = bound01(r, 255);
-    g = bound01(g, 255);
-    b = bound01(b, 255);
-
-    var max = mathMax(r, g, b), min = mathMin(r, g, b);
-    var h, s, l = (max + min) / 2;
-
-    if(max == min) {
-        h = s = 0; // achromatic
-    }
-    else {
-        var d = max - min;
-        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        switch(max) {
-            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-            case g: h = (b - r) / d + 2; break;
-            case b: h = (r - g) / d + 4; break;
-        }
-
-        h /= 6;
-    }
-
-    return { h: h, s: s, l: l };
-}
-
-// `hslToRgb`
-// Converts an HSL color value to RGB.
-// *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
-// *Returns:* { r, g, b } in the set [0, 255]
-function hslToRgb(h, s, l) {
-    var r, g, b;
-
-    h = bound01(h, 360);
-    s = bound01(s, 100);
-    l = bound01(l, 100);
-
-    function hue2rgb(p, q, t) {
-        if(t < 0) t += 1;
-        if(t > 1) t -= 1;
-        if(t < 1/6) return p + (q - p) * 6 * t;
-        if(t < 1/2) return q;
-        if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-        return p;
-    }
-
-    if(s === 0) {
-        r = g = b = l; // achromatic
-    }
-    else {
-        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-        var p = 2 * l - q;
-        r = hue2rgb(p, q, h + 1/3);
-        g = hue2rgb(p, q, h);
-        b = hue2rgb(p, q, h - 1/3);
-    }
-
-    return { r: r * 255, g: g * 255, b: b * 255 };
-}
-
-// `rgbToHsv`
-// Converts an RGB color value to HSV
-// *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
-// *Returns:* { h, s, v } in [0,1]
-function rgbToHsv(r, g, b) {
-
-    r = bound01(r, 255);
-    g = bound01(g, 255);
-    b = bound01(b, 255);
-
-    var max = mathMax(r, g, b), min = mathMin(r, g, b);
-    var h, s, v = max;
-
-    var d = max - min;
-    s = max === 0 ? 0 : d / max;
-
-    if(max == min) {
-        h = 0; // achromatic
-    }
-    else {
-        switch(max) {
-            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-            case g: h = (b - r) / d + 2; break;
-            case b: h = (r - g) / d + 4; break;
-        }
-        h /= 6;
-    }
-    return { h: h, s: s, v: v };
-}
-
-// `hsvToRgb`
-// Converts an HSV color value to RGB.
-// *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
-// *Returns:* { r, g, b } in the set [0, 255]
- function hsvToRgb(h, s, v) {
-
-    h = bound01(h, 360) * 6;
-    s = bound01(s, 100);
-    v = bound01(v, 100);
-
-    var i = Math.floor(h),
-        f = h - i,
-        p = v * (1 - s),
-        q = v * (1 - f * s),
-        t = v * (1 - (1 - f) * s),
-        mod = i % 6,
-        r = [v, q, p, p, t, v][mod],
-        g = [t, v, v, q, p, p][mod],
-        b = [p, p, t, v, v, q][mod];
-
-    return { r: r * 255, g: g * 255, b: b * 255 };
-}
-
-// `rgbToHex`
-// Converts an RGB color to hex
-// Assumes r, g, and b are contained in the set [0, 255]
-// Returns a 3 or 6 character hex
-function rgbToHex(r, g, b, allow3Char) {
-
-    var hex = [
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16))
-    ];
-
-    // Return a 3 character hex if possible
-    if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) {
-        return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
-    }
-
-    return hex.join("");
-}
-
-// `rgbaToHex`
-// Converts an RGBA color plus alpha transparency to hex
-// Assumes r, g, b are contained in the set [0, 255] and
-// a in [0, 1]. Returns a 4 or 8 character rgba hex
-function rgbaToHex(r, g, b, a, allow4Char) {
-
-    var hex = [
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16)),
-        pad2(convertDecimalToHex(a))
-    ];
-
-    // Return a 4 character hex if possible
-    if (allow4Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1) && hex[3].charAt(0) == hex[3].charAt(1)) {
-        return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0) + hex[3].charAt(0);
-    }
-
-    return hex.join("");
-}
-
-// `rgbaToArgbHex`
-// Converts an RGBA color to an ARGB Hex8 string
-// Rarely used, but required for "toFilter()"
-function rgbaToArgbHex(r, g, b, a) {
-
-    var hex = [
-        pad2(convertDecimalToHex(a)),
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16))
-    ];
-
-    return hex.join("");
-}
-
-// `equals`
-// Can be called with any tinycolor input
-tinycolor.equals = function (color1, color2) {
-    if (!color1 || !color2) { return false; }
-    return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
-};
-
-tinycolor.random = function() {
-    return tinycolor.fromRatio({
-        r: mathRandom(),
-        g: mathRandom(),
-        b: mathRandom()
-    });
-};
-
-
-// Modification Functions
-// ----------------------
-// Thanks to less.js for some of the basics here
-// <https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js>
-
-function desaturate(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.s -= amount / 100;
-    hsl.s = clamp01(hsl.s);
-    return tinycolor(hsl);
-}
-
-function saturate(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.s += amount / 100;
-    hsl.s = clamp01(hsl.s);
-    return tinycolor(hsl);
-}
-
-function greyscale(color) {
-    return tinycolor(color).desaturate(100);
-}
-
-function lighten (color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.l += amount / 100;
-    hsl.l = clamp01(hsl.l);
-    return tinycolor(hsl);
-}
-
-function brighten(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var rgb = tinycolor(color).toRgb();
-    rgb.r = mathMax(0, mathMin(255, rgb.r - mathRound(255 * - (amount / 100))));
-    rgb.g = mathMax(0, mathMin(255, rgb.g - mathRound(255 * - (amount / 100))));
-    rgb.b = mathMax(0, mathMin(255, rgb.b - mathRound(255 * - (amount / 100))));
-    return tinycolor(rgb);
-}
-
-function darken (color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.l -= amount / 100;
-    hsl.l = clamp01(hsl.l);
-    return tinycolor(hsl);
-}
-
-// Spin takes a positive or negative amount within [-360, 360] indicating the change of hue.
-// Values outside of this range will be wrapped into this range.
-function spin(color, amount) {
-    var hsl = tinycolor(color).toHsl();
-    var hue = (hsl.h + amount) % 360;
-    hsl.h = hue < 0 ? 360 + hue : hue;
-    return tinycolor(hsl);
-}
-
-// Combination Functions
-// ---------------------
-// Thanks to jQuery xColor for some of the ideas behind these
-// <https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js>
-
-function complement(color) {
-    var hsl = tinycolor(color).toHsl();
-    hsl.h = (hsl.h + 180) % 360;
-    return tinycolor(hsl);
-}
-
-function triad(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 120) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 240) % 360, s: hsl.s, l: hsl.l })
-    ];
-}
-
-function tetrad(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 90) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 180) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 270) % 360, s: hsl.s, l: hsl.l })
-    ];
-}
-
-function splitcomplement(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 72) % 360, s: hsl.s, l: hsl.l}),
-        tinycolor({ h: (h + 216) % 360, s: hsl.s, l: hsl.l})
-    ];
-}
-
-function analogous(color, results, slices) {
-    results = results || 6;
-    slices = slices || 30;
-
-    var hsl = tinycolor(color).toHsl();
-    var part = 360 / slices;
-    var ret = [tinycolor(color)];
-
-    for (hsl.h = ((hsl.h - (part * results >> 1)) + 720) % 360; --results; ) {
-        hsl.h = (hsl.h + part) % 360;
-        ret.push(tinycolor(hsl));
-    }
-    return ret;
-}
-
-function monochromatic(color, results) {
-    results = results || 6;
-    var hsv = tinycolor(color).toHsv();
-    var h = hsv.h, s = hsv.s, v = hsv.v;
-    var ret = [];
-    var modification = 1 / results;
-
-    while (results--) {
-        ret.push(tinycolor({ h: h, s: s, v: v}));
-        v = (v + modification) % 1;
-    }
-
-    return ret;
-}
-
-// Utility Functions
-// ---------------------
-
-tinycolor.mix = function(color1, color2, amount) {
-    amount = (amount === 0) ? 0 : (amount || 50);
-
-    var rgb1 = tinycolor(color1).toRgb();
-    var rgb2 = tinycolor(color2).toRgb();
-
-    var p = amount / 100;
-
-    var rgba = {
-        r: ((rgb2.r - rgb1.r) * p) + rgb1.r,
-        g: ((rgb2.g - rgb1.g) * p) + rgb1.g,
-        b: ((rgb2.b - rgb1.b) * p) + rgb1.b,
-        a: ((rgb2.a - rgb1.a) * p) + rgb1.a
-    };
-
-    return tinycolor(rgba);
-};
-
-
-// Readability Functions
-// ---------------------
-// <http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef (WCAG Version 2)
-
-// `contrast`
-// Analyze the 2 colors and returns the color contrast defined by (WCAG Version 2)
-tinycolor.readability = function(color1, color2) {
-    var c1 = tinycolor(color1);
-    var c2 = tinycolor(color2);
-    return (Math.max(c1.getLuminance(),c2.getLuminance())+0.05) / (Math.min(c1.getLuminance(),c2.getLuminance())+0.05);
-};
-
-// `isReadable`
-// Ensure that foreground and background color combinations meet WCAG2 guidelines.
-// The third argument is an optional Object.
-//      the 'level' property states 'AA' or 'AAA' - if missing or invalid, it defaults to 'AA';
-//      the 'size' property states 'large' or 'small' - if missing or invalid, it defaults to 'small'.
-// If the entire object is absent, isReadable defaults to {level:"AA",size:"small"}.
-
-// *Example*
-//    tinycolor.isReadable("#000", "#111") => false
-//    tinycolor.isReadable("#000", "#111",{level:"AA",size:"large"}) => false
-tinycolor.isReadable = function(color1, color2, wcag2) {
-    var readability = tinycolor.readability(color1, color2);
-    var wcag2Parms, out;
-
-    out = false;
-
-    wcag2Parms = validateWCAG2Parms(wcag2);
-    switch (wcag2Parms.level + wcag2Parms.size) {
-        case "AAsmall":
-        case "AAAlarge":
-            out = readability >= 4.5;
-            break;
-        case "AAlarge":
-            out = readability >= 3;
-            break;
-        case "AAAsmall":
-            out = readability >= 7;
-            break;
-    }
-    return out;
-
-};
-
-// `mostReadable`
-// Given a base color and a list of possible foreground or background
-// colors for that base, returns the most readable color.
-// Optionally returns Black or White if the most readable color is unreadable.
-// *Example*
-//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
-//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
-//    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"large"}).toHexString(); // "#faf3f3"
-//    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"small"}).toHexString(); // "#ffffff"
-tinycolor.mostReadable = function(baseColor, colorList, args) {
-    var bestColor = null;
-    var bestScore = 0;
-    var readability;
-    var includeFallbackColors, level, size;
-    args = args || {};
-    includeFallbackColors = args.includeFallbackColors ;
-    level = args.level;
-    size = args.size;
-
-    for (var i= 0; i < colorList.length ; i++) {
-        readability = tinycolor.readability(baseColor, colorList[i]);
-        if (readability > bestScore) {
-            bestScore = readability;
-            bestColor = tinycolor(colorList[i]);
-        }
-    }
-
-    if (tinycolor.isReadable(baseColor, bestColor, {"level":level,"size":size}) || !includeFallbackColors) {
-        return bestColor;
-    }
-    else {
-        args.includeFallbackColors=false;
-        return tinycolor.mostReadable(baseColor,["#fff", "#000"],args);
-    }
-};
-
-
-// Big List of Colors
-// ------------------
-// <http://www.w3.org/TR/css3-color/#svg-color>
-var names = tinycolor.names = {
-    aliceblue: "f0f8ff",
-    antiquewhite: "faebd7",
-    aqua: "0ff",
-    aquamarine: "7fffd4",
-    azure: "f0ffff",
-    beige: "f5f5dc",
-    bisque: "ffe4c4",
-    black: "000",
-    blanchedalmond: "ffebcd",
-    blue: "00f",
-    blueviolet: "8a2be2",
-    brown: "a52a2a",
-    burlywood: "deb887",
-    burntsienna: "ea7e5d",
-    cadetblue: "5f9ea0",
-    chartreuse: "7fff00",
-    chocolate: "d2691e",
-    coral: "ff7f50",
-    cornflowerblue: "6495ed",
-    cornsilk: "fff8dc",
-    crimson: "dc143c",
-    cyan: "0ff",
-    darkblue: "00008b",
-    darkcyan: "008b8b",
-    darkgoldenrod: "b8860b",
-    darkgray: "a9a9a9",
-    darkgreen: "006400",
-    darkgrey: "a9a9a9",
-    darkkhaki: "bdb76b",
-    darkmagenta: "8b008b",
-    darkolivegreen: "556b2f",
-    darkorange: "ff8c00",
-    darkorchid: "9932cc",
-    darkred: "8b0000",
-    darksalmon: "e9967a",
-    darkseagreen: "8fbc8f",
-    darkslateblue: "483d8b",
-    darkslategray: "2f4f4f",
-    darkslategrey: "2f4f4f",
-    darkturquoise: "00ced1",
-    darkviolet: "9400d3",
-    deeppink: "ff1493",
-    deepskyblue: "00bfff",
-    dimgray: "696969",
-    dimgrey: "696969",
-    dodgerblue: "1e90ff",
-    firebrick: "b22222",
-    floralwhite: "fffaf0",
-    forestgreen: "228b22",
-    fuchsia: "f0f",
-    gainsboro: "dcdcdc",
-    ghostwhite: "f8f8ff",
-    gold: "ffd700",
-    goldenrod: "daa520",
-    gray: "808080",
-    green: "008000",
-    greenyellow: "adff2f",
-    grey: "808080",
-    honeydew: "f0fff0",
-    hotpink: "ff69b4",
-    indianred: "cd5c5c",
-    indigo: "4b0082",
-    ivory: "fffff0",
-    khaki: "f0e68c",
-    lavender: "e6e6fa",
-    lavenderblush: "fff0f5",
-    lawngreen: "7cfc00",
-    lemonchiffon: "fffacd",
-    lightblue: "add8e6",
-    lightcoral: "f08080",
-    lightcyan: "e0ffff",
-    lightgoldenrodyellow: "fafad2",
-    lightgray: "d3d3d3",
-    lightgreen: "90ee90",
-    lightgrey: "d3d3d3",
-    lightpink: "ffb6c1",
-    lightsalmon: "ffa07a",
-    lightseagreen: "20b2aa",
-    lightskyblue: "87cefa",
-    lightslategray: "789",
-    lightslategrey: "789",
-    lightsteelblue: "b0c4de",
-    lightyellow: "ffffe0",
-    lime: "0f0",
-    limegreen: "32cd32",
-    linen: "faf0e6",
-    magenta: "f0f",
-    maroon: "800000",
-    mediumaquamarine: "66cdaa",
-    mediumblue: "0000cd",
-    mediumorchid: "ba55d3",
-    mediumpurple: "9370db",
-    mediumseagreen: "3cb371",
-    mediumslateblue: "7b68ee",
-    mediumspringgreen: "00fa9a",
-    mediumturquoise: "48d1cc",
-    mediumvioletred: "c71585",
-    midnightblue: "191970",
-    mintcream: "f5fffa",
-    mistyrose: "ffe4e1",
-    moccasin: "ffe4b5",
-    navajowhite: "ffdead",
-    navy: "000080",
-    oldlace: "fdf5e6",
-    olive: "808000",
-    olivedrab: "6b8e23",
-    orange: "ffa500",
-    orangered: "ff4500",
-    orchid: "da70d6",
-    palegoldenrod: "eee8aa",
-    palegreen: "98fb98",
-    paleturquoise: "afeeee",
-    palevioletred: "db7093",
-    papayawhip: "ffefd5",
-    peachpuff: "ffdab9",
-    peru: "cd853f",
-    pink: "ffc0cb",
-    plum: "dda0dd",
-    powderblue: "b0e0e6",
-    purple: "800080",
-    rebeccapurple: "663399",
-    red: "f00",
-    rosybrown: "bc8f8f",
-    royalblue: "4169e1",
-    saddlebrown: "8b4513",
-    salmon: "fa8072",
-    sandybrown: "f4a460",
-    seagreen: "2e8b57",
-    seashell: "fff5ee",
-    sienna: "a0522d",
-    silver: "c0c0c0",
-    skyblue: "87ceeb",
-    slateblue: "6a5acd",
-    slategray: "708090",
-    slategrey: "708090",
-    snow: "fffafa",
-    springgreen: "00ff7f",
-    steelblue: "4682b4",
-    tan: "d2b48c",
-    teal: "008080",
-    thistle: "d8bfd8",
-    tomato: "ff6347",
-    turquoise: "40e0d0",
-    violet: "ee82ee",
-    wheat: "f5deb3",
-    white: "fff",
-    whitesmoke: "f5f5f5",
-    yellow: "ff0",
-    yellowgreen: "9acd32"
-};
-
-// Make it easy to access colors via `hexNames[hex]`
-var hexNames = tinycolor.hexNames = flip(names);
-
-
-// Utilities
-// ---------
-
-// `{ 'name1': 'val1' }` becomes `{ 'val1': 'name1' }`
-function flip(o) {
-    var flipped = { };
-    for (var i in o) {
-        if (o.hasOwnProperty(i)) {
-            flipped[o[i]] = i;
-        }
-    }
-    return flipped;
-}
-
-// Return a valid alpha value [0,1] with all invalid values being set to 1
-function boundAlpha(a) {
-    a = parseFloat(a);
-
-    if (isNaN(a) || a < 0 || a > 1) {
-        a = 1;
-    }
-
-    return a;
-}
-
-// Take input from [0, n] and return it as [0, 1]
-function bound01(n, max) {
-    if (isOnePointZero(n)) { n = "100%"; }
-
-    var processPercent = isPercentage(n);
-    n = mathMin(max, mathMax(0, parseFloat(n)));
-
-    // Automatically convert percentage into number
-    if (processPercent) {
-        n = parseInt(n * max, 10) / 100;
-    }
-
-    // Handle floating point rounding errors
-    if ((Math.abs(n - max) < 0.000001)) {
-        return 1;
-    }
-
-    // Convert into [0, 1] range if it isn't already
-    return (n % max) / parseFloat(max);
-}
-
-// Force a number between 0 and 1
-function clamp01(val) {
-    return mathMin(1, mathMax(0, val));
-}
-
-// Parse a base-16 hex value into a base-10 integer
-function parseIntFromHex(val) {
-    return parseInt(val, 16);
-}
-
-// Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
-// <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
-function isOnePointZero(n) {
-    return typeof n == "string" && n.indexOf('.') != -1 && parseFloat(n) === 1;
-}
-
-// Check to see if string passed in is a percentage
-function isPercentage(n) {
-    return typeof n === "string" && n.indexOf('%') != -1;
-}
-
-// Force a hex value to have 2 characters
-function pad2(c) {
-    return c.length == 1 ? '0' + c : '' + c;
-}
-
-// Replace a decimal with it's percentage value
-function convertToPercentage(n) {
-    if (n <= 1) {
-        n = (n * 100) + "%";
-    }
-
-    return n;
-}
-
-// Converts a decimal to a hex value
-function convertDecimalToHex(d) {
-    return Math.round(parseFloat(d) * 255).toString(16);
-}
-// Converts a hex value to a decimal
-function convertHexToDecimal(h) {
-    return (parseIntFromHex(h) / 255);
-}
-
-var matchers = (function() {
-
-    // <http://www.w3.org/TR/css3-values/#integers>
-    var CSS_INTEGER = "[-\\+]?\\d+%?";
-
-    // <http://www.w3.org/TR/css3-values/#number-value>
-    var CSS_NUMBER = "[-\\+]?\\d*\\.\\d+%?";
-
-    // Allow positive/negative integer/number.  Don't capture the either/or, just the entire outcome.
-    var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
-
-    // Actual matching.
-    // Parentheses and commas are optional, but not required.
-    // Whitespace can take the place of commas or opening paren
-    var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-    var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-
-    return {
-        CSS_UNIT: new RegExp(CSS_UNIT),
-        rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
-        rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
-        hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
-        hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
-        hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
-        hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
-        hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-        hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
-        hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-        hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
-    };
-})();
-
-// `isValidCSSUnit`
-// Take in a single string / number and check to see if it looks like a CSS unit
-// (see `matchers` above for definition).
-function isValidCSSUnit(color) {
-    return !!matchers.CSS_UNIT.exec(color);
-}
-
-// `stringInputToObject`
-// Permissive string parsing.  Take in a number of formats, and output an object
-// based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
-function stringInputToObject(color) {
-
-    color = color.replace(trimLeft,'').replace(trimRight, '').toLowerCase();
-    var named = false;
-    if (names[color]) {
-        color = names[color];
-        named = true;
-    }
-    else if (color == 'transparent') {
-        return { r: 0, g: 0, b: 0, a: 0, format: "name" };
-    }
-
-    // Try to match string input using regular expressions.
-    // Keep most of the number bounding out of this function - don't worry about [0,1] or [0,100] or [0,360]
-    // Just return an object and let the conversion functions handle that.
-    // This way the result will be the same whether the tinycolor is initialized with string or object.
-    var match;
-    if ((match = matchers.rgb.exec(color))) {
-        return { r: match[1], g: match[2], b: match[3] };
-    }
-    if ((match = matchers.rgba.exec(color))) {
-        return { r: match[1], g: match[2], b: match[3], a: match[4] };
-    }
-    if ((match = matchers.hsl.exec(color))) {
-        return { h: match[1], s: match[2], l: match[3] };
-    }
-    if ((match = matchers.hsla.exec(color))) {
-        return { h: match[1], s: match[2], l: match[3], a: match[4] };
-    }
-    if ((match = matchers.hsv.exec(color))) {
-        return { h: match[1], s: match[2], v: match[3] };
-    }
-    if ((match = matchers.hsva.exec(color))) {
-        return { h: match[1], s: match[2], v: match[3], a: match[4] };
-    }
-    if ((match = matchers.hex8.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            a: convertHexToDecimal(match[4]),
-            format: named ? "name" : "hex8"
-        };
-    }
-    if ((match = matchers.hex6.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            format: named ? "name" : "hex"
-        };
-    }
-    if ((match = matchers.hex4.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1] + '' + match[1]),
-            g: parseIntFromHex(match[2] + '' + match[2]),
-            b: parseIntFromHex(match[3] + '' + match[3]),
-            a: convertHexToDecimal(match[4] + '' + match[4]),
-            format: named ? "name" : "hex8"
-        };
-    }
-    if ((match = matchers.hex3.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1] + '' + match[1]),
-            g: parseIntFromHex(match[2] + '' + match[2]),
-            b: parseIntFromHex(match[3] + '' + match[3]),
-            format: named ? "name" : "hex"
-        };
-    }
-
-    return false;
-}
-
-function validateWCAG2Parms(parms) {
-    // return valid WCAG2 parms for isReadable.
-    // If input parms are invalid, return {"level":"AA", "size":"small"}
-    var level, size;
-    parms = parms || {"level":"AA", "size":"small"};
-    level = (parms.level || "AA").toUpperCase();
-    size = (parms.size || "small").toLowerCase();
-    if (level !== "AA" && level !== "AAA") {
-        level = "AA";
-    }
-    if (size !== "small" && size !== "large") {
-        size = "small";
-    }
-    return {"level":level, "size":size};
-}
-
-// Node: Export function
-if ('object' !== "undefined" && module.exports) {
-    module.exports = tinycolor;
-}
-// AMD/requirejs: Define the module
-else if (typeof undefined === 'function' && undefined.amd) {
-    undefined(function () {return tinycolor;});
-}
-// Browser: Expose to window
-else {
-    window.tinycolor = tinycolor;
-}
-
-})(Math);
-});
-
 function autoColorItems(items, colorField) {
     if (typeof colorField !== 'string') return;
 
-    var colors = schemePaired; // Paired color set from color brewer
+    // d3.scale.category10
+    var colors = [0x1f77b4, 0xff7f0e, 0x2ca02c, 0xd62728, 0x9467bd, 0x8c564b, 0xe377c2, 0x7f7f7f, 0xbcbd22, 0x17becf];
 
     var colorGroups = {};
 
@@ -94568,51 +94199,106 @@ function getIntegrator(physicsSettings) {
   return eulerIntegrator$2
 }
 
-var CAMERA_DISTANCE2NODES_FACTOR = 120;
+var CAMERA_DISTANCE2NODES_FACTOR = 140;
 var NODE_BASE_SIZE = 4;
 var COOLDOWNTICKS = 70;
+var LINEMATERIAL = new LineBasicMaterial({
+    color: 0xffffff,
+    transparent: true,
+    opacity: 0.15
+});
+var cntTicks = 0;
+
+function layoutTick(state) {
+    if (cntTicks++ > COOLDOWNTICKS) {
+        state.onFrame = null; // Stop ticking graph
+    }
+
+    state.layout.step();
+
+    // Update nodes position
+    state.network.nodes.forEach(function (node) {
+        var sprite = node.sprite;
+        if (!sprite) return;
+        var pos = state.layout.getNodePosition(node.id);
+        sprite.position.x = pos.x;
+        sprite.position.y = pos.y;
+        sprite.position.z = pos.z;
+    });
+    // Update links position
+    state.network.links.forEach(function (link) {
+        var line = link.line;
+        if (!line) return;
+
+        var pos = state.layout.getLinkPosition(state.layout.graph.getLink(link.sid, link.tid).id),
+            start = pos['from'],
+            end = pos['to'],
+            linePos = line.geometry.attributes.position;
+
+        linePos.array[0] = start.x;
+        linePos.array[1] = start.y || 0;
+        linePos.array[2] = start.z || 0;
+        linePos.array[3] = end.x;
+        linePos.array[4] = end.y || 0;
+        linePos.array[5] = end.z || 0;
+
+        linePos.needsUpdate = true;
+        line.geometry.computeBoundingSphere();
+    });
+}
 
 var network = {
     name: 'network',
     apply: function apply(state) {
+        state.onFrame = null;
         // Setup graph
         var graph = ngraph_graph();
-        state.network = { nodes: [], links: [] };
+        state.network = {
+            nodes: [],
+            links: []
+        };
         state.graphData.forEach(function (item) {
             graph.addNode(item[state.idField]);
-            state.network.nodes.push({ id: item[state.idField], name: item[state.nameField], color: item._color, size: item._size, data: item });
+            state.network.nodes.push({
+                id: item[state.idField],
+                name: item[state.nameField],
+                color: item._color,
+                size: item._size,
+                data: item
+            });
             if (Array.isArray(item[state.linkField])) {
                 item[state.linkField].forEach(function (tid) {
                     if (state.network.links.find(function (link) {
                         return link.sid === item[state.idField] && link.tid === tid || link.tid === item[state.idField] && link.sid === tid;
                     })) return;
                     graph.addLink(item[state.idField], tid);
-                    state.network.links.push({ sid: item[state.idField], tid: tid });
+                    state.network.links.push({
+                        sid: item[state.idField],
+                        tid: tid
+                    });
                 });
             }
         });
         var layout = ngraph_forcelayout3d(graph);
         layout.graph = graph; // Attach graph reference to layout
+        state.layout = layout;
 
         // Create nodes
-        var nodeMaterials = {}; // indexed by color
         state.network.nodes.forEach(function (node) {
             var nodeRadius = NODE_BASE_SIZE * node.size;
-            if (!nodeMaterials.hasOwnProperty(node.color)) {
-                nodeMaterials[node.color] = new ShaderMaterial({
-                    uniforms: {
-                        uColor: {
-                            value: new Color(node.color)
-                        }
-                    },
-                    vertexShader: nodeVertexShaderSource,
-                    fragmentShader: nodeFragmentShaderSource,
-                    blending: AdditiveBlending,
-                    depthTest: false,
-                    transparent: true
-                });
-            }
-            var sprite = new Mesh(new SphereGeometry(nodeRadius, 32, 32), nodeMaterials[node.color]);
+            var material = new ShaderMaterial({
+                uniforms: {
+                    uColor: {
+                        value: new Color(node.color)
+                    }
+                },
+                vertexShader: nodeVertexShaderSource,
+                fragmentShader: nodeFragmentShaderSource,
+                blending: AdditiveBlending,
+                depthTest: false,
+                transparent: true
+            });
+            var sprite = new Mesh(new SphereGeometry(nodeRadius, 32, 32), material);
             sprite.vid = node.id;
             sprite.name = node.name;
             sprite.vdata = node.data;
@@ -94620,81 +94306,123 @@ var network = {
         });
 
         // Create links
-        var lineMaterial = new LineBasicMaterial({
-            color: 0xffffff,
-            transparent: true,
-            opacity: 0.15
-        });
         state.network.links.forEach(function (link) {
             var geometry = new BufferGeometry();
             geometry.addAttribute('position', new BufferAttribute(new Float32Array(2 * 3), 3));
-            var line = new Line(geometry, lineMaterial);
+            var line = new Line(geometry, LINEMATERIAL);
             line.renderOrder = 10; // Prevent visual glitches of dark lines on top of spheres by rendering them last
             state.webglScene.add(link.line = line);
         });
 
-        if (state.camera.position.x === 0 && state.camera.position.y === 0) {
-            // If camera still in default position (not user modified)
-            state.camera.position.z = Math.cbrt(state.graphData.length) * CAMERA_DISTANCE2NODES_FACTOR;
+        new Tween(state.camera.position).to({
+            x: 0,
+            y: 0,
+            z: Math.cbrt(state.graphData.length) * CAMERA_DISTANCE2NODES_FACTOR
+        }, 800).easing(Easing.Quadratic.InOut).on(function () {
             state.camera.lookAt(state.webglScene.position);
-        }
+        }).start();
 
         // Setup render DOM
         state.webglRenderer.domElement.style.display = 'block';
         state.css3dRenderer.domElement.style.display = 'none';
 
+        // data & relations has been applied
+        state.resetData = state.resetRel = false;
+
         // Start rendering
-        var cntTicks = 0;
-        state.onFrame = layoutTick;
+        cntTicks = 0;
+        state.onFrame = function () {
+            return layoutTick(state);
+        };
         this.inUse = true;
-
-        function layoutTick() {
-            if (cntTicks++ > COOLDOWNTICKS) {
-                state.onFrame = null; // Stop ticking graph
-            }
-
-            layout.step();
-
-            // Update nodes position
-            state.network.nodes.forEach(function (node) {
-                var sprite = node.sprite;
-                if (!sprite) return;
-                var pos = layout.getNodePosition(node.id);
-                sprite.position.x = pos.x;
-                sprite.position.y = pos.y;
-                sprite.position.z = pos.z;
-            });
-            // Update links position
-            state.network.links.forEach(function (link) {
-                var line = link.line;
-                if (!line) return;
-
-                var pos = layout.getLinkPosition(layout.graph.getLink(link.sid, link.tid).id),
-                    start = pos['from'],
-                    end = pos['to'],
-                    linePos = line.geometry.attributes.position;
-
-                linePos.array[0] = start.x;
-                linePos.array[1] = start.y || 0;
-                linePos.array[2] = start.z || 0;
-                linePos.array[3] = end.x;
-                linePos.array[4] = end.y || 0;
-                linePos.array[5] = end.z || 0;
-
-                linePos.needsUpdate = true;
-                line.geometry.computeBoundingSphere();
-            });
-        }
     },
     cancel: function cancel(state) {
-        state.network = { nodes: [], links: [] };
+        state.network = {
+            nodes: [],
+            links: []
+        };
+        state.layout = undefined;
         this.inUse = false;
     },
     reset: function reset(state) {
-        state.network = { nodes: [], links: [] };
-        while (state.webglScene.children.length) {
-            state.webglScene.remove(state.webglScene.children[0]);
-        } // Clear the place
+        if (state.resetData) {
+            // re-apply
+            while (state.webglScene.children.length) {
+                state.webglScene.remove(state.webglScene.children[0]);
+            } // Clear the place
+            this.apply(state);
+            return;
+        }
+
+        if (state.resetRel) {
+            state.onFrame = null;
+            // Update layout
+            console.log('update relations');
+            // clear links
+            state.network.links = [];
+            state.layout.graph.clear();
+            for (var i = 0; i < state.webglScene.children.length; i++) {
+                if (state.webglScene.children[i] && state.webglScene.children[i].type === 'Line') state.webglScene.remove(state.webglScene.children[i--]);
+            }
+
+            // Update force-graph
+            state.graphData.forEach(function (item, index) {
+                var node = state.network.nodes[index];
+                state.layout.graph.addNode(node.id);
+                state.layout.setNodePosition(node.id, node.sprite.position.x, node.sprite.position.y, node.sprite.position.z);
+                if (Array.isArray(item[state.linkField])) {
+                    item[state.linkField].forEach(function (tid) {
+                        if (state.network.links.find(function (link) {
+                            return link.sid === node.id && link.tid === tid || link.tid === node.id && link.sid === tid;
+                        })) return;
+                        state.layout.graph.addLink(node.id, tid);
+                        state.network.links.push({
+                            sid: node.id,
+                            tid: tid
+                        });
+                    });
+                }
+            });
+
+            // Add links to scene
+            state.network.links.forEach(function (link) {
+                var geometry = new BufferGeometry();
+                geometry.addAttribute('position', new BufferAttribute(new Float32Array(2 * 3), 3));
+                var line = new Line(geometry, LINEMATERIAL);
+                line.renderOrder = 10; // Prevent visual glitches of dark lines on top of spheres by rendering them last
+                state.webglScene.add(link.line = line);
+            });
+
+            // Restart rendering
+            cntTicks = 0;
+            state.onFrame = function () {
+                return layoutTick(state);
+            };
+        }
+
+        // Update nodes field
+        state.graphData.forEach(function (item, index) {
+            state.network.nodes[index].id = item[state.idField];
+            state.network.nodes[index].name = item[state.nameField];
+            state.network.nodes[index].color = item._color;
+            state.network.nodes[index].size = item._size;
+        });
+
+        // Update nodes style
+        state.network.nodes.forEach(function (node) {
+            var nodeRadius = NODE_BASE_SIZE * node.size;
+            var scaleRate = nodeRadius / node.sprite.geometry.parameters.radius;
+            new Tween(node.sprite.scale).to({
+                x: scaleRate,
+                y: scaleRate,
+                z: scaleRate
+            }, 400).easing(Easing.Quadratic.InOut).start();
+
+            new Tween(node.sprite.material.uniforms.uColor.value).to(new Color(node.color), 400).easing(Easing.Quadratic.InOut).start();
+
+            node.sprite.vid = node.id;
+            node.sprite.name = node.name;
+        });
     }
 };
 
@@ -94706,19 +94434,27 @@ var index = Kapsule({
             default: [],
             onChange: function onChange(_, state) {
                 state.onFrame = null;
+                state.resetData = true;
             }
         },
         graphType: {
             default: 'network'
         },
         idField: {
-            default: 'id'
+            default: 'id',
+            onChange: function onChange(_, state) {
+                state.onFrame = null;
+                state.resetData = true;
+            }
         },
         nameField: {
             default: 'name'
         },
         linkField: {
-            default: 'link'
+            default: 'link',
+            onChange: function onChange(_, state) {
+                state.resetRel = true;
+            }
         },
         colorField: {
             default: 'color'
@@ -94825,6 +94561,9 @@ var index = Kapsule({
             }); // Check only objects with labels
             toolTipElem.textContent = intersects.length ? intersects[0].object.name : '';
 
+            // tween update
+            update();
+
             // Frame cycle
             tbControls_webgl.update();
             tbControls_css3.update();
@@ -94833,17 +94572,16 @@ var index = Kapsule({
             requestAnimationFrame(animate);
         })();
     },
-    update: function update(state) {
+    update: function update$$1(state) {
         var delay = state.init ? VISUALIZE_DELAY : 0;
         state.init = true;
         // update layput
         this.resizeDom();
 
-        // state.onFrame = null; // Pause simulation
-        state.infoElem.innerHTML = '<div class="loader-inner line-scale-pulse-out-rapid"><div></div><div></div><div></div><div></div><div></div></div>';
+        state.infoElem.innerHTML = '<div class="loading-pulse"></div>';
 
-        if (!Array.isArray(state.graphData)) return;
-        validate();
+        if (!Array.isArray(state.graphData) || state.graphData.length == 0) return;
+        if (state.resetData) validate();
 
         // set color
         autoColorItems(state.graphData, state.colorField);
@@ -94857,17 +94595,15 @@ var index = Kapsule({
             } else if (visualize.inUse && visualize.name === state.graphType) {
                 // reset current layout
                 visualize.reset(state);
-                delay = 0;
-            }
-            if (visualize.name === state.graphType) {
+                state.infoElem.innerHTML = '';
+            } else if (visualize.name === state.graphType) {
                 // wait for cancel
                 setTimeout(function () {
                     visualize.apply(state);
+                    state.infoElem.innerHTML = '';
                 }, delay);
             }
         });
-
-        state.infoElem.innerHTML = '';
 
         function validate() {
             console.info('Graph loading', state.graphData.length, 'records');
