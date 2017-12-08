@@ -1,14 +1,14 @@
 import './assets/css/graph.css';
-import 'loaders.css';
 
 import Kapsule from 'kapsule';
+import * as TWEEN from 'es6-tween';
 import * as THREE from 'three';
 import { CSS3DRenderer } from 'three-renderer-css3d';
 import trackballControls from 'three-trackballcontrols';
-import { autoColorItems, colorStr2Hex } from './utils/color-utils';
+import { autoColorItems } from './utils/color-utils';
 import { linearSizeItems } from './utils/math-utils';
 
-import network from './network/force-graph'
+import network from './network/force-graph';
 
 const VISUALIZE_DELAY = 1500;
 
@@ -143,6 +143,9 @@ export default Kapsule({
                 .filter(o => o.object.name); // Check only objects with labels
             toolTipElem.textContent = intersects.length ? intersects[0].object.name : '';
 
+            // tween update
+            TWEEN.update();
+
             // Frame cycle
             tbControls_webgl.update();
             tbControls_css3.update();
@@ -157,7 +160,7 @@ export default Kapsule({
         // update layput
         this.resizeDom();
 
-        state.infoElem.innerHTML = '<div class="loader-inner line-scale-pulse-out-rapid"><div></div><div></div><div></div><div></div><div></div></div>';
+        state.infoElem.innerHTML = '<div class="loading-pulse"></div>';
 
         if (!Array.isArray(state.graphData) || state.graphData.length == 0) return;
         if (state.resetData) validate();
