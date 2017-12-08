@@ -3,14 +3,20 @@ import './assets/css/graph.css';
 import Kapsule from 'kapsule';
 import * as TWEEN from 'es6-tween';
 import * as THREE from 'three';
-import { CSS3DRenderer } from 'three-renderer-css3d';
+import {
+    CSS3DRenderer
+} from 'three-renderer-css3d';
 import trackballControls from 'three-trackballcontrols';
-import { autoColorItems } from './utils/color-utils';
-import { linearSizeItems } from './utils/math-utils';
+import {
+    autoColorItems
+} from './utils/color-utils';
+import {
+    linearSizeItems
+} from './utils/math-utils';
 
 import network from './network/force-graph';
 
-const VISUALIZE_DELAY = 1500;
+const VISUALIZE_DELAY = 500;
 
 export default Kapsule({
     props: {
@@ -184,6 +190,8 @@ export default Kapsule({
                     visualize.apply(state);
                     state.infoElem.innerHTML = '';
                 }, delay);
+            } else if (state.resetData) {
+                visualize.resetData(state);
             }
         });
 

@@ -17,13 +17,6 @@
             height: 100%;
         }
 
-        #sidebar {
-            position: absolute;
-            top: 100px;
-            left: 20px;
-            width: 100px;
-        }
-
         #footer {
             position: absolute;
             width: 100%;
@@ -51,10 +44,6 @@
 
 <body>
     <div id="graph"></div>
-    <div id="sidebar">
-        <button id="data1">23 persons</button>
-        <button id="data2">100 persons</button>
-    </div>
     <div id="footer">
         <button id="setting1">setting1</button>
         <button id="setting2">setting2</button>
@@ -72,47 +61,27 @@
                 data.data1 = JSON.parse(this.responseText);
                 Graph.graphData(data.data1)
                     .colorField('country')
-                    .sizeField('age')
+                    .sizeField('majority')
                     .nameField('country')
+                    .linkField('link')
                     .onNodeClick(data => console.log(data));
             }
         };
         xhttp.open("GET", "data/23persons.json", true);
         xhttp.send();
 
-        const xhttp2 = new XMLHttpRequest();
-        xhttp2.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                data.data2 = JSON.parse(this.responseText);
-            }
-        };
-        xhttp2.open("GET", "data/100persons.json", true);
-        xhttp2.send();
-
         document.getElementById('setting1').addEventListener('click', () => {
-            Graph.colorField('country')
-                .sizeField('age')
-                .nameField('country');
+            Graph.linkField('link')
+                .sizeField('age');
         });
 
         document.getElementById('setting2').addEventListener('click', () => {
-            Graph.colorField('gender')
-                .sizeField('majority')
-                .nameField('id');
+            Graph.linkField('link_2')
+                .colorField('gender');
         });
 
         document.getElementById('setting3').addEventListener('click', () => {
-            Graph.colorField('age')
-                .sizeField('majority')
-                .nameField('id');
-        });
-
-        document.getElementById('data1').addEventListener('click', () => {
-            Graph.graphData(data.data1);
-        });
-
-        document.getElementById('data2').addEventListener('click', () => {
-            Graph.graphData(data.data2);
+            Graph.linkField('link_3');
         });
     </script>
 </body>
