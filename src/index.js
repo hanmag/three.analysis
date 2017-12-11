@@ -3,20 +3,14 @@ import './assets/css/graph.css';
 import Kapsule from 'kapsule';
 import * as TWEEN from 'es6-tween';
 import * as THREE from 'three';
-import {
-    CSS3DRenderer
-} from 'three-renderer-css3d';
 import trackballControls from 'three-trackballcontrols';
-import {
-    autoColorItems
-} from './utils/color-utils';
-import {
-    linearSizeItems
-} from './utils/math-utils';
+import { autoColorItems } from './utils/color-utils';
+import { linearSizeItems } from './utils/math-utils';
 
-import network from './network/force-graph';
+import network from './network/3d-force-graph';
+import scatter from './scatter/3d-scatter-graph';
 
-const VISUALIZE_DELAY = 500;
+const visualizes = [network, scatter];
 
 export default Kapsule({
     props: {
@@ -117,14 +111,9 @@ export default Kapsule({
             }
         }, false);
 
-        // Setup css3 renderer
-        state.css3dRenderer = new CSS3DRenderer();
-        domNode.appendChild(state.css3dRenderer.domElement);
-
         // Setup scenes
         const scene = new THREE.Scene();
         scene.add(state.webglScene = new THREE.Group());
-        scene.add(state.css3Scene = new THREE.Group());
 
         // Add lights
         scene.add(new THREE.AmbientLight(0xcccccc));
@@ -136,9 +125,6 @@ export default Kapsule({
 
         // Add camera interaction
         const tbControls_webgl = new trackballControls(state.camera, state.webglRenderer.domElement);
-        const tbControls_css3 = new trackballControls(state.camera, state.css3dRenderer.domElement);
-
-        state.visualizes = [network];
 
         // Kick-off renderer
         (function animate() {
@@ -154,15 +140,11 @@ export default Kapsule({
 
             // Frame cycle
             tbControls_webgl.update();
-            tbControls_css3.update();
             state.webglRenderer.render(scene, state.camera);
-            state.css3dRenderer.render(scene, state.camera);
             requestAnimationFrame(animate);
         })();
     },
     update: function (state) {
-        let delay = state.init ? VISUALIZE_DELAY : 0;
-        state.init = true;
         // update layput
         this.resizeDom();
 
@@ -176,24 +158,24 @@ export default Kapsule({
         // set size
         linearSizeItems(state.graphData, state.sizeField)
 
-        state.visualizes.forEach(visualize => {
+        visualizes.forEach(visualize => {
             if (visualize.inUse && visualize.name !== state.graphType) {
                 // fade out aniamtion
                 visualize.cancel(state);
             } else if (visualize.inUse && visualize.name === state.graphType) {
                 // reset current layout
                 visualize.reset(state);
-                state.infoElem.innerHTML = '';
             } else if (visualize.name === state.graphType) {
-                // wait for cancel
-                setTimeout(() => {
-                    visualize.apply(state);
-                    state.infoElem.innerHTML = '';
-                }, delay);
+                // apply new visualize
+                visualize.apply(state);
             } else if (state.resetData) {
-                visualize.resetData(state);
+                visualize.layout(state);
             }
         });
+
+        // update complete
+        state.resetData = state.resetRel = false;
+        state.infoElem.innerHTML = '';
 
         function validate() {
             console.info('Graph loading', state.graphData.length, 'records');
@@ -218,8 +200,6 @@ export default Kapsule({
             }
             if (state.width && state.height) {
                 state.webglRenderer.setSize(state.width, state.height);
-                state.css3dRenderer.setSize(state.width, state.height);
-                state.css3dRenderer.domElement.style.marginTop = -state.height + "px";
                 state.camera.aspect = state.width / state.height;
                 state.camera.updateProjectionMatrix();
             }

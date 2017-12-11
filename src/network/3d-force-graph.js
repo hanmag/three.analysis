@@ -61,7 +61,7 @@ export default {
 
         // Setup graph
         if (state.resetData) {
-            this.resetData(state);
+            this.layout(state);
 
             // Create nodes
             state.network.nodes.forEach(node => {
@@ -132,23 +132,18 @@ export default {
             });
         }
 
-        // Setup render DOM
-        state.webglRenderer.domElement.style.display = 'block';
-        state.css3dRenderer.domElement.style.display = 'none';
-
         if (state.resetData || state.resetRel) {
-            // Start rendering
+            // (Re)Start rendering
             cntTicks = 0;
             state.onFrame = () => layoutTick(state);
         }
 
-        // data & relations has been applied
-        state.resetData = state.resetRel = false;
         this.inUse = true;
     },
     cancel: function (state) {
         if (state.resetData)
-            this.resetData(state);
+            this.layout(state);
+        state.onFrame = null;
         this.inUse = false;
     },
     reset: function (state) {
@@ -201,7 +196,7 @@ export default {
 
         this.apply(state);
     },
-    resetData: function (state) {
+    layout: function (state) {
         // reset layout
         const graph = ngraph();
         state.network = {
