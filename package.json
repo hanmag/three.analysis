@@ -41,7 +41,6 @@
     "ngraph.forcelayout3d": "0.0.16",
     "ngraph.graph": "0.0.14",
     "three": "^0.88.0",
-    "three-renderer-css3d": "^1.0.0",
     "three-trackballcontrols": "0.0.6"
   }
 }
